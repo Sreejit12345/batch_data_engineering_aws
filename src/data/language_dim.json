@@ -1,0 +1,58 @@
+[
+    {
+        "language_name": "Python",
+        "language_description": "This is language Python"
+    },
+    {
+        "language_name": "Makefile",
+        "language_description": "This is language Makefile"
+    },
+    {
+        "language_name": "Dockerfile",
+        "language_description": "This is language Dockerfile"
+    },
+    {
+        "language_name": "Shell",
+        "language_description": "This is language Shell"
+    },
+    {
+        "language_name": "JavaScript",
+        "language_description": "This is language JavaScript"
+    },
+    {
+        "language_name": "CSS",
+        "language_description": "This is language CSS"
+    },
+    {
+        "language_name": "Jinja",
+        "language_description": "This is language Jinja"
+    },
+    {
+        "language_name": "Jupyter Notebook",
+        "language_description": "This is language Jupyter Notebook"
+    },
+    {
+        "language_name": "Just",
+        "language_description": "This is language Just"
+    },
+    {
+        "language_name": "HTML",
+        "language_description": "This is language HTML"
+    },
+    {
+        "language_name": "HCL",
+        "language_description": "This is language HCL"
+    },
+    {
+        "language_name": "TSQL",
+        "language_description": "This is language TSQL"
+    },
+    {
+        "language_name": "Rust",
+        "language_description": "This is language Rust"
+    },
+    {
+        "language_name": "Procfile",
+        "language_description": "This is language Procfile"
+    }
+]

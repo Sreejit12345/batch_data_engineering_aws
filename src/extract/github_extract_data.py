@@ -10,13 +10,14 @@ import boto3
 import configparser
 import sys
 
+
 def write_json(d,type):
 
      with open(f"{type}.json", "w", encoding="utf-8") as f:
         json.dump(d, f,indent=4)
 
 
-def derive_next_url(resp):
+def derive_next_url(resp,logger):
 # Parses response, if next present it returns next url to call. Else returns None
 
     next_call=''
@@ -65,7 +66,7 @@ def make_api_call(url,headers):
     return resp    
        
 
-def query_org_dimension(client):
+def query_org_dimension(client,logger):
 
      '''
      Responsible to query orgs in org list
@@ -110,7 +111,7 @@ def query_org_dimension(client):
      return all_orgs
 
 
-def query_repository_dimension(pages_reqd,org_dim,client):
+def query_repository_dimension(pages_reqd,org_dim,client,logger):
 
     '''
     Responsible to query repos in org  - also paginates if reqd.
@@ -180,7 +181,7 @@ def query_repository_dimension(pages_reqd,org_dim,client):
                     )
                              
                 
-            list_url=derive_next_url(resp)
+            list_url=derive_next_url(resp,logger)
 
             if(list_url is None):
                     logger.info(" No next token found .... ")
@@ -192,7 +193,7 @@ def query_repository_dimension(pages_reqd,org_dim,client):
     return all_repo
 
 
-def query_repo_language_bridge(repo_dim,client):
+def query_repo_language_bridge(repo_dim,client,logger):
      
      """
      Build a repo language bridge table with weightage percentage.
@@ -255,7 +256,7 @@ def query_repo_language_bridge(repo_dim,client):
      return all_languages
 
 
-def query_language_dimension(repo_language_bridge,client):
+def query_language_dimension(repo_language_bridge,client,logger):
      '''
      # builds a language dimension - right now we dont have rich metadata so we just create a synthetic description. 
      # This is an SCD1 based dimension as we dont need to track any updates on language.
@@ -280,7 +281,7 @@ def query_language_dimension(repo_language_bridge,client):
      return list(languages_map.values())
 
     
-def query_commit_facts_default_branch(pages_reqd,repo_dim,client):
+def query_commit_facts_default_branch(pages_reqd,repo_dim,client,logger):
      
      """
      Queries commits on the defualt branch and populates facts incrementally based on watermark.
@@ -340,7 +341,7 @@ def query_commit_facts_default_branch(pages_reqd,repo_dim,client):
 
                     all_commits.append(commits_fct_dict)
 
-                full_url = derive_next_url(commits_list_resp)
+                full_url = derive_next_url(commits_list_resp,logger)
                 if(full_url is None):
                     logger.info(" No next token found .... ")
                     break
@@ -355,7 +356,7 @@ def query_commit_facts_default_branch(pages_reqd,repo_dim,client):
      return all_commits
 
 
-def query_pull_requests_fact(pages_reqd,repo_dim,client):
+def query_pull_requests_fact(pages_reqd,repo_dim,client,logger):
      
      '''
      Responsible to pull data for all Pull requests. 
@@ -441,7 +442,7 @@ def query_pull_requests_fact(pages_reqd,repo_dim,client):
                             r["full_name"],
                         )
 
-                full_url = derive_next_url(pull_requests_list_resp)
+                full_url = derive_next_url(pull_requests_list_resp,logger)
                 if(full_url is None):
                     logger.info(" No next token found .... ")
                     break
@@ -451,7 +452,7 @@ def query_pull_requests_fact(pages_reqd,repo_dim,client):
      return all_pull_requests
 
 
-def query_user_dimension(commits_fact_incr,query_pull_requests_fact_t,client):
+def query_user_dimension(commits_fact_incr,query_pull_requests_fact_t,client,logger):
 
      all_user_id=[]
 
@@ -497,72 +498,4 @@ def query_user_dimension(commits_fact_incr,query_pull_requests_fact_t,client):
 
      return all_users_dict
 
-        
-
-if(__name__=='__main__'):
-
-        # load from env if running locally
-
-        load_dotenv()
-        secret=os.getenv('github_pat')
-        env= os.getenv('env')
-
-        if ( env is None):
-
-             #read from glue job parameter
-             from awsglue.utils import getResolvedOptions
-             expected_params = ['env']
-             args = getResolvedOptions(sys.argv, expected_params)
-             env = args['env']
-
-        config=configparser.ConfigParser()
-        config.read(f'src/extract/config/constants-{env}.ini')
-
-        if(secret is None):
-
-             #read from secret manager
-             boto_client= boto3.client("secretsmanager", region_name='ap-south-1')
-             secret=boto_client.get_secret_value(SecretId=config['general']['secret_name'])['SecretString']
-
-        client_obj = GitHubClient(
-             
-        headers={'Accept':'application/vnd.github+json',
-        'X-GitHub-Api-Version':'2026-03-10',
-        'Authorization': f'Bearer {secret}'},
-
-        org_base_url=config['general']['org_base_url'],
-        repo_base_url= config['general']['repo_base_url'],
-        user_base_url= config['general']['user_base_url'],
-        org_list= config['general']['org_list'].split(',')
-        )
-        
-        logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s [%(levelname)s] (%(name)s): %(message)s",
-        datefmt="%Y-%m-%d %H:%M:%S"
-    )
-
-        logging.getLogger("urllib3").setLevel(logging.WARNING)
-
-        logger = logging.getLogger("Extract Job")
-
-        org_dim_full =query_org_dimension(client=client_obj)
-        repo_dim_full =query_repository_dimension(pages_reqd=10,org_dim=org_dim_full,client=client_obj)
-        repo_language_bridge_full = query_repo_language_bridge(repo_dim=repo_dim_full,client=client_obj)
-        language_dim_full= query_language_dimension(repo_language_bridge=repo_language_bridge_full,client=client_obj)
-        commits_fact_incr=query_commit_facts_default_branch(pages_reqd=10000,repo_dim=repo_dim_full,client=client_obj)
-        query_pull_requests_fact_t= query_pull_requests_fact(pages_reqd=10000,repo_dim=repo_dim_full,client=client_obj)
-        query_user_dimension_full= query_user_dimension(commits_fact_incr,query_pull_requests_fact_t,client=client_obj)
-
-        logger.info("Job Finished.....")
-
-        print(org_dim_full)
-
-
-        #write_json(org_dim_full,"src/data/org_dim")
-        #write_json(repo_dim_full,"src/data/repo_dim")
-        #write_json(commits_fact_incr,"src/data/commits_fact")
-        #write_json(repo_language_bridge_full,"src/data/repo_language_bridge")
-        #write_json(language_dim_full,'src/data/language_dim')
-        #write_json(query_pull_requests_fact_t,'src/data/pull_requests_fact')
-        #write_json(query_user_dimension_full,'src/data/user_dim')
+    

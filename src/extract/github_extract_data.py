@@ -1,7 +1,7 @@
 import requests
 import logging
 import json
-from github_api_client import GitHubClient
+from src.extract.github_api_client import GitHubClient
 from tenacity import retry,wait_exponential,stop_after_attempt
 from requests.exceptions import HTTPError
 from dotenv import load_dotenv
@@ -394,9 +394,9 @@ def query_pull_requests_fact(pages_reqd,repo_dim,client,logger):
 
                 for pulls in pull_requests_list_resp_:
                     try:
-                        get_api_url= client.repo_base_url + r['full_name'] + f'/pulls/{pulls['number']}'
+                        get_api_url= client.repo_base_url + r['full_name'] + f'/pulls/{pulls["number"]}'
                         
-                        logger.info(f" Getting detail info for PR {pulls["title"]}...")
+                        logger.info(f""" Getting detail info for PR {pulls["title"]}...""")
                         
                         get_pr_resp=make_api_call(get_api_url,client.headers).json()
 

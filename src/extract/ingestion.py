@@ -1,7 +1,9 @@
 from src.extract.github_api_client import *
 from src.extract.github_extract_data import *
+import src.extract as extract_package
 import os
 import logging
+from pathlib import Path
 
 
 logging.basicConfig(
@@ -31,7 +33,10 @@ if ( env is None):
         env = args['env']
 
 config=configparser.ConfigParser()
-config.read(f'src/extract/config/constants-{env}.ini')
+
+
+config_path = Path(extract_package.__file__).parent / "config" / f"constants-{env}.ini"
+config.read(config_path)
 
 if(secret is None):
 

@@ -5,16 +5,33 @@ from src.extract.github_api_client import GitHubClient
 from tenacity import retry,wait_exponential,stop_after_attempt
 from requests.exceptions import HTTPError
 from dotenv import load_dotenv
-import os
-import boto3
-import configparser
-import sys
+from datetime import datetime, timezone
+from typing import Optional
 
 
-def write_json(d,type):
+def parse_github_timestamp(value):
+     if value is None:
+          return None
 
-     with open(f"{type}.json", "w", encoding="utf-8") as f:
-        json.dump(d, f,indent=4)
+     if value.endswith("Z"):
+          value = value[:-1] + "+00:00"
+
+     timestamp = datetime.fromisoformat(value)
+     if timestamp.tzinfo is None:
+          timestamp = timestamp.replace(tzinfo=timezone.utc)
+
+     return timestamp.astimezone(timezone.utc)
+
+
+def write_json(d, output_path):
+
+     def serialize_datetime(value):
+          if isinstance(value, datetime):
+               return value.isoformat()
+          raise TypeError(f"Object of type {type(value).__name__} is not JSON serializable")
+
+     with open(f"{output_path}.json", "w", encoding="utf-8") as f:
+        json.dump(d, f, indent=4, default=serialize_datetime)
 
 
 def derive_next_url(resp,logger):
@@ -74,6 +91,7 @@ def query_org_dimension(client,logger):
 
      Natural Key: org_id
      Grain: 1 record per org
+     Watermark Column: updated_at
      '''
 
      all_orgs= []
@@ -99,8 +117,8 @@ def query_org_dimension(client,logger):
                  "followers":resp["followers"],
                  "following":resp["following"],
                  "public_repos":resp["public_repos"],
-                 "created_at":resp["created_at"],
-                 "updated_at":resp["updated_at"]
+                 "created_at":parse_github_timestamp(resp["created_at"]),
+                 "updated_at":parse_github_timestamp(resp["updated_at"])
                  }
 
             all_orgs.append(org_dim_dict)
@@ -167,8 +185,8 @@ def query_repository_dimension(pages_reqd,org_dim,client,logger):
                         "subscribers_count": repo_details['subscribers_count'],
                         "stargazers_count": repo_details['stargazers_count'],
                         "open_issues_count": repo_details['open_issues_count'],
-                        "created_at": repo_details['created_at'],
-                        "updated_at": repo_details['updated_at']
+                        "created_at": parse_github_timestamp(repo_details['created_at']),
+                        "updated_at": parse_github_timestamp(repo_details['updated_at'])
                     }
 
 
@@ -335,8 +353,8 @@ def query_commit_facts_default_branch(pages_reqd,repo_dim,client,logger):
                             "committer_name_unverified":commits["commit"]["committer"]["name"], 
                             "org_id":org_id,
                             "repo_id":repo_id,
-                            "committed_at":commits['commit']['committer']['date'],
-                            "authored_at":commits['commit']['author']['date']
+                            "committed_at":parse_github_timestamp(commits['commit']['committer']['date']),
+                            "authored_at":parse_github_timestamp(commits['commit']['author']['date'])
                     }
 
                     all_commits.append(commits_fct_dict)
@@ -412,10 +430,10 @@ def query_pull_requests_fact(pages_reqd,repo_dim,client,logger):
                                 "is_draft": pulls['draft'],
                                 "state": pulls['state'],
                                 "title":pulls["title"],
-                                'created_at': pulls['created_at'],
-                                'updated_at': pulls['updated_at'],
-                                "closed_at": pulls['closed_at'],
-                                "merged_at": pulls['merged_at'],
+                                'created_at': parse_github_timestamp(pulls['created_at']),
+                                'updated_at': parse_github_timestamp(pulls['updated_at']),
+                                "closed_at": parse_github_timestamp(pulls['closed_at']),
+                                "merged_at": parse_github_timestamp(pulls['merged_at']),
                             
                         }
 
@@ -487,8 +505,8 @@ def query_user_dimension(commits_fact_incr,query_pull_requests_fact_t,client,log
                     "email": user_resp['email'],
                     "is_hireable": user_resp['hireable'],
                     "bio": user_resp['bio'] ,
-                    "created_at": user_resp['created_at'],
-                    'updated_at': user_resp['updated_at']
+                    "created_at": parse_github_timestamp(user_resp['created_at']),
+                    'updated_at': parse_github_timestamp(user_resp['updated_at'])
                }
 
                all_users_dict.append(user_dict)

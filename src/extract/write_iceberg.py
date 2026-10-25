@@ -7,12 +7,12 @@ import pyarrow as pa
 # for local auth the user executing must have aws cli installed and necessary iam permissions .
 # In aws glue it is governed by iam role policies
 
-def initialize_catalog():
+def initialize_catalog(catalog_name,aws_region):
     glue_catalog=load_catalog(
-        name='468094684048',
+        name=catalog_name,
         **{
             'type': 'glue',
-            'client.region': 'ap-south-1',
+            'client.region': aws_region,
         }
     )
 
@@ -26,12 +26,12 @@ def get_ingestion_date():
     return formatted_date
 
 
-def write_table(table_name,df,logger,database_name):
+def write_table(table_name,df,logger,database_name,catalog_name,aws_region):
 
     logger.info("Looking up schema for table %s", table_name)
 
     schema= ARROW_SCHEMAS[table_name]
-    catalog = initialize_catalog()
+    catalog = initialize_catalog(catalog_name,aws_region)
     identifier = f"{database_name}.{table_name}"
 
     catalog.create_table_if_not_exists(
@@ -44,3 +44,5 @@ def write_table(table_name,df,logger,database_name):
     arrow_table = pa.Table.from_pylist(df, schema=table.schema().as_arrow())
 
     table.append(arrow_table)
+
+    logger.info("Looking up schema for table %s", table_name)

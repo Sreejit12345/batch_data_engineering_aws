@@ -10,14 +10,21 @@ import sys
 import configparser
 
 
-logging.basicConfig(
-level=logging.INFO,
-format="%(asctime)s [%(levelname)s] (%(name)s): %(message)s",
-datefmt="%Y-%m-%d %H:%M:%S"
-)
+root_logger = logging.getLogger()
+root_logger.setLevel(logging.INFO)
+
+if not root_logger.handlers:
+  handler = logging.StreamHandler(sys.stdout)
+  handler.setLevel(logging.INFO)
+  handler.setFormatter(
+      logging.Formatter(
+          "%(asctime)s [%(levelname)s] (%(name)s): %(message)s",
+          datefmt="%Y-%m-%d %H:%M:%S",
+      )
+  )
+  root_logger.addHandler(handler)
 
 logging.getLogger("urllib3").setLevel(logging.WARNING)
-
 
 logger = logging.getLogger("Extract Job")
 

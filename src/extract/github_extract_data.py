@@ -8,7 +8,13 @@ from dotenv import load_dotenv
 from datetime import datetime, timezone
 from typing import Optional
 
+def add_bronze_audit_columns(d):
+     # add ingestion date
 
+     current_date = datetime.now(timezone.utc)
+     d['ingestion_timestamp'] = current_date
+
+     
 def parse_github_timestamp(value):
      if value is None:
           return None
@@ -121,6 +127,8 @@ def query_org_dimension(client,logger):
                  "updated_at":parse_github_timestamp(resp["updated_at"])
                  }
 
+            add_bronze_audit_columns(org_dim_dict)
+
             all_orgs.append(org_dim_dict)
 
           except Exception:
@@ -189,6 +197,7 @@ def query_repository_dimension(pages_reqd,org_dim,client,logger):
                         "updated_at": parse_github_timestamp(repo_details['updated_at'])
                     }
 
+                    add_bronze_audit_columns(repo_dim_dict)
 
                     all_repo.append(repo_dim_dict)
 
@@ -263,7 +272,11 @@ def query_repo_language_bridge(repo_dim,client,logger):
                         "weightage":v
                 }
 
-                all_languages.append( base_dict| add_dict)
+                merged_dict= base_dict| add_dict
+
+                add_bronze_audit_columns(merged_dict)
+
+                all_languages.append(merged_dict)
 
           except Exception:
                logger.exception(
@@ -291,10 +304,14 @@ def query_language_dimension(repo_language_bridge,client,logger):
           if lang not in languages_map:
                logger.info(f"Getting the language for repo {i['repo_id']}")
 
-               languages_map[lang] = {
+               lang_rec={
                     'language_name': lang,
                     'language_description': f"This is language {lang}"
                }
+
+               add_bronze_audit_columns(lang_rec)
+
+               languages_map[lang] = lang_rec
 
      return list(languages_map.values())
 
@@ -356,6 +373,8 @@ def query_commit_facts_default_branch(pages_reqd,repo_dim,client,logger):
                             "committed_at":parse_github_timestamp(commits['commit']['committer']['date']),
                             "authored_at":parse_github_timestamp(commits['commit']['author']['date'])
                     }
+
+                    add_bronze_audit_columns(commits_fct_dict)
 
                     all_commits.append(commits_fct_dict)
 
@@ -450,6 +469,8 @@ def query_pull_requests_fact(pages_reqd,repo_dim,client,logger):
 
                         pull_requests_fct_dict.update(get_api_dict)
 
+                        add_bronze_audit_columns(pull_requests_fct_dict)
+
 
                         all_pull_requests.append(pull_requests_fct_dict)
 
@@ -508,6 +529,8 @@ def query_user_dimension(commits_fact_incr,query_pull_requests_fact_t,client,log
                     "created_at": parse_github_timestamp(user_resp['created_at']),
                     'updated_at': parse_github_timestamp(user_resp['updated_at'])
                }
+
+               add_bronze_audit_columns(user_dict)
 
                all_users_dict.append(user_dict)
 

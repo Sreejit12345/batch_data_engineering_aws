@@ -16,8 +16,9 @@
         "subscribers_count": 1,
         "stargazers_count": 0,
         "open_issues_count": 4,
-        "created_at": "2021-11-13T12:54:03Z",
-        "updated_at": "2026-06-15T12:57:28Z"
+        "created_at": "2021-11-13T12:54:03+00:00",
+        "updated_at": "2026-06-15T12:57:28+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:17.296838+00:00"
     },
     {
         "org_id": 89419010,
@@ -36,8 +37,9 @@
         "subscribers_count": 2,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2021-12-15T12:33:16Z",
-        "updated_at": "2022-01-01T19:15:25Z"
+        "created_at": "2021-12-15T12:33:16+00:00",
+        "updated_at": "2022-01-01T19:15:25+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:17.893037+00:00"
     },
     {
         "org_id": 89419010,
@@ -51,13 +53,14 @@
         "isForked": false,
         "forks_count": 632,
         "visibility": "public",
-        "size": 120730,
-        "watchers_count": 6000,
-        "subscribers_count": 27,
-        "stargazers_count": 6000,
-        "open_issues_count": 470,
-        "created_at": "2022-01-26T09:51:04Z",
-        "updated_at": "2026-10-23T07:58:16Z"
+        "size": 120769,
+        "watchers_count": 6012,
+        "subscribers_count": 26,
+        "stargazers_count": 6012,
+        "open_issues_count": 473,
+        "created_at": "2022-01-26T09:51:04+00:00",
+        "updated_at": "2026-10-25T10:57:36+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:18.838518+00:00"
     },
     {
         "org_id": 89419010,
@@ -76,8 +79,9 @@
         "subscribers_count": 2,
         "stargazers_count": 2,
         "open_issues_count": 0,
-        "created_at": "2022-03-02T13:24:02Z",
-        "updated_at": "2025-06-04T12:31:56Z"
+        "created_at": "2022-03-02T13:24:02+00:00",
+        "updated_at": "2025-06-04T12:31:56+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:19.376176+00:00"
     },
     {
         "org_id": 89419010,
@@ -96,8 +100,9 @@
         "subscribers_count": 2,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2022-08-18T14:49:47Z",
-        "updated_at": "2024-06-07T08:58:09Z"
+        "created_at": "2022-08-18T14:49:47+00:00",
+        "updated_at": "2024-06-07T08:58:09+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:19.882931+00:00"
     },
     {
         "org_id": 89419010,
@@ -116,8 +121,9 @@
         "subscribers_count": 2,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2022-11-14T16:27:23Z",
-        "updated_at": "2022-11-23T09:51:38Z"
+        "created_at": "2022-11-14T16:27:23+00:00",
+        "updated_at": "2022-11-23T09:51:38+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:20.408443+00:00"
     },
     {
         "org_id": 89419010,
@@ -136,8 +142,9 @@
         "subscribers_count": 2,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2022-11-28T23:36:19Z",
-        "updated_at": "2023-05-29T11:13:09Z"
+        "created_at": "2022-11-28T23:36:19+00:00",
+        "updated_at": "2023-05-29T11:13:09+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:20.970093+00:00"
     },
     {
         "org_id": 89419010,
@@ -156,8 +163,9 @@
         "subscribers_count": 2,
         "stargazers_count": 3,
         "open_issues_count": 0,
-        "created_at": "2022-12-01T12:58:29Z",
-        "updated_at": "2023-08-17T09:48:02Z"
+        "created_at": "2022-12-01T12:58:29+00:00",
+        "updated_at": "2023-08-17T09:48:02+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:21.541659+00:00"
     },
     {
         "org_id": 89419010,
@@ -176,8 +184,9 @@
         "subscribers_count": 2,
         "stargazers_count": 3,
         "open_issues_count": 0,
-        "created_at": "2022-12-07T13:33:39Z",
-        "updated_at": "2025-10-02T05:49:13Z"
+        "created_at": "2022-12-07T13:33:39+00:00",
+        "updated_at": "2025-10-02T05:49:13+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:22.069486+00:00"
     },
     {
         "org_id": 89419010,
@@ -196,8 +205,9 @@
         "subscribers_count": 7,
         "stargazers_count": 124,
         "open_issues_count": 64,
-        "created_at": "2023-01-03T13:42:39Z",
-        "updated_at": "2026-09-14T16:15:25Z"
+        "created_at": "2023-01-03T13:42:39+00:00",
+        "updated_at": "2026-09-14T16:15:25+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:22.609987+00:00"
     },
     {
         "org_id": 89419010,
@@ -216,8 +226,9 @@
         "subscribers_count": 2,
         "stargazers_count": 2,
         "open_issues_count": 0,
-        "created_at": "2023-02-21T19:04:56Z",
-        "updated_at": "2024-07-26T21:40:56Z"
+        "created_at": "2023-02-21T19:04:56+00:00",
+        "updated_at": "2024-07-26T21:40:56+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:23.143778+00:00"
     },
     {
         "org_id": 89419010,
@@ -236,8 +247,9 @@
         "subscribers_count": 2,
         "stargazers_count": 4,
         "open_issues_count": 0,
-        "created_at": "2023-04-26T11:50:22Z",
-        "updated_at": "2025-07-10T15:01:24Z"
+        "created_at": "2023-04-26T11:50:22+00:00",
+        "updated_at": "2025-07-10T15:01:24+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:23.674434+00:00"
     },
     {
         "org_id": 89419010,
@@ -256,8 +268,9 @@
         "subscribers_count": 0,
         "stargazers_count": 7,
         "open_issues_count": 5,
-        "created_at": "2023-05-03T13:04:27Z",
-        "updated_at": "2024-05-23T04:40:34Z"
+        "created_at": "2023-05-03T13:04:27+00:00",
+        "updated_at": "2024-05-23T04:40:34+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:24.300606+00:00"
     },
     {
         "org_id": 89419010,
@@ -276,8 +289,9 @@
         "subscribers_count": 2,
         "stargazers_count": 2,
         "open_issues_count": 0,
-        "created_at": "2023-05-15T17:12:12Z",
-        "updated_at": "2024-10-16T16:56:22Z"
+        "created_at": "2023-05-15T17:12:12+00:00",
+        "updated_at": "2024-10-16T16:56:22+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:24.905090+00:00"
     },
     {
         "org_id": 89419010,
@@ -296,8 +310,9 @@
         "subscribers_count": 2,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2023-05-24T18:48:25Z",
-        "updated_at": "2023-05-24T19:07:03Z"
+        "created_at": "2023-05-24T18:48:25+00:00",
+        "updated_at": "2023-05-24T19:07:03+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:25.471002+00:00"
     },
     {
         "org_id": 89419010,
@@ -316,8 +331,9 @@
         "subscribers_count": 1,
         "stargazers_count": 1,
         "open_issues_count": 0,
-        "created_at": "2023-05-28T19:01:36Z",
-        "updated_at": "2024-02-28T12:08:09Z"
+        "created_at": "2023-05-28T19:01:36+00:00",
+        "updated_at": "2024-02-28T12:08:09+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:26.021317+00:00"
     },
     {
         "org_id": 89419010,
@@ -336,8 +352,9 @@
         "subscribers_count": 2,
         "stargazers_count": 1,
         "open_issues_count": 0,
-        "created_at": "2023-06-02T16:32:07Z",
-        "updated_at": "2023-06-08T08:22:40Z"
+        "created_at": "2023-06-02T16:32:07+00:00",
+        "updated_at": "2023-06-08T08:22:40+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:26.567721+00:00"
     },
     {
         "org_id": 89419010,
@@ -356,8 +373,9 @@
         "subscribers_count": 2,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2023-06-05T11:51:53Z",
-        "updated_at": "2023-06-06T10:08:08Z"
+        "created_at": "2023-06-05T11:51:53+00:00",
+        "updated_at": "2023-06-06T10:08:08+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:27.078386+00:00"
     },
     {
         "org_id": 89419010,
@@ -376,8 +394,9 @@
         "subscribers_count": 2,
         "stargazers_count": 5,
         "open_issues_count": 0,
-        "created_at": "2023-06-07T18:31:38Z",
-        "updated_at": "2025-06-04T08:32:49Z"
+        "created_at": "2023-06-07T18:31:38+00:00",
+        "updated_at": "2025-06-04T08:32:49+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:27.780174+00:00"
     },
     {
         "org_id": 89419010,
@@ -396,8 +415,9 @@
         "subscribers_count": 3,
         "stargazers_count": 1,
         "open_issues_count": 0,
-        "created_at": "2023-06-26T09:30:26Z",
-        "updated_at": "2023-07-28T13:32:30Z"
+        "created_at": "2023-06-26T09:30:26+00:00",
+        "updated_at": "2023-07-28T13:32:30+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:28.396228+00:00"
     },
     {
         "org_id": 89419010,
@@ -416,8 +436,9 @@
         "subscribers_count": 2,
         "stargazers_count": 1,
         "open_issues_count": 0,
-        "created_at": "2023-07-27T08:56:49Z",
-        "updated_at": "2023-07-28T13:33:57Z"
+        "created_at": "2023-07-27T08:56:49+00:00",
+        "updated_at": "2023-07-28T13:33:57+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:28.913682+00:00"
     },
     {
         "org_id": 89419010,
@@ -436,8 +457,9 @@
         "subscribers_count": 3,
         "stargazers_count": 1,
         "open_issues_count": 0,
-        "created_at": "2023-08-07T12:57:50Z",
-        "updated_at": "2024-02-28T08:27:58Z"
+        "created_at": "2023-08-07T12:57:50+00:00",
+        "updated_at": "2024-02-28T08:27:58+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:29.460989+00:00"
     },
     {
         "org_id": 89419010,
@@ -456,8 +478,9 @@
         "subscribers_count": 2,
         "stargazers_count": 12,
         "open_issues_count": 0,
-        "created_at": "2023-08-07T13:22:39Z",
-        "updated_at": "2026-03-19T01:36:58Z"
+        "created_at": "2023-08-07T13:22:39+00:00",
+        "updated_at": "2026-03-19T01:36:58+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:29.993658+00:00"
     },
     {
         "org_id": 89419010,
@@ -476,8 +499,9 @@
         "subscribers_count": 2,
         "stargazers_count": 4,
         "open_issues_count": 0,
-        "created_at": "2023-08-07T20:10:55Z",
-        "updated_at": "2025-03-30T00:51:11Z"
+        "created_at": "2023-08-07T20:10:55+00:00",
+        "updated_at": "2025-03-30T00:51:11+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:30.508050+00:00"
     },
     {
         "org_id": 89419010,
@@ -496,8 +520,9 @@
         "subscribers_count": 2,
         "stargazers_count": 14,
         "open_issues_count": 0,
-        "created_at": "2023-08-23T08:42:41Z",
-        "updated_at": "2026-05-16T20:21:07Z"
+        "created_at": "2023-08-23T08:42:41+00:00",
+        "updated_at": "2026-05-16T20:21:07+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:31.072517+00:00"
     },
     {
         "org_id": 89419010,
@@ -516,8 +541,9 @@
         "subscribers_count": 3,
         "stargazers_count": 32,
         "open_issues_count": 2,
-        "created_at": "2023-09-07T17:12:33Z",
-        "updated_at": "2026-08-07T05:19:40Z"
+        "created_at": "2023-09-07T17:12:33+00:00",
+        "updated_at": "2026-08-07T05:19:40+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:31.612865+00:00"
     },
     {
         "org_id": 89419010,
@@ -536,8 +562,9 @@
         "subscribers_count": 3,
         "stargazers_count": 8,
         "open_issues_count": 1,
-        "created_at": "2023-09-14T20:43:49Z",
-        "updated_at": "2024-01-01T22:36:54Z"
+        "created_at": "2023-09-14T20:43:49+00:00",
+        "updated_at": "2024-01-01T22:36:54+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:32.155386+00:00"
     },
     {
         "org_id": 89419010,
@@ -556,8 +583,9 @@
         "subscribers_count": 3,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2023-10-09T07:29:26Z",
-        "updated_at": "2023-10-09T07:29:27Z"
+        "created_at": "2023-10-09T07:29:26+00:00",
+        "updated_at": "2023-10-09T07:29:27+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:32.720049+00:00"
     },
     {
         "org_id": 89419010,
@@ -576,8 +604,9 @@
         "subscribers_count": 3,
         "stargazers_count": 15,
         "open_issues_count": 2,
-        "created_at": "2023-11-06T12:45:34Z",
-        "updated_at": "2026-10-16T09:01:58Z"
+        "created_at": "2023-11-06T12:45:34+00:00",
+        "updated_at": "2026-10-16T09:01:58+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:33.256771+00:00"
     },
     {
         "org_id": 89419010,
@@ -596,8 +625,9 @@
         "subscribers_count": 2,
         "stargazers_count": 27,
         "open_issues_count": 0,
-        "created_at": "2023-11-10T13:07:23Z",
-        "updated_at": "2026-07-28T13:34:28Z"
+        "created_at": "2023-11-10T13:07:23+00:00",
+        "updated_at": "2026-07-28T13:34:28+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:33.824748+00:00"
     },
     {
         "org_id": 89419010,
@@ -616,8 +646,9 @@
         "subscribers_count": 3,
         "stargazers_count": 3,
         "open_issues_count": 0,
-        "created_at": "2023-11-15T18:20:18Z",
-        "updated_at": "2024-02-28T08:25:08Z"
+        "created_at": "2023-11-15T18:20:18+00:00",
+        "updated_at": "2024-02-28T08:25:08+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:34.385511+00:00"
     },
     {
         "org_id": 89419010,
@@ -636,8 +667,9 @@
         "subscribers_count": 3,
         "stargazers_count": 3,
         "open_issues_count": 0,
-        "created_at": "2023-11-27T14:56:40Z",
-        "updated_at": "2024-09-10T18:46:20Z"
+        "created_at": "2023-11-27T14:56:40+00:00",
+        "updated_at": "2024-09-10T18:46:20+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:34.927757+00:00"
     },
     {
         "org_id": 89419010,
@@ -656,8 +688,9 @@
         "subscribers_count": 2,
         "stargazers_count": 1,
         "open_issues_count": 0,
-        "created_at": "2023-12-08T11:35:18Z",
-        "updated_at": "2024-03-11T15:00:42Z"
+        "created_at": "2023-12-08T11:35:18+00:00",
+        "updated_at": "2024-03-11T15:00:42+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:35.975406+00:00"
     },
     {
         "org_id": 89419010,
@@ -676,8 +709,9 @@
         "subscribers_count": 2,
         "stargazers_count": 1,
         "open_issues_count": 0,
-        "created_at": "2023-12-20T08:35:19Z",
-        "updated_at": "2025-05-21T09:27:32Z"
+        "created_at": "2023-12-20T08:35:19+00:00",
+        "updated_at": "2025-05-21T09:27:32+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:36.590443+00:00"
     },
     {
         "org_id": 89419010,
@@ -696,8 +730,9 @@
         "subscribers_count": 0,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2024-01-05T18:06:22Z",
-        "updated_at": "2024-03-05T15:18:46Z"
+        "created_at": "2024-01-05T18:06:22+00:00",
+        "updated_at": "2024-03-05T15:18:46+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:37.171343+00:00"
     },
     {
         "org_id": 89419010,
@@ -716,8 +751,9 @@
         "subscribers_count": 3,
         "stargazers_count": 48,
         "open_issues_count": 0,
-        "created_at": "2024-01-30T10:49:11Z",
-        "updated_at": "2026-09-07T07:10:38Z"
+        "created_at": "2024-01-30T10:49:11+00:00",
+        "updated_at": "2026-09-07T07:10:38+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:37.698529+00:00"
     },
     {
         "org_id": 89419010,
@@ -736,8 +772,9 @@
         "subscribers_count": 3,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2024-02-01T12:41:02Z",
-        "updated_at": "2024-02-01T12:44:38Z"
+        "created_at": "2024-02-01T12:41:02+00:00",
+        "updated_at": "2024-02-01T12:44:38+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:38.270114+00:00"
     },
     {
         "org_id": 89419010,
@@ -756,8 +793,9 @@
         "subscribers_count": 3,
         "stargazers_count": 1,
         "open_issues_count": 1,
-        "created_at": "2024-02-09T17:17:18Z",
-        "updated_at": "2025-04-02T11:16:41Z"
+        "created_at": "2024-02-09T17:17:18+00:00",
+        "updated_at": "2025-04-02T11:16:41+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:38.832738+00:00"
     },
     {
         "org_id": 89419010,
@@ -776,8 +814,9 @@
         "subscribers_count": 2,
         "stargazers_count": 2,
         "open_issues_count": 0,
-        "created_at": "2024-02-27T15:54:47Z",
-        "updated_at": "2026-09-30T16:53:13Z"
+        "created_at": "2024-02-27T15:54:47+00:00",
+        "updated_at": "2026-09-30T16:53:13+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:39.430849+00:00"
     },
     {
         "org_id": 89419010,
@@ -796,8 +835,9 @@
         "subscribers_count": 3,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2024-03-19T14:04:53Z",
-        "updated_at": "2024-03-27T16:31:49Z"
+        "created_at": "2024-03-19T14:04:53+00:00",
+        "updated_at": "2024-03-27T16:31:49+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:39.961415+00:00"
     },
     {
         "org_id": 89419010,
@@ -816,8 +856,9 @@
         "subscribers_count": 2,
         "stargazers_count": 9,
         "open_issues_count": 0,
-        "created_at": "2024-03-19T16:49:36Z",
-        "updated_at": "2025-03-29T14:14:43Z"
+        "created_at": "2024-03-19T16:49:36+00:00",
+        "updated_at": "2025-03-29T14:14:43+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:40.478875+00:00"
     },
     {
         "org_id": 89419010,
@@ -836,8 +877,9 @@
         "subscribers_count": 0,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2024-04-21T15:51:30Z",
-        "updated_at": "2024-04-21T15:57:56Z"
+        "created_at": "2024-04-21T15:51:30+00:00",
+        "updated_at": "2024-04-21T15:57:56+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:41.092009+00:00"
     },
     {
         "org_id": 89419010,
@@ -856,8 +898,9 @@
         "subscribers_count": 2,
         "stargazers_count": 39,
         "open_issues_count": 31,
-        "created_at": "2024-04-25T15:40:33Z",
-        "updated_at": "2026-06-04T22:21:40Z"
+        "created_at": "2024-04-25T15:40:33+00:00",
+        "updated_at": "2026-06-04T22:21:40+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:41.652001+00:00"
     },
     {
         "org_id": 89419010,
@@ -876,8 +919,9 @@
         "subscribers_count": 2,
         "stargazers_count": 4,
         "open_issues_count": 0,
-        "created_at": "2024-04-29T09:11:52Z",
-        "updated_at": "2025-08-30T08:14:12Z"
+        "created_at": "2024-04-29T09:11:52+00:00",
+        "updated_at": "2025-08-30T08:14:12+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:42.169978+00:00"
     },
     {
         "org_id": 89419010,
@@ -896,8 +940,9 @@
         "subscribers_count": 3,
         "stargazers_count": 4,
         "open_issues_count": 1,
-        "created_at": "2024-05-07T14:17:44Z",
-        "updated_at": "2025-07-28T14:53:44Z"
+        "created_at": "2024-05-07T14:17:44+00:00",
+        "updated_at": "2025-07-28T14:53:44+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:42.748603+00:00"
     },
     {
         "org_id": 89419010,
@@ -916,8 +961,9 @@
         "subscribers_count": 3,
         "stargazers_count": 1,
         "open_issues_count": 0,
-        "created_at": "2024-05-08T13:38:40Z",
-        "updated_at": "2025-11-05T21:34:02Z"
+        "created_at": "2024-05-08T13:38:40+00:00",
+        "updated_at": "2025-11-05T21:34:02+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:43.329479+00:00"
     },
     {
         "org_id": 89419010,
@@ -936,8 +982,9 @@
         "subscribers_count": 8,
         "stargazers_count": 262,
         "open_issues_count": 3,
-        "created_at": "2024-06-19T07:42:55Z",
-        "updated_at": "2026-10-20T12:48:18Z"
+        "created_at": "2024-06-19T07:42:55+00:00",
+        "updated_at": "2026-10-20T12:48:18+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:43.858431+00:00"
     },
     {
         "org_id": 89419010,
@@ -956,8 +1003,9 @@
         "subscribers_count": 2,
         "stargazers_count": 3,
         "open_issues_count": 0,
-        "created_at": "2024-06-20T14:28:05Z",
-        "updated_at": "2024-12-06T21:06:36Z"
+        "created_at": "2024-06-20T14:28:05+00:00",
+        "updated_at": "2024-12-06T21:06:36+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:44.400825+00:00"
     },
     {
         "org_id": 89419010,
@@ -976,8 +1024,9 @@
         "subscribers_count": 2,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2024-06-24T16:48:14Z",
-        "updated_at": "2024-06-28T16:42:40Z"
+        "created_at": "2024-06-24T16:48:14+00:00",
+        "updated_at": "2024-06-28T16:42:40+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:44.976365+00:00"
     },
     {
         "org_id": 89419010,
@@ -996,8 +1045,9 @@
         "subscribers_count": 2,
         "stargazers_count": 2,
         "open_issues_count": 1,
-        "created_at": "2024-09-02T13:53:28Z",
-        "updated_at": "2026-03-25T14:15:23Z"
+        "created_at": "2024-09-02T13:53:28+00:00",
+        "updated_at": "2026-03-25T14:15:23+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:45.539705+00:00"
     },
     {
         "org_id": 89419010,
@@ -1016,8 +1066,9 @@
         "subscribers_count": 3,
         "stargazers_count": 9,
         "open_issues_count": 0,
-        "created_at": "2024-09-09T09:46:18Z",
-        "updated_at": "2026-01-08T09:20:11Z"
+        "created_at": "2024-09-09T09:46:18+00:00",
+        "updated_at": "2026-01-08T09:20:11+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:46.076430+00:00"
     },
     {
         "org_id": 89419010,
@@ -1036,8 +1087,9 @@
         "subscribers_count": 2,
         "stargazers_count": 2,
         "open_issues_count": 1,
-        "created_at": "2024-10-01T09:23:46Z",
-        "updated_at": "2026-07-16T09:30:57Z"
+        "created_at": "2024-10-01T09:23:46+00:00",
+        "updated_at": "2026-07-16T09:30:57+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:46.619138+00:00"
     },
     {
         "org_id": 89419010,
@@ -1056,8 +1108,9 @@
         "subscribers_count": 2,
         "stargazers_count": 4,
         "open_issues_count": 1,
-        "created_at": "2024-10-04T11:25:21Z",
-        "updated_at": "2026-08-22T22:40:25Z"
+        "created_at": "2024-10-04T11:25:21+00:00",
+        "updated_at": "2026-08-22T22:40:25+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:47.178978+00:00"
     },
     {
         "org_id": 89419010,
@@ -1076,8 +1129,9 @@
         "subscribers_count": 2,
         "stargazers_count": 1,
         "open_issues_count": 1,
-        "created_at": "2024-10-04T11:28:11Z",
-        "updated_at": "2026-01-06T07:51:16Z"
+        "created_at": "2024-10-04T11:28:11+00:00",
+        "updated_at": "2026-01-06T07:51:16+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:47.847382+00:00"
     },
     {
         "org_id": 89419010,
@@ -1096,8 +1150,9 @@
         "subscribers_count": 2,
         "stargazers_count": 1,
         "open_issues_count": 1,
-        "created_at": "2024-10-04T11:29:15Z",
-        "updated_at": "2025-03-23T18:27:57Z"
+        "created_at": "2024-10-04T11:29:15+00:00",
+        "updated_at": "2025-03-23T18:27:57+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:48.414499+00:00"
     },
     {
         "org_id": 89419010,
@@ -1116,8 +1171,9 @@
         "subscribers_count": 2,
         "stargazers_count": 0,
         "open_issues_count": 1,
-        "created_at": "2024-10-10T11:43:50Z",
-        "updated_at": "2025-01-22T09:53:32Z"
+        "created_at": "2024-10-10T11:43:50+00:00",
+        "updated_at": "2025-01-22T09:53:32+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:49.080294+00:00"
     },
     {
         "org_id": 89419010,
@@ -1136,8 +1192,9 @@
         "subscribers_count": 2,
         "stargazers_count": 0,
         "open_issues_count": 1,
-        "created_at": "2024-10-10T11:46:45Z",
-        "updated_at": "2025-01-22T09:50:58Z"
+        "created_at": "2024-10-10T11:46:45+00:00",
+        "updated_at": "2025-01-22T09:50:58+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:49.665562+00:00"
     },
     {
         "org_id": 89419010,
@@ -1156,8 +1213,9 @@
         "subscribers_count": 3,
         "stargazers_count": 4,
         "open_issues_count": 0,
-        "created_at": "2024-10-23T10:16:14Z",
-        "updated_at": "2025-02-05T02:22:29Z"
+        "created_at": "2024-10-23T10:16:14+00:00",
+        "updated_at": "2025-02-05T02:22:29+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:50.204746+00:00"
     },
     {
         "org_id": 89419010,
@@ -1176,8 +1234,9 @@
         "subscribers_count": 2,
         "stargazers_count": 0,
         "open_issues_count": 11,
-        "created_at": "2024-10-31T17:46:17Z",
-        "updated_at": "2024-10-31T18:23:14Z"
+        "created_at": "2024-10-31T17:46:17+00:00",
+        "updated_at": "2024-10-31T18:23:14+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:50.786155+00:00"
     },
     {
         "org_id": 89419010,
@@ -1196,8 +1255,9 @@
         "subscribers_count": 0,
         "stargazers_count": 2,
         "open_issues_count": 0,
-        "created_at": "2024-11-09T00:06:55Z",
-        "updated_at": "2025-05-09T15:02:44Z"
+        "created_at": "2024-11-09T00:06:55+00:00",
+        "updated_at": "2025-05-09T15:02:44+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:51.367139+00:00"
     },
     {
         "org_id": 89419010,
@@ -1216,8 +1276,9 @@
         "subscribers_count": 3,
         "stargazers_count": 1,
         "open_issues_count": 1,
-        "created_at": "2025-02-03T13:51:21Z",
-        "updated_at": "2025-04-02T23:10:11Z"
+        "created_at": "2025-02-03T13:51:21+00:00",
+        "updated_at": "2025-04-02T23:10:11+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:51.950310+00:00"
     },
     {
         "org_id": 89419010,
@@ -1236,8 +1297,9 @@
         "subscribers_count": 3,
         "stargazers_count": 1,
         "open_issues_count": 2,
-        "created_at": "2025-02-03T13:56:06Z",
-        "updated_at": "2025-08-02T20:49:11Z"
+        "created_at": "2025-02-03T13:56:06+00:00",
+        "updated_at": "2025-08-02T20:49:11+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:52.511957+00:00"
     },
     {
         "org_id": 89419010,
@@ -1256,8 +1318,9 @@
         "subscribers_count": 3,
         "stargazers_count": 0,
         "open_issues_count": 1,
-        "created_at": "2025-02-03T13:57:07Z",
-        "updated_at": "2025-02-18T03:10:12Z"
+        "created_at": "2025-02-03T13:57:07+00:00",
+        "updated_at": "2025-02-18T03:10:12+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:53.072470+00:00"
     },
     {
         "org_id": 89419010,
@@ -1276,8 +1339,9 @@
         "subscribers_count": 3,
         "stargazers_count": 0,
         "open_issues_count": 1,
-        "created_at": "2025-02-03T13:58:17Z",
-        "updated_at": "2025-02-18T03:11:33Z"
+        "created_at": "2025-02-03T13:58:17+00:00",
+        "updated_at": "2025-02-18T03:11:33+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:53.793082+00:00"
     },
     {
         "org_id": 89419010,
@@ -1296,8 +1360,9 @@
         "subscribers_count": 3,
         "stargazers_count": 1,
         "open_issues_count": 1,
-        "created_at": "2025-02-03T13:59:14Z",
-        "updated_at": "2026-10-07T06:04:55Z"
+        "created_at": "2025-02-03T13:59:14+00:00",
+        "updated_at": "2026-10-07T06:04:55+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:54.359779+00:00"
     },
     {
         "org_id": 89419010,
@@ -1316,8 +1381,9 @@
         "subscribers_count": 3,
         "stargazers_count": 0,
         "open_issues_count": 1,
-        "created_at": "2025-03-05T09:34:27Z",
-        "updated_at": "2025-03-10T04:36:53Z"
+        "created_at": "2025-03-05T09:34:27+00:00",
+        "updated_at": "2025-03-10T04:36:53+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:54.900874+00:00"
     },
     {
         "org_id": 89419010,
@@ -1336,8 +1402,9 @@
         "subscribers_count": 2,
         "stargazers_count": 1,
         "open_issues_count": 0,
-        "created_at": "2025-03-21T13:23:45Z",
-        "updated_at": "2025-08-21T17:28:33Z"
+        "created_at": "2025-03-21T13:23:45+00:00",
+        "updated_at": "2025-08-21T17:28:33+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:55.487364+00:00"
     },
     {
         "org_id": 89419010,
@@ -1356,8 +1423,9 @@
         "subscribers_count": 2,
         "stargazers_count": 2,
         "open_issues_count": 0,
-        "created_at": "2025-03-24T13:07:20Z",
-        "updated_at": "2025-10-10T19:47:35Z"
+        "created_at": "2025-03-24T13:07:20+00:00",
+        "updated_at": "2025-10-10T19:47:35+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:56.014012+00:00"
     },
     {
         "org_id": 89419010,
@@ -1376,8 +1444,9 @@
         "subscribers_count": 3,
         "stargazers_count": 8,
         "open_issues_count": 0,
-        "created_at": "2025-04-07T19:35:47Z",
-        "updated_at": "2026-01-21T06:50:00Z"
+        "created_at": "2025-04-07T19:35:47+00:00",
+        "updated_at": "2026-01-21T06:50:00+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:56.554513+00:00"
     },
     {
         "org_id": 89419010,
@@ -1396,8 +1465,9 @@
         "subscribers_count": 2,
         "stargazers_count": 3,
         "open_issues_count": 0,
-        "created_at": "2025-04-23T12:36:50Z",
-        "updated_at": "2026-08-02T11:10:08Z"
+        "created_at": "2025-04-23T12:36:50+00:00",
+        "updated_at": "2026-08-02T11:10:08+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:57.105461+00:00"
     },
     {
         "org_id": 89419010,
@@ -1416,8 +1486,9 @@
         "subscribers_count": 0,
         "stargazers_count": 1,
         "open_issues_count": 0,
-        "created_at": "2025-05-09T06:58:51Z",
-        "updated_at": "2026-09-27T16:03:25Z"
+        "created_at": "2025-05-09T06:58:51+00:00",
+        "updated_at": "2026-09-27T16:03:25+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:57.786273+00:00"
     },
     {
         "org_id": 89419010,
@@ -1436,8 +1507,9 @@
         "subscribers_count": 0,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2025-08-05T16:33:22Z",
-        "updated_at": "2025-08-05T16:39:39Z"
+        "created_at": "2025-08-05T16:33:22+00:00",
+        "updated_at": "2025-08-05T16:39:39+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:58.400926+00:00"
     },
     {
         "org_id": 89419010,
@@ -1456,8 +1528,9 @@
         "subscribers_count": 1,
         "stargazers_count": 10,
         "open_issues_count": 2,
-        "created_at": "2025-08-28T16:57:50Z",
-        "updated_at": "2026-08-22T22:40:24Z"
+        "created_at": "2025-08-28T16:57:50+00:00",
+        "updated_at": "2026-08-22T22:40:24+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:58.942492+00:00"
     },
     {
         "org_id": 89419010,
@@ -1476,8 +1549,9 @@
         "subscribers_count": 0,
         "stargazers_count": 4,
         "open_issues_count": 0,
-        "created_at": "2025-10-21T13:04:09Z",
-        "updated_at": "2025-10-31T11:35:13Z"
+        "created_at": "2025-10-21T13:04:09+00:00",
+        "updated_at": "2025-10-31T11:35:13+00:00",
+        "ingestion_timestamp": "2026-10-25 12:21:59.532263+00:00"
     },
     {
         "org_id": 89419010,
@@ -1496,8 +1570,9 @@
         "subscribers_count": 0,
         "stargazers_count": 7,
         "open_issues_count": 0,
-        "created_at": "2025-10-28T17:40:26Z",
-        "updated_at": "2026-04-04T22:52:38Z"
+        "created_at": "2025-10-28T17:40:26+00:00",
+        "updated_at": "2026-04-04T22:52:38+00:00",
+        "ingestion_timestamp": "2026-10-25 12:22:00.108099+00:00"
     },
     {
         "org_id": 89419010,
@@ -1516,8 +1591,9 @@
         "subscribers_count": 0,
         "stargazers_count": 16,
         "open_issues_count": 0,
-        "created_at": "2025-11-17T14:50:08Z",
-        "updated_at": "2026-07-13T15:01:37Z"
+        "created_at": "2025-11-17T14:50:08+00:00",
+        "updated_at": "2026-07-13T15:01:37+00:00",
+        "ingestion_timestamp": "2026-10-25 12:22:00.628068+00:00"
     },
     {
         "org_id": 89419010,
@@ -1536,8 +1612,9 @@
         "subscribers_count": 0,
         "stargazers_count": 3,
         "open_issues_count": 1,
-        "created_at": "2025-12-04T14:17:18Z",
-        "updated_at": "2026-06-08T10:25:00Z"
+        "created_at": "2025-12-04T14:17:18+00:00",
+        "updated_at": "2026-06-08T10:25:00+00:00",
+        "ingestion_timestamp": "2026-10-25 12:22:01.168099+00:00"
     },
     {
         "org_id": 89419010,
@@ -1556,8 +1633,9 @@
         "subscribers_count": 0,
         "stargazers_count": 2,
         "open_issues_count": 0,
-        "created_at": "2026-01-27T16:49:28Z",
-        "updated_at": "2026-05-08T23:06:57Z"
+        "created_at": "2026-01-27T16:49:28+00:00",
+        "updated_at": "2026-05-08T23:06:57+00:00",
+        "ingestion_timestamp": "2026-10-25 12:22:01.707125+00:00"
     },
     {
         "org_id": 89419010,
@@ -1576,8 +1654,9 @@
         "subscribers_count": 0,
         "stargazers_count": 1,
         "open_issues_count": 0,
-        "created_at": "2026-02-09T11:23:08Z",
-        "updated_at": "2026-04-23T08:36:57Z"
+        "created_at": "2026-02-09T11:23:08+00:00",
+        "updated_at": "2026-04-23T08:36:57+00:00",
+        "ingestion_timestamp": "2026-10-25 12:22:02.317557+00:00"
     },
     {
         "org_id": 89419010,
@@ -1596,8 +1675,9 @@
         "subscribers_count": 0,
         "stargazers_count": 63,
         "open_issues_count": 7,
-        "created_at": "2026-02-17T17:38:27Z",
-        "updated_at": "2026-10-16T20:54:57Z"
+        "created_at": "2026-02-17T17:38:27+00:00",
+        "updated_at": "2026-10-16T20:54:57+00:00",
+        "ingestion_timestamp": "2026-10-25 12:22:02.872066+00:00"
     },
     {
         "org_id": 89419010,
@@ -1616,8 +1696,9 @@
         "subscribers_count": 0,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2026-04-14T23:08:38Z",
-        "updated_at": "2026-05-01T19:13:19Z"
+        "created_at": "2026-04-14T23:08:38+00:00",
+        "updated_at": "2026-05-01T19:13:19+00:00",
+        "ingestion_timestamp": "2026-10-25 12:22:03.519977+00:00"
     },
     {
         "org_id": 89419010,
@@ -1636,8 +1717,9 @@
         "subscribers_count": 0,
         "stargazers_count": 1,
         "open_issues_count": 3,
-        "created_at": "2026-05-13T11:50:26Z",
-        "updated_at": "2026-10-07T16:40:02Z"
+        "created_at": "2026-05-13T11:50:26+00:00",
+        "updated_at": "2026-10-07T16:40:02+00:00",
+        "ingestion_timestamp": "2026-10-25 12:22:04.080529+00:00"
     },
     {
         "org_id": 89419010,
@@ -1656,8 +1738,9 @@
         "subscribers_count": 0,
         "stargazers_count": 0,
         "open_issues_count": 2,
-        "created_at": "2026-06-15T13:07:03Z",
-        "updated_at": "2026-10-07T16:39:18Z"
+        "created_at": "2026-06-15T13:07:03+00:00",
+        "updated_at": "2026-10-07T16:39:18+00:00",
+        "ingestion_timestamp": "2026-10-25 12:22:04.635176+00:00"
     },
     {
         "org_id": 89419010,
@@ -1676,8 +1759,9 @@
         "subscribers_count": 0,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2026-08-13T02:03:25Z",
-        "updated_at": "2026-08-13T02:03:33Z"
+        "created_at": "2026-08-13T02:03:25+00:00",
+        "updated_at": "2026-08-13T02:03:33+00:00",
+        "ingestion_timestamp": "2026-10-25 12:22:05.193055+00:00"
     },
     {
         "org_id": 89419010,
@@ -1696,8 +1780,9 @@
         "subscribers_count": 0,
         "stargazers_count": 3,
         "open_issues_count": 0,
-        "created_at": "2026-08-17T14:06:52Z",
-        "updated_at": "2026-08-20T06:06:23Z"
+        "created_at": "2026-08-17T14:06:52+00:00",
+        "updated_at": "2026-08-20T06:06:23+00:00",
+        "ingestion_timestamp": "2026-10-25 12:22:05.770725+00:00"
     },
     {
         "org_id": 89419010,
@@ -1716,8 +1801,9 @@
         "subscribers_count": 0,
         "stargazers_count": 1,
         "open_issues_count": 0,
-        "created_at": "2026-09-25T07:52:00Z",
-        "updated_at": "2026-10-16T15:15:00Z"
+        "created_at": "2026-09-25T07:52:00+00:00",
+        "updated_at": "2026-10-16T15:15:00+00:00",
+        "ingestion_timestamp": "2026-10-25 12:22:06.319112+00:00"
     },
     {
         "org_id": 89419010,
@@ -1736,7 +1822,8 @@
         "subscribers_count": 0,
         "stargazers_count": 0,
         "open_issues_count": 0,
-        "created_at": "2026-10-21T19:35:20Z",
-        "updated_at": "2026-10-21T20:56:55Z"
+        "created_at": "2026-10-21T19:35:20+00:00",
+        "updated_at": "2026-10-21T20:56:55+00:00",
+        "ingestion_timestamp": "2026-10-25 12:22:06.899488+00:00"
     }
 ]

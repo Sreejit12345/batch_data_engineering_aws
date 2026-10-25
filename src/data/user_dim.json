@@ -10,8 +10,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2014-07-02T10:36:39Z",
-        "updated_at": "2026-09-12T15:13:02Z"
+        "created_at": "2014-07-02T10:36:39+00:00",
+        "updated_at": "2026-09-12T15:13:02+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:14.358904+00:00"
     },
     {
         "user_id": 41213451,
@@ -24,8 +25,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "I wear many hats\r\n\r\n\r\n-- image credit: Trevor K",
-        "created_at": "2018-07-13T22:11:59Z",
-        "updated_at": "2026-10-11T16:12:54Z"
+        "created_at": "2018-07-13T22:11:59+00:00",
+        "updated_at": "2026-10-11T16:12:54+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:14.794408+00:00"
     },
     {
         "user_id": 167216143,
@@ -38,8 +40,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2024-04-16T14:03:22Z",
-        "updated_at": "2026-09-30T10:35:48Z"
+        "created_at": "2024-04-16T14:03:22+00:00",
+        "updated_at": "2026-10-23T14:40:51+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:15.314360+00:00"
     },
     {
         "user_id": 78477846,
@@ -52,8 +55,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2021-02-03T10:35:16Z",
-        "updated_at": "2026-10-12T04:42:58Z"
+        "created_at": "2021-02-03T10:35:16+00:00",
+        "updated_at": "2026-10-12T04:42:58+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:15.832011+00:00"
     },
     {
         "user_id": 101302295,
@@ -66,8 +70,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2022-03-10T01:17:47Z",
-        "updated_at": "2026-10-18T10:43:15Z"
+        "created_at": "2022-03-10T01:17:47+00:00",
+        "updated_at": "2026-10-18T10:43:15+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:16.325207+00:00"
     },
     {
         "user_id": 33765915,
@@ -80,8 +85,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2017-11-17T21:35:38Z",
-        "updated_at": "2026-09-29T22:16:08Z"
+        "created_at": "2017-11-17T21:35:38+00:00",
+        "updated_at": "2026-09-29T22:16:08+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:16.846183+00:00"
     },
     {
         "user_id": 143019553,
@@ -94,8 +100,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "high school version\r\nStudent UCM",
-        "created_at": "2023-08-23T16:45:39Z",
-        "updated_at": "2026-10-15T02:28:00Z"
+        "created_at": "2023-08-23T16:45:39+00:00",
+        "updated_at": "2026-10-15T02:28:00+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:17.377173+00:00"
     },
     {
         "user_id": 10009124,
@@ -108,8 +115,9 @@
         "email": "al.filimok@gmail.com",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2014-11-30T12:42:02Z",
-        "updated_at": "2026-10-06T13:26:30Z"
+        "created_at": "2014-11-30T12:42:02+00:00",
+        "updated_at": "2026-10-06T13:26:30+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:17.897334+00:00"
     },
     {
         "user_id": 114760229,
@@ -122,8 +130,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2022-09-30T15:41:13Z",
-        "updated_at": "2026-09-20T18:22:30Z"
+        "created_at": "2022-09-30T15:41:13+00:00",
+        "updated_at": "2026-09-20T18:22:30+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:18.414173+00:00"
     },
     {
         "user_id": 57807910,
@@ -136,8 +145,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2019-11-15T16:51:18Z",
-        "updated_at": "2026-09-23T04:31:27Z"
+        "created_at": "2019-11-15T16:51:18+00:00",
+        "updated_at": "2026-09-23T04:31:27+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:18.940723+00:00"
     },
     {
         "user_id": 64324135,
@@ -150,8 +160,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2020-04-25T16:56:20Z",
-        "updated_at": "2026-08-09T19:52:33Z"
+        "created_at": "2020-04-25T16:56:20+00:00",
+        "updated_at": "2026-08-09T19:52:33+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:19.474332+00:00"
     },
     {
         "user_id": 144886824,
@@ -164,8 +175,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2023-09-13T07:23:05Z",
-        "updated_at": "2026-06-11T15:17:44Z"
+        "created_at": "2023-09-13T07:23:05+00:00",
+        "updated_at": "2026-06-11T15:17:44+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:19.977324+00:00"
     },
     {
         "user_id": 189392423,
@@ -178,8 +190,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2024-11-22T18:27:11Z",
-        "updated_at": "2026-10-07T17:24:19Z"
+        "created_at": "2024-11-22T18:27:11+00:00",
+        "updated_at": "2026-10-07T17:24:19+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:20.473138+00:00"
     },
     {
         "user_id": 9200682,
@@ -192,8 +205,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "\ud83d\udcbb Software / Data Engineer ",
-        "created_at": "2014-10-13T17:13:36Z",
-        "updated_at": "2026-10-02T16:00:45Z"
+        "created_at": "2014-10-13T17:13:36+00:00",
+        "updated_at": "2026-10-23T14:05:14+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:21.004991+00:00"
     },
     {
         "user_id": 53571625,
@@ -206,8 +220,9 @@
         "email": null,
         "is_hireable": true,
         "bio": null,
-        "created_at": "2019-08-01T14:13:27Z",
-        "updated_at": "2026-09-19T04:06:10Z"
+        "created_at": "2019-08-01T14:13:27+00:00",
+        "updated_at": "2026-09-19T04:06:10+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:21.508963+00:00"
     },
     {
         "user_id": 202633260,
@@ -220,8 +235,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2025-03-10T11:26:16Z",
-        "updated_at": "2025-04-28T13:51:50Z"
+        "created_at": "2025-03-10T11:26:16+00:00",
+        "updated_at": "2025-04-28T13:51:50+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:22.033020+00:00"
     },
     {
         "user_id": 2398765,
@@ -234,8 +250,9 @@
         "email": null,
         "is_hireable": true,
         "bio": null,
-        "created_at": "2012-09-22T09:08:55Z",
-        "updated_at": "2026-09-18T01:41:22Z"
+        "created_at": "2012-09-22T09:08:55+00:00",
+        "updated_at": "2026-09-18T01:41:22+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:22.555190+00:00"
     },
     {
         "user_id": 145766958,
@@ -248,8 +265,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Automation Engineer",
-        "created_at": "2023-09-22T10:52:14Z",
-        "updated_at": "2026-10-18T12:55:51Z"
+        "created_at": "2023-09-22T10:52:14+00:00",
+        "updated_at": "2026-10-18T12:55:51+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:23.081369+00:00"
     },
     {
         "user_id": 102953522,
@@ -262,8 +280,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2022-04-04T08:40:24Z",
-        "updated_at": "2026-08-02T09:30:14Z"
+        "created_at": "2022-04-04T08:40:24+00:00",
+        "updated_at": "2026-08-02T09:30:14+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:23.605943+00:00"
     },
     {
         "user_id": 112353331,
@@ -276,8 +295,9 @@
         "email": "sam@samincodes.com",
         "is_hireable": null,
         "bio": "Fullstack Developer | FastAPI & React | Building ApplyLuma\r\nSoftware Developer based in Stockholm \ud83c\uddf8\ud83c\uddea\r\nFullstack Developer focused on FastAPI, React & AI apps",
-        "created_at": "2022-08-28T22:25:05Z",
-        "updated_at": "2026-10-13T19:32:18Z"
+        "created_at": "2022-08-28T22:25:05+00:00",
+        "updated_at": "2026-10-13T19:32:18+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:24.132101+00:00"
     },
     {
         "user_id": 29553206,
@@ -290,8 +310,9 @@
         "email": "github@elvis.ai",
         "is_hireable": null,
         "bio": "daring minds love",
-        "created_at": "2017-06-19T19:30:58Z",
-        "updated_at": "2026-10-14T20:53:41Z"
+        "created_at": "2017-06-19T19:30:58+00:00",
+        "updated_at": "2026-10-14T20:53:41+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:24.662265+00:00"
     },
     {
         "user_id": 272262716,
@@ -304,8 +325,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2026-03-30T15:32:05Z",
-        "updated_at": "2026-09-28T03:26:48Z"
+        "created_at": "2026-03-30T15:32:05+00:00",
+        "updated_at": "2026-09-28T03:26:48+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:25.177239+00:00"
     },
     {
         "user_id": 75667013,
@@ -318,8 +340,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Senior Software Engineer, AI Systems @ dltHub | OSS contributor | Hunyo co-founder",
-        "created_at": "2020-12-08T08:53:21Z",
-        "updated_at": "2026-10-19T21:54:00Z"
+        "created_at": "2020-12-08T08:53:21+00:00",
+        "updated_at": "2026-10-19T21:54:00+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:25.718152+00:00"
     },
     {
         "user_id": 4063815,
@@ -332,8 +355,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Fintech professional with interests in Machine Learning.",
-        "created_at": "2013-04-04T23:07:09Z",
-        "updated_at": "2026-06-30T13:43:36Z"
+        "created_at": "2013-04-04T23:07:09+00:00",
+        "updated_at": "2026-06-30T13:43:36+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:26.237869+00:00"
     },
     {
         "user_id": 46086727,
@@ -346,8 +370,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Building AI agents and GTM systems.",
-        "created_at": "2018-12-23T13:15:47Z",
-        "updated_at": "2026-09-21T17:09:29Z"
+        "created_at": "2018-12-23T13:15:47+00:00",
+        "updated_at": "2026-09-21T17:09:29+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:26.752773+00:00"
     },
     {
         "user_id": 55456841,
@@ -360,8 +385,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2019-09-17T17:13:15Z",
-        "updated_at": "2026-01-02T21:02:35Z"
+        "created_at": "2019-09-17T17:13:15+00:00",
+        "updated_at": "2026-01-02T21:02:35+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:27.274839+00:00"
     },
     {
         "user_id": 149578,
@@ -374,8 +400,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2009-11-06T04:02:31Z",
-        "updated_at": "2026-10-08T12:54:50Z"
+        "created_at": "2009-11-06T04:02:31+00:00",
+        "updated_at": "2026-10-08T12:54:50+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:27.802582+00:00"
     },
     {
         "user_id": 214673483,
@@ -388,8 +415,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2025-06-03T14:15:41Z",
-        "updated_at": "2026-05-21T11:55:20Z"
+        "created_at": "2025-06-03T14:15:41+00:00",
+        "updated_at": "2026-05-21T11:55:20+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:28.348569+00:00"
     },
     {
         "user_id": 20586062,
@@ -402,8 +430,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2016-07-21T20:41:41Z",
-        "updated_at": "2026-10-09T20:03:25Z"
+        "created_at": "2016-07-21T20:41:41+00:00",
+        "updated_at": "2026-10-09T20:03:25+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:28.854767+00:00"
     },
     {
         "user_id": 142128206,
@@ -416,8 +445,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2023-08-13T01:24:24Z",
-        "updated_at": "2026-07-21T21:14:48Z"
+        "created_at": "2023-08-13T01:24:24+00:00",
+        "updated_at": "2026-07-21T21:14:48+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:29.399089+00:00"
     },
     {
         "user_id": 118957648,
@@ -430,8 +460,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2022-11-24T05:38:52Z",
-        "updated_at": "2026-10-07T14:47:45Z"
+        "created_at": "2022-11-24T05:38:52+00:00",
+        "updated_at": "2026-10-24T02:05:30+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:29.894504+00:00"
     },
     {
         "user_id": 25770064,
@@ -444,8 +475,9 @@
         "email": "ivan.r.chebotar@gmail.com",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2017-02-14T13:02:39Z",
-        "updated_at": "2026-09-24T19:58:46Z"
+        "created_at": "2017-02-14T13:02:39+00:00",
+        "updated_at": "2026-09-24T19:58:46+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:30.426532+00:00"
     },
     {
         "user_id": 237433426,
@@ -458,8 +490,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2025-10-11T13:08:46Z",
-        "updated_at": "2026-10-20T10:10:24Z"
+        "created_at": "2025-10-11T13:08:46+00:00",
+        "updated_at": "2026-10-24T11:27:34+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:30.965119+00:00"
     },
     {
         "user_id": 47230033,
@@ -472,8 +505,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2019-01-31T22:54:49Z",
-        "updated_at": "2026-05-13T09:32:35Z"
+        "created_at": "2019-01-31T22:54:49+00:00",
+        "updated_at": "2026-05-13T09:32:35+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:31.500173+00:00"
     },
     {
         "user_id": 67560023,
@@ -486,8 +520,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "CPA turned analytics and automation enthusiast. Proficient in low-code automation and scripting, data science, API integration and data engineering.",
-        "created_at": "2020-06-28T20:20:03Z",
-        "updated_at": "2026-10-14T19:44:39Z"
+        "created_at": "2020-06-28T20:20:03+00:00",
+        "updated_at": "2026-10-24T19:24:42+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:32.002071+00:00"
     },
     {
         "user_id": 9882716,
@@ -500,8 +535,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Decentralization enthusiast, in love with python & cool editor-plugins. I have an endless list of things that I want to learn next...",
-        "created_at": "2014-11-21T12:00:36Z",
-        "updated_at": "2026-10-11T08:37:39Z"
+        "created_at": "2014-11-21T12:00:36+00:00",
+        "updated_at": "2026-10-11T08:37:39+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:32.551393+00:00"
     },
     {
         "user_id": 110029405,
@@ -514,8 +550,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "AI Engineer \u00b7 Python + TypeScript \u00b7 Building agents & ML tools \u00b7 Open to OSS collabs",
-        "created_at": "2022-07-26T10:30:25Z",
-        "updated_at": "2026-10-11T22:36:14Z"
+        "created_at": "2022-07-26T10:30:25+00:00",
+        "updated_at": "2026-10-11T22:36:14+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:33.044889+00:00"
     },
     {
         "user_id": 199047774,
@@ -528,8 +565,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2025-02-13T07:14:08Z",
-        "updated_at": "2025-07-30T17:55:40Z"
+        "created_at": "2025-02-13T07:14:08+00:00",
+        "updated_at": "2025-07-30T17:55:40+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:33.575763+00:00"
     },
     {
         "user_id": 88698977,
@@ -542,8 +580,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2021-08-10T03:49:57Z",
-        "updated_at": "2026-10-02T19:15:30Z"
+        "created_at": "2021-08-10T03:49:57+00:00",
+        "updated_at": "2026-10-02T19:15:30+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:34.092044+00:00"
     },
     {
         "user_id": 309601892,
@@ -556,8 +595,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2026-07-27T04:28:49Z",
-        "updated_at": "2026-07-27T06:27:44Z"
+        "created_at": "2026-07-27T04:28:49+00:00",
+        "updated_at": "2026-07-27T06:27:44+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:34.625616+00:00"
     },
     {
         "user_id": 8766565,
@@ -570,8 +610,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2014-09-14T08:52:06Z",
-        "updated_at": "2026-08-16T18:25:58Z"
+        "created_at": "2014-09-14T08:52:06+00:00",
+        "updated_at": "2026-08-16T18:25:58+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:35.147898+00:00"
     },
     {
         "user_id": 20367975,
@@ -584,8 +625,9 @@
         "email": "alena@dlthub.com",
         "is_hireable": null,
         "bio": "Data Scientist ",
-        "created_at": "2016-07-09T08:47:05Z",
-        "updated_at": "2026-09-28T20:07:55Z"
+        "created_at": "2016-07-09T08:47:05+00:00",
+        "updated_at": "2026-09-28T20:07:55+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:35.664596+00:00"
     },
     {
         "user_id": 68975210,
@@ -598,8 +640,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2020-07-29T23:07:10Z",
-        "updated_at": "2026-10-13T16:00:08Z"
+        "created_at": "2020-07-29T23:07:10+00:00",
+        "updated_at": "2026-10-13T16:00:08+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:36.194548+00:00"
     },
     {
         "user_id": 35960427,
@@ -612,8 +655,9 @@
         "email": null,
         "is_hireable": true,
         "bio": null,
-        "created_at": "2018-01-30T12:28:43Z",
-        "updated_at": "2026-10-19T19:00:30Z"
+        "created_at": "2018-01-30T12:28:43+00:00",
+        "updated_at": "2026-10-19T19:00:30+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:36.709725+00:00"
     },
     {
         "user_id": 118033516,
@@ -626,8 +670,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2022-11-12T02:49:12Z",
-        "updated_at": "2026-10-18T11:32:47Z"
+        "created_at": "2022-11-12T02:49:12+00:00",
+        "updated_at": "2026-10-18T11:32:47+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:37.671062+00:00"
     },
     {
         "user_id": 176737389,
@@ -640,8 +685,9 @@
         "email": null,
         "is_hireable": true,
         "bio": null,
-        "created_at": "2024-07-27T06:42:29Z",
-        "updated_at": "2026-10-21T01:27:51Z"
+        "created_at": "2024-07-27T06:42:29+00:00",
+        "updated_at": "2026-10-21T01:27:51+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:38.306366+00:00"
     },
     {
         "user_id": 12297835,
@@ -654,8 +700,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2015-05-07T15:03:29Z",
-        "updated_at": "2026-01-02T12:54:49Z"
+        "created_at": "2015-05-07T15:03:29+00:00",
+        "updated_at": "2026-01-02T12:54:49+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:38.812918+00:00"
     },
     {
         "user_id": 90472049,
@@ -668,8 +715,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2021-09-10T17:14:02Z",
-        "updated_at": "2026-10-20T09:38:09Z"
+        "created_at": "2021-09-10T17:14:02+00:00",
+        "updated_at": "2026-10-20T09:38:09+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:39.334704+00:00"
     },
     {
         "user_id": 69235,
@@ -682,8 +730,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2009-04-01T05:30:00Z",
-        "updated_at": "2026-10-20T11:49:04Z"
+        "created_at": "2009-04-01T05:30:00+00:00",
+        "updated_at": "2026-10-20T11:49:04+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:39.864954+00:00"
     },
     {
         "user_id": 112957047,
@@ -696,8 +745,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2022-09-06T13:46:08Z",
-        "updated_at": "2026-10-16T11:20:37Z"
+        "created_at": "2022-09-06T13:46:08+00:00",
+        "updated_at": "2026-10-16T11:20:37+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:40.416834+00:00"
     },
     {
         "user_id": 199911033,
@@ -710,8 +760,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2025-02-19T10:04:12Z",
-        "updated_at": "2026-10-21T14:48:45Z"
+        "created_at": "2025-02-19T10:04:12+00:00",
+        "updated_at": "2026-10-21T14:48:45+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:40.913425+00:00"
     },
     {
         "user_id": 57681532,
@@ -724,8 +775,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Software Engineer",
-        "created_at": "2019-11-12T17:59:37Z",
-        "updated_at": "2026-10-22T17:33:15Z"
+        "created_at": "2019-11-12T17:59:37+00:00",
+        "updated_at": "2026-10-22T17:33:15+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:41.433868+00:00"
     },
     {
         "user_id": 132002432,
@@ -738,8 +790,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "I'm a CS student bro",
-        "created_at": "2023-04-27T17:22:07Z",
-        "updated_at": "2026-10-08T09:36:06Z"
+        "created_at": "2023-04-27T17:22:07+00:00",
+        "updated_at": "2026-10-08T09:36:06+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:41.956186+00:00"
     },
     {
         "user_id": 188038,
@@ -752,8 +805,9 @@
         "email": "joscha@feth.com",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2010-01-23T00:19:18Z",
-        "updated_at": "2026-10-14T11:37:57Z"
+        "created_at": "2010-01-23T00:19:18+00:00",
+        "updated_at": "2026-10-14T11:37:57+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:42.495195+00:00"
     },
     {
         "user_id": 63794314,
@@ -766,8 +820,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2020-04-16T13:03:31Z",
-        "updated_at": "2026-04-15T16:42:54Z"
+        "created_at": "2020-04-16T13:03:31+00:00",
+        "updated_at": "2026-04-15T16:42:54+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:43.018827+00:00"
     },
     {
         "user_id": 117648012,
@@ -780,8 +835,9 @@
         "email": "mohammedarbinsibi@gmail.com",
         "is_hireable": true,
         "bio": "Those who can imagine anything, can create the impossible.",
-        "created_at": "2022-11-07T11:56:45Z",
-        "updated_at": "2026-08-29T21:47:55Z"
+        "created_at": "2022-11-07T11:56:45+00:00",
+        "updated_at": "2026-08-29T21:47:55+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:43.539907+00:00"
     },
     {
         "user_id": 5748886,
@@ -794,8 +850,9 @@
         "email": "xnegxneg@gmail.com",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2013-10-22T16:31:12Z",
-        "updated_at": "2026-07-13T09:14:57Z"
+        "created_at": "2013-10-22T16:31:12+00:00",
+        "updated_at": "2026-07-13T09:14:57+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:44.056151+00:00"
     },
     {
         "user_id": 94456982,
@@ -808,8 +865,9 @@
         "email": null,
         "is_hireable": true,
         "bio": "Python developer working on data pipelines, backend systems and sports data. I like untangling messy data problems and making things work reliably.",
-        "created_at": "2021-11-16T12:47:40Z",
-        "updated_at": "2026-10-21T16:26:50Z"
+        "created_at": "2021-11-16T12:47:40+00:00",
+        "updated_at": "2026-10-21T16:26:50+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:44.624770+00:00"
     },
     {
         "user_id": 1155738,
@@ -822,8 +880,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2011-10-27T13:59:46Z",
-        "updated_at": "2026-08-14T17:47:19Z"
+        "created_at": "2011-10-27T13:59:46+00:00",
+        "updated_at": "2026-08-14T17:47:19+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:45.159573+00:00"
     },
     {
         "user_id": 62056091,
@@ -836,8 +895,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Professional writer and educator specializing in vector search and agent memory.\r\n",
-        "created_at": "2020-03-11T09:55:16Z",
-        "updated_at": "2026-10-08T17:05:49Z"
+        "created_at": "2020-03-11T09:55:16+00:00",
+        "updated_at": "2026-10-08T17:05:49+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:45.699672+00:00"
     },
     {
         "user_id": 211275939,
@@ -850,8 +910,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2025-05-12T02:25:46Z",
-        "updated_at": "2026-10-06T12:33:41Z"
+        "created_at": "2025-05-12T02:25:46+00:00",
+        "updated_at": "2026-10-06T12:33:41+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:46.203011+00:00"
     },
     {
         "user_id": 15742630,
@@ -864,8 +925,9 @@
         "email": "munish7771@gmail.com",
         "is_hireable": null,
         "bio": "those who cannot remember the past are condemned to repeat it\r\n",
-        "created_at": "2015-11-09T19:34:29Z",
-        "updated_at": "2026-09-24T13:56:09Z"
+        "created_at": "2015-11-09T19:34:29+00:00",
+        "updated_at": "2026-10-24T13:56:01+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:46.719938+00:00"
     },
     {
         "user_id": 98139823,
@@ -878,8 +940,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Sleeping mango",
-        "created_at": "2022-01-21T03:40:07Z",
-        "updated_at": "2026-10-13T08:26:28Z"
+        "created_at": "2022-01-21T03:40:07+00:00",
+        "updated_at": "2026-10-13T08:26:28+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:47.254321+00:00"
     },
     {
         "user_id": 17202864,
@@ -892,8 +955,9 @@
         "email": "rudolfix@rudolfix.org",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2016-02-12T17:15:23Z",
-        "updated_at": "2026-10-20T18:50:07Z"
+        "created_at": "2016-02-12T17:15:23+00:00",
+        "updated_at": "2026-10-20T18:50:07+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:47.775649+00:00"
     },
     {
         "user_id": 114083504,
@@ -906,8 +970,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Working \ud83d\udc4d ",
-        "created_at": "2022-09-21T13:34:56Z",
-        "updated_at": "2026-06-26T10:55:50Z"
+        "created_at": "2022-09-21T13:34:56+00:00",
+        "updated_at": "2026-10-24T15:22:46+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:48.311790+00:00"
     },
     {
         "user_id": 28017841,
@@ -920,8 +985,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2017-04-25T17:58:38Z",
-        "updated_at": "2026-10-14T10:55:28Z"
+        "created_at": "2017-04-25T17:58:38+00:00",
+        "updated_at": "2026-10-14T10:55:28+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:48.835128+00:00"
     },
     {
         "user_id": 195942578,
@@ -934,8 +1000,9 @@
         "email": "canyang.zhao2@gmail.com",
         "is_hireable": null,
         "bio": "AI @ UW-Madison | Prev SDE Intern @ Biotechne | LLM Engineer Intern @ AI Rudder",
-        "created_at": "2025-01-21T17:00:42Z",
-        "updated_at": "2026-10-08T04:30:06Z"
+        "created_at": "2025-01-21T17:00:42+00:00",
+        "updated_at": "2026-10-23T22:53:35+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:49.360047+00:00"
     },
     {
         "user_id": 36439732,
@@ -948,8 +1015,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Apache Kyuubi Committer",
-        "created_at": "2018-02-13T09:25:09Z",
-        "updated_at": "2026-09-21T09:49:54Z"
+        "created_at": "2018-02-13T09:25:09+00:00",
+        "updated_at": "2026-09-21T09:49:54+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:49.884945+00:00"
     },
     {
         "user_id": 16099508,
@@ -962,8 +1030,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2015-12-01T11:21:39Z",
-        "updated_at": "2026-07-30T07:02:22Z"
+        "created_at": "2015-12-01T11:21:39+00:00",
+        "updated_at": "2026-07-30T07:02:22+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:50.346981+00:00"
     },
     {
         "user_id": 266243254,
@@ -976,8 +1045,9 @@
         "email": "ugbotueferhire@gmail.com",
         "is_hireable": null,
         "bio": "Eferhire Ugbotu is a high-impact technologist and researcher dedicated to building scalable digital infrastructure and driving data-led commercial growth.",
-        "created_at": "2026-03-07T07:17:46Z",
-        "updated_at": "2026-08-26T14:23:39Z"
+        "created_at": "2026-03-07T07:17:46+00:00",
+        "updated_at": "2026-08-26T14:23:39+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:50.870102+00:00"
     },
     {
         "user_id": 59309744,
@@ -990,8 +1060,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2019-12-28T11:45:58Z",
-        "updated_at": "2026-10-19T11:19:44Z"
+        "created_at": "2019-12-28T11:45:58+00:00",
+        "updated_at": "2026-10-19T11:19:44+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:51.352651+00:00"
     },
     {
         "user_id": 94948026,
@@ -1004,8 +1075,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "I love oyster.\r\nData Engineer.",
-        "created_at": "2021-11-24T04:21:03Z",
-        "updated_at": "2026-08-27T12:55:00Z"
+        "created_at": "2021-11-24T04:21:03+00:00",
+        "updated_at": "2026-08-27T12:55:00+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:51.778877+00:00"
     },
     {
         "user_id": 22517436,
@@ -1018,8 +1090,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2016-09-29T08:13:06Z",
-        "updated_at": "2026-09-03T15:39:57Z"
+        "created_at": "2016-09-29T08:13:06+00:00",
+        "updated_at": "2026-09-03T15:39:57+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:52.210191+00:00"
     },
     {
         "user_id": 264538812,
@@ -1032,8 +1105,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2026-02-28T01:52:06Z",
-        "updated_at": "2026-10-13T06:46:09Z"
+        "created_at": "2026-02-28T01:52:06+00:00",
+        "updated_at": "2026-10-13T06:46:09+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:52.638637+00:00"
     },
     {
         "user_id": 22557372,
@@ -1046,8 +1120,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "DataOps Engineer",
-        "created_at": "2016-10-01T07:41:33Z",
-        "updated_at": "2026-10-22T23:20:50Z"
+        "created_at": "2016-10-01T07:41:33+00:00",
+        "updated_at": "2026-10-22T23:20:50+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:53.089020+00:00"
     },
     {
         "user_id": 44608192,
@@ -1060,8 +1135,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2018-10-30T12:16:51Z",
-        "updated_at": "2026-06-16T17:41:30Z"
+        "created_at": "2018-10-30T12:16:51+00:00",
+        "updated_at": "2026-06-16T17:41:30+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:53.537325+00:00"
     },
     {
         "user_id": 240662211,
@@ -1074,8 +1150,9 @@
         "email": "backendbytushar@gmail.com",
         "is_hireable": null,
         "bio": "Code fascination at peak.",
-        "created_at": "2025-10-28T08:10:51Z",
-        "updated_at": "2026-09-19T09:26:37Z"
+        "created_at": "2025-10-28T08:10:51+00:00",
+        "updated_at": "2026-10-25T04:19:35+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:53.985871+00:00"
     },
     {
         "user_id": 169155,
@@ -1088,8 +1165,9 @@
         "email": "rudi.floren@gmail.com",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2009-12-17T21:44:32Z",
-        "updated_at": "2026-10-11T17:04:41Z"
+        "created_at": "2009-12-17T21:44:32+00:00",
+        "updated_at": "2026-10-23T21:48:53+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:54.451808+00:00"
     },
     {
         "user_id": 17356491,
@@ -1102,8 +1180,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2016-02-20T15:02:12Z",
-        "updated_at": "2026-03-04T15:54:31Z"
+        "created_at": "2016-02-20T15:02:12+00:00",
+        "updated_at": "2026-03-04T15:54:31+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:54.964993+00:00"
     },
     {
         "user_id": 27340,
@@ -1116,8 +1195,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Staff Data Engineer at SensorUp.",
-        "created_at": "2008-10-02T21:59:09Z",
-        "updated_at": "2026-10-21T03:01:05Z"
+        "created_at": "2008-10-02T21:59:09+00:00",
+        "updated_at": "2026-10-21T03:01:05+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:55.409810+00:00"
     },
     {
         "user_id": 83116240,
@@ -1130,8 +1210,9 @@
         "email": null,
         "is_hireable": true,
         "bio": "22 | Breaking and Building | SDE @microsoft, GSoC @google-deepmind ",
-        "created_at": "2021-04-24T09:25:16Z",
-        "updated_at": "2026-10-18T05:45:20Z"
+        "created_at": "2021-04-24T09:25:16+00:00",
+        "updated_at": "2026-10-18T05:45:20+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:55.841446+00:00"
     },
     {
         "user_id": 5762770,
@@ -1144,8 +1225,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "End to end data since 2012",
-        "created_at": "2013-10-24T06:09:56Z",
-        "updated_at": "2026-10-12T11:08:45Z"
+        "created_at": "2013-10-24T06:09:56+00:00",
+        "updated_at": "2026-10-12T11:08:45+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:56.276412+00:00"
     },
     {
         "user_id": 200482516,
@@ -1158,8 +1240,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "I love AI, I love open source, and I love free, high-performance alternatives to mainstream applications.\r\n\r\nFollow me on GitHub and my social media accounts!",
-        "created_at": "2025-02-23T11:31:20Z",
-        "updated_at": "2026-10-10T12:32:48Z"
+        "created_at": "2025-02-23T11:31:20+00:00",
+        "updated_at": "2026-10-10T12:32:48+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:56.788426+00:00"
     },
     {
         "user_id": 3385048,
@@ -1172,8 +1255,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2013-01-25T20:20:12Z",
-        "updated_at": "2026-03-02T04:43:25Z"
+        "created_at": "2013-01-25T20:20:12+00:00",
+        "updated_at": "2026-03-02T04:43:25+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:57.440605+00:00"
     },
     {
         "user_id": 260932319,
@@ -1186,8 +1270,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2026-02-11T14:41:41Z",
-        "updated_at": "2026-09-14T06:29:13Z"
+        "created_at": "2026-02-11T14:41:41+00:00",
+        "updated_at": "2026-09-14T06:29:13+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:58.149790+00:00"
     },
     {
         "user_id": 57835745,
@@ -1200,8 +1285,9 @@
         "email": null,
         "is_hireable": true,
         "bio": "burning, not consumed.",
-        "created_at": "2019-11-16T13:50:07Z",
-        "updated_at": "2026-10-07T10:57:44Z"
+        "created_at": "2019-11-16T13:50:07+00:00",
+        "updated_at": "2026-10-07T10:57:44+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:58.812783+00:00"
     },
     {
         "user_id": 9139429,
@@ -1214,8 +1300,9 @@
         "email": "sansiositres@gmail.com",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2014-10-10T17:24:07Z",
-        "updated_at": "2026-10-20T09:02:37Z"
+        "created_at": "2014-10-10T17:24:07+00:00",
+        "updated_at": "2026-10-20T09:02:37+00:00",
+        "ingestion_timestamp": "2026-10-25 12:27:59.476893+00:00"
     },
     {
         "user_id": 76570855,
@@ -1228,8 +1315,9 @@
         "email": null,
         "is_hireable": true,
         "bio": "Building OddsFox",
-        "created_at": "2020-12-24T20:26:54Z",
-        "updated_at": "2026-10-17T19:37:33Z"
+        "created_at": "2020-12-24T20:26:54+00:00",
+        "updated_at": "2026-10-17T19:37:33+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:00.040509+00:00"
     },
     {
         "user_id": 82286824,
@@ -1242,8 +1330,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2021-04-10T19:09:31Z",
-        "updated_at": "2026-10-19T13:22:35Z"
+        "created_at": "2021-04-10T19:09:31+00:00",
+        "updated_at": "2026-10-19T13:22:35+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:00.597980+00:00"
     },
     {
         "user_id": 1033963,
@@ -1256,8 +1345,9 @@
         "email": "me@steinthor.dev",
         "is_hireable": true,
         "bio": null,
-        "created_at": "2011-09-07T20:33:35Z",
-        "updated_at": "2026-10-12T05:00:49Z"
+        "created_at": "2011-09-07T20:33:35+00:00",
+        "updated_at": "2026-10-12T05:00:49+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:01.110208+00:00"
     },
     {
         "user_id": 281015534,
@@ -1270,8 +1360,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2026-05-01T18:01:07Z",
-        "updated_at": "2026-10-17T15:25:32Z"
+        "created_at": "2026-05-01T18:01:07+00:00",
+        "updated_at": "2026-10-17T15:25:32+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:01.621897+00:00"
     },
     {
         "user_id": 1060085,
@@ -1284,8 +1375,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2011-09-18T16:09:15Z",
-        "updated_at": "2026-09-30T07:24:55Z"
+        "created_at": "2011-09-18T16:09:15+00:00",
+        "updated_at": "2026-09-30T07:24:55+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:02.052804+00:00"
     },
     {
         "user_id": 1233654,
@@ -1298,8 +1390,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "In healthcare with finance and business intelligence expertise.",
-        "created_at": "2011-12-01T14:47:03Z",
-        "updated_at": "2026-10-19T16:47:47Z"
+        "created_at": "2011-12-01T14:47:03+00:00",
+        "updated_at": "2026-10-19T16:47:47+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:02.514575+00:00"
     },
     {
         "user_id": 139802361,
@@ -1312,8 +1405,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Let's end this charade, Shall We?       \r\n\r\n",
-        "created_at": "2023-07-17T17:54:05Z",
-        "updated_at": "2026-09-16T12:07:40Z"
+        "created_at": "2023-07-17T17:54:05+00:00",
+        "updated_at": "2026-09-16T12:07:40+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:02.959630+00:00"
     },
     {
         "user_id": 105636602,
@@ -1326,8 +1420,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Data Engineer",
-        "created_at": "2022-05-16T09:17:12Z",
-        "updated_at": "2026-09-06T19:18:03Z"
+        "created_at": "2022-05-16T09:17:12+00:00",
+        "updated_at": "2026-09-06T19:18:03+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:03.464777+00:00"
     },
     {
         "user_id": 16361214,
@@ -1340,8 +1435,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2015-12-19T11:21:40Z",
-        "updated_at": "2026-10-22T08:33:45Z"
+        "created_at": "2015-12-19T11:21:40+00:00",
+        "updated_at": "2026-10-22T08:33:45+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:03.913799+00:00"
     },
     {
         "user_id": 41351936,
@@ -1354,8 +1450,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Building SIDHA \u2014 sensor-to-insight data architecture for hidradenitis suppurativa research | Health data infrastructure for autoimmune disease",
-        "created_at": "2018-07-18T02:09:20Z",
-        "updated_at": "2026-10-03T05:19:45Z"
+        "created_at": "2018-07-18T02:09:20+00:00",
+        "updated_at": "2026-10-03T05:19:45+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:04.357404+00:00"
     },
     {
         "user_id": 91439361,
@@ -1368,8 +1465,9 @@
         "email": "stfuazzo@gmail.com",
         "is_hireable": null,
         "bio": "Stuck in the matrix \ud83d\udeb6",
-        "created_at": "2021-09-26T23:29:15Z",
-        "updated_at": "2026-10-05T17:23:22Z"
+        "created_at": "2021-09-26T23:29:15+00:00",
+        "updated_at": "2026-10-05T17:23:22+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:04.799976+00:00"
     },
     {
         "user_id": 133815042,
@@ -1382,8 +1480,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2023-05-16T20:22:37Z",
-        "updated_at": "2026-10-19T01:46:15Z"
+        "created_at": "2023-05-16T20:22:37+00:00",
+        "updated_at": "2026-10-19T01:46:15+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:05.238907+00:00"
     },
     {
         "user_id": 29667074,
@@ -1396,8 +1495,9 @@
         "email": "menna.tullah.magdy731@gmail.com",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2017-06-23T22:16:06Z",
-        "updated_at": "2026-07-07T07:03:12Z"
+        "created_at": "2017-06-23T22:16:06+00:00",
+        "updated_at": "2026-07-07T07:03:12+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:05.705143+00:00"
     },
     {
         "user_id": 34209028,
@@ -1410,8 +1510,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Staff Software Engineer @ Visa ",
-        "created_at": "2017-12-03T11:29:20Z",
-        "updated_at": "2026-10-12T15:39:40Z"
+        "created_at": "2017-12-03T11:29:20+00:00",
+        "updated_at": "2026-10-12T15:39:40+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:06.228395+00:00"
     },
     {
         "user_id": 101326085,
@@ -1424,8 +1525,9 @@
         "email": null,
         "is_hireable": true,
         "bio": "Writing Python & SQL",
-        "created_at": "2022-03-10T09:56:01Z",
-        "updated_at": "2026-10-14T03:22:41Z"
+        "created_at": "2022-03-10T09:56:01+00:00",
+        "updated_at": "2026-10-14T03:22:41+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:06.740726+00:00"
     },
     {
         "user_id": 169967362,
@@ -1438,8 +1540,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Finance-native Python engineer building Bitcoin fee intelligence, x402/MCP payment tooling, and agent infrastructure.",
-        "created_at": "2024-05-16T04:08:05Z",
-        "updated_at": "2026-09-16T15:18:33Z"
+        "created_at": "2024-05-16T04:08:05+00:00",
+        "updated_at": "2026-09-16T15:18:33+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:07.181199+00:00"
     },
     {
         "user_id": 98808071,
@@ -1452,8 +1555,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2022-02-01T09:13:35Z",
-        "updated_at": "2026-10-15T18:45:26Z"
+        "created_at": "2022-02-01T09:13:35+00:00",
+        "updated_at": "2026-10-23T19:26:18+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:07.625520+00:00"
     },
     {
         "user_id": 24296200,
@@ -1466,8 +1570,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2016-12-01T13:50:56Z",
-        "updated_at": "2026-10-08T15:03:55Z"
+        "created_at": "2016-12-01T13:50:56+00:00",
+        "updated_at": "2026-10-08T15:03:55+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:08.085602+00:00"
     },
     {
         "user_id": 67928839,
@@ -1480,8 +1585,9 @@
         "email": null,
         "is_hireable": true,
         "bio": "Data Engineer @Vandebron   || Data Engineering and DevOps || R Python SQL Go Dagster Docker \ud83d\ude80 ",
-        "created_at": "2020-07-06T21:00:47Z",
-        "updated_at": "2026-09-22T20:09:53Z"
+        "created_at": "2020-07-06T21:00:47+00:00",
+        "updated_at": "2026-09-22T20:09:53+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:08.519737+00:00"
     },
     {
         "user_id": 453898,
@@ -1494,8 +1600,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2010-10-26T00:34:26Z",
-        "updated_at": "2026-09-07T12:31:31Z"
+        "created_at": "2010-10-26T00:34:26+00:00",
+        "updated_at": "2026-09-07T12:31:31+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:08.983029+00:00"
     },
     {
         "user_id": 31050507,
@@ -1508,8 +1615,9 @@
         "email": null,
         "is_hireable": true,
         "bio": null,
-        "created_at": "2017-08-15T22:20:13Z",
-        "updated_at": "2026-10-21T23:30:42Z"
+        "created_at": "2017-08-15T22:20:13+00:00",
+        "updated_at": "2026-10-21T23:30:42+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:09.505205+00:00"
     },
     {
         "user_id": 140411658,
@@ -1522,8 +1630,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2023-07-24T13:26:49Z",
-        "updated_at": "2026-09-17T23:09:13Z"
+        "created_at": "2023-07-24T13:26:49+00:00",
+        "updated_at": "2026-09-17T23:09:13+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:09.960848+00:00"
     },
     {
         "user_id": 40214285,
@@ -1536,8 +1645,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2018-06-12T18:39:15Z",
-        "updated_at": "2026-10-01T19:43:21Z"
+        "created_at": "2018-06-12T18:39:15+00:00",
+        "updated_at": "2026-10-01T19:43:21+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:10.413510+00:00"
     },
     {
         "user_id": 14027534,
@@ -1550,8 +1660,9 @@
         "email": "pgoslatara@gmail.com",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2015-08-29T08:37:27Z",
-        "updated_at": "2026-10-15T10:07:57Z"
+        "created_at": "2015-08-29T08:37:27+00:00",
+        "updated_at": "2026-10-24T15:41:59+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:10.880385+00:00"
     },
     {
         "user_id": 20677906,
@@ -1564,8 +1675,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2016-07-27T07:38:57Z",
-        "updated_at": "2026-06-30T04:34:00Z"
+        "created_at": "2016-07-27T07:38:57+00:00",
+        "updated_at": "2026-06-30T04:34:00+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:11.332424+00:00"
     },
     {
         "user_id": 89645338,
@@ -1578,8 +1690,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2021-08-27T13:03:49Z",
-        "updated_at": "2026-10-10T04:04:43Z"
+        "created_at": "2021-08-27T13:03:49+00:00",
+        "updated_at": "2026-10-10T04:04:43+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:11.860688+00:00"
     },
     {
         "user_id": 234540314,
@@ -1592,8 +1705,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "AI Data Engineer | Building Production-Grade Data Pipelines & AI Applications | PySpark \u2022 Databricks \u2022 GCP \u2022 SQL \u2022 Python | LLMs \u2022 RAG \u2022 Vector Databases",
-        "created_at": "2025-09-26T04:38:41Z",
-        "updated_at": "2026-08-18T06:57:53Z"
+        "created_at": "2025-09-26T04:38:41+00:00",
+        "updated_at": "2026-08-18T06:57:53+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:12.295042+00:00"
     },
     {
         "user_id": 56090906,
@@ -1606,8 +1720,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Passionate about automation, cloud, and turning data into impact.\r\nExploring opportunities at the intersection of tech and gaming.",
-        "created_at": "2019-10-02T18:53:50Z",
-        "updated_at": "2026-10-09T13:20:34Z"
+        "created_at": "2019-10-02T18:53:50+00:00",
+        "updated_at": "2026-10-09T13:20:34+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:12.749450+00:00"
     },
     {
         "user_id": 669988,
@@ -1620,8 +1735,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Currently @hotdata-dev formerly: @mode @codeforamerica @cloud-gov",
-        "created_at": "2011-03-15T00:23:43Z",
-        "updated_at": "2026-08-23T15:45:56Z"
+        "created_at": "2011-03-15T00:23:43+00:00",
+        "updated_at": "2026-08-23T15:45:56+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:13.194655+00:00"
     },
     {
         "user_id": 3298085,
@@ -1634,8 +1750,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Senior Infrastructure & Data Engineer @ Legacy\r\n\r\nwww.linkedin.com/in/christopher-carman\r\n",
-        "created_at": "2013-01-17T16:52:05Z",
-        "updated_at": "2026-10-21T08:18:05Z"
+        "created_at": "2013-01-17T16:52:05+00:00",
+        "updated_at": "2026-10-21T08:18:05+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:13.635509+00:00"
     },
     {
         "user_id": 851749,
@@ -1648,8 +1765,9 @@
         "email": "joachim.rosskopf@gmail.com",
         "is_hireable": true,
         "bio": "Joachim works since 15y as dev. and consultant for software systems, architecture and processes. He's doing a PhD at Institute of Theoretical Physics in Ulm.",
-        "created_at": "2011-06-15T13:22:38Z",
-        "updated_at": "2026-10-19T19:07:39Z"
+        "created_at": "2011-06-15T13:22:38+00:00",
+        "updated_at": "2026-10-19T19:07:39+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:14.083760+00:00"
     },
     {
         "user_id": 28944679,
@@ -1662,8 +1780,9 @@
         "email": "annas.mazhar10@gmail.com",
         "is_hireable": null,
         "bio": "Yoda\r\n",
-        "created_at": "2017-05-25T06:23:33Z",
-        "updated_at": "2026-09-27T14:29:57Z"
+        "created_at": "2017-05-25T06:23:33+00:00",
+        "updated_at": "2026-09-27T14:29:57+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:14.544753+00:00"
     },
     {
         "user_id": 185616676,
@@ -1676,8 +1795,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Working with data, inventory, e-commerce, and logistics in the music industry.",
-        "created_at": "2024-10-19T14:29:09Z",
-        "updated_at": "2026-07-25T20:13:08Z"
+        "created_at": "2024-10-19T14:29:09+00:00",
+        "updated_at": "2026-07-25T20:13:08+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:15.017946+00:00"
     },
     {
         "user_id": 4172079,
@@ -1690,8 +1810,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Metabase, previously at Athens Research, Roam Research, Angular. Lover of homemade pizza, craft beers, and games. \ud83c\udf55 \ud83c\udf7a \ud83c\udfae",
-        "created_at": "2013-04-16T14:44:31Z",
-        "updated_at": "2026-10-05T15:49:44Z"
+        "created_at": "2013-04-16T14:44:31+00:00",
+        "updated_at": "2026-10-05T15:49:44+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:15.549883+00:00"
     },
     {
         "user_id": 58055473,
@@ -1704,8 +1825,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "CPA \u00d7 Builder",
-        "created_at": "2019-11-22T00:23:35Z",
-        "updated_at": "2026-10-13T17:12:13Z"
+        "created_at": "2019-11-22T00:23:35+00:00",
+        "updated_at": "2026-10-13T17:12:13+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:16.002067+00:00"
     },
     {
         "user_id": 3627835,
@@ -1718,8 +1840,9 @@
         "email": "goanpeca@gmail.com",
         "is_hireable": true,
         "bio": "\ud83d\udc0d Senior Software Engineer \ud83d\ude4c\ud83c\udffc Open Source AI \ud83d\ude80 [he/him/el]",
-        "created_at": "2013-02-18T15:49:16Z",
-        "updated_at": "2026-10-19T15:53:51Z"
+        "created_at": "2013-02-18T15:49:16+00:00",
+        "updated_at": "2026-10-23T19:49:54+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:16.469723+00:00"
     },
     {
         "user_id": 61187390,
@@ -1732,8 +1855,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Data engineering, Infra, Python/Go",
-        "created_at": "2020-02-18T10:40:40Z",
-        "updated_at": "2026-10-12T18:32:56Z"
+        "created_at": "2020-02-18T10:40:40+00:00",
+        "updated_at": "2026-10-12T18:32:56+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:16.979837+00:00"
     },
     {
         "user_id": 29396800,
@@ -1746,8 +1870,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2017-06-13T08:05:58Z",
-        "updated_at": "2026-09-22T05:59:42Z"
+        "created_at": "2017-06-13T08:05:58+00:00",
+        "updated_at": "2026-09-22T05:59:42+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:17.428242+00:00"
     },
     {
         "user_id": 1504066,
@@ -1760,8 +1885,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Data processing | Analytics | Visualization",
-        "created_at": "2012-03-05T18:56:03Z",
-        "updated_at": "2026-09-05T18:57:35Z"
+        "created_at": "2012-03-05T18:56:03+00:00",
+        "updated_at": "2026-09-05T18:57:35+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:17.873121+00:00"
     },
     {
         "user_id": 11660098,
@@ -1774,8 +1900,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Co-Founder, CTO at Lightdash. Full-stack all the things.",
-        "created_at": "2015-03-26T06:49:31Z",
-        "updated_at": "2026-10-21T07:59:28Z"
+        "created_at": "2015-03-26T06:49:31+00:00",
+        "updated_at": "2026-10-21T07:59:28+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:18.324283+00:00"
     },
     {
         "user_id": 133560135,
@@ -1788,8 +1915,9 @@
         "email": "jayjai@berkeley.edu",
         "is_hireable": true,
         "bio": "Building",
-        "created_at": "2023-05-14T06:14:05Z",
-        "updated_at": "2026-09-19T16:58:42Z"
+        "created_at": "2023-05-14T06:14:05+00:00",
+        "updated_at": "2026-09-19T16:58:42+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:18.825334+00:00"
     },
     {
         "user_id": 34094921,
@@ -1802,8 +1930,9 @@
         "email": "will@wrussell.co.uk",
         "is_hireable": true,
         "bio": "Lead Developer Advocate @kestra-io ",
-        "created_at": "2017-11-29T11:50:08Z",
-        "updated_at": "2026-10-12T16:40:50Z"
+        "created_at": "2017-11-29T11:50:08+00:00",
+        "updated_at": "2026-10-12T16:40:50+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:19.278378+00:00"
     },
     {
         "user_id": 48723787,
@@ -1816,8 +1945,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "AI engineer building agent harnesses & open-source contributor.",
-        "created_at": "2019-03-19T14:18:36Z",
-        "updated_at": "2026-09-14T10:28:28Z"
+        "created_at": "2019-03-19T14:18:36+00:00",
+        "updated_at": "2026-09-14T10:28:28+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:19.728757+00:00"
     },
     {
         "user_id": 18120524,
@@ -1830,8 +1960,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "data@dltHub",
-        "created_at": "2016-03-28T15:29:51Z",
-        "updated_at": "2026-05-31T17:24:38Z"
+        "created_at": "2016-03-28T15:29:51+00:00",
+        "updated_at": "2026-05-31T17:24:38+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:20.170052+00:00"
     },
     {
         "user_id": 87073104,
@@ -1844,8 +1975,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2021-07-07T11:40:14Z",
-        "updated_at": "2026-10-21T16:32:05Z"
+        "created_at": "2021-07-07T11:40:14+00:00",
+        "updated_at": "2026-10-21T16:32:05+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:20.614725+00:00"
     },
     {
         "user_id": 51058514,
@@ -1858,8 +1990,9 @@
         "email": null,
         "is_hireable": true,
         "bio": "Hi \ud83d\udc4b, I\u2019m Sanjay Santhanam, a software engineer with Python, Java, and React expertise. Passionate about building scalable solutions in ML, and computer vision",
-        "created_at": "2019-05-26T18:17:25Z",
-        "updated_at": "2026-10-23T04:25:11Z"
+        "created_at": "2019-05-26T18:17:25+00:00",
+        "updated_at": "2026-10-23T04:25:11+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:21.056502+00:00"
     },
     {
         "user_id": 257642323,
@@ -1872,8 +2005,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2026-01-27T22:11:00Z",
-        "updated_at": "2026-05-06T19:39:20Z"
+        "created_at": "2026-01-27T22:11:00+00:00",
+        "updated_at": "2026-05-06T19:39:20+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:21.588669+00:00"
     },
     {
         "user_id": 124244,
@@ -1886,8 +2020,9 @@
         "email": "mathias.ahsberg@gmail.com",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2009-09-07T19:18:11Z",
-        "updated_at": "2026-10-18T08:23:42Z"
+        "created_at": "2009-09-07T19:18:11+00:00",
+        "updated_at": "2026-10-23T21:43:21+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:22.026268+00:00"
     },
     {
         "user_id": 963413,
@@ -1900,8 +2035,9 @@
         "email": null,
         "is_hireable": true,
         "bio": "freelance data platform architect",
-        "created_at": "2011-08-06T18:24:11Z",
-        "updated_at": "2026-09-28T22:21:27Z"
+        "created_at": "2011-08-06T18:24:11+00:00",
+        "updated_at": "2026-09-28T22:21:27+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:22.510681+00:00"
     },
     {
         "user_id": 214823765,
@@ -1914,8 +2050,9 @@
         "email": "mridankanmandal2006@gmail.com",
         "is_hireable": null,
         "bio": "I am studying for Bachelor of Technology in Information Technology and Business Informatics at IIIT-A. I do research in the field of EdgeAI, RL and CVPR.",
-        "created_at": "2025-06-04T11:46:37Z",
-        "updated_at": "2026-10-16T05:27:15Z"
+        "created_at": "2025-06-04T11:46:37+00:00",
+        "updated_at": "2026-10-16T05:27:15+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:23.022143+00:00"
     },
     {
         "user_id": 29766995,
@@ -1928,8 +2065,9 @@
         "email": null,
         "is_hireable": true,
         "bio": null,
-        "created_at": "2017-06-29T03:15:31Z",
-        "updated_at": "2026-09-23T22:02:39Z"
+        "created_at": "2017-06-29T03:15:31+00:00",
+        "updated_at": "2026-10-23T11:02:38+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:23.455530+00:00"
     },
     {
         "user_id": 36906329,
@@ -1942,8 +2080,9 @@
         "email": "yi1115610574@gmail.com",
         "is_hireable": null,
         "bio": "I know nothing.",
-        "created_at": "2018-02-28T01:38:13Z",
-        "updated_at": "2026-07-30T02:35:07Z"
+        "created_at": "2018-02-28T01:38:13+00:00",
+        "updated_at": "2026-07-30T02:35:07+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:23.886425+00:00"
     },
     {
         "user_id": 182826843,
@@ -1956,8 +2095,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2024-09-25T22:46:43Z",
-        "updated_at": "2026-08-31T14:29:32Z"
+        "created_at": "2024-09-25T22:46:43+00:00",
+        "updated_at": "2026-08-31T14:29:32+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:24.325965+00:00"
     },
     {
         "user_id": 527708,
@@ -1970,8 +2110,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2010-12-17T19:49:54Z",
-        "updated_at": "2026-09-11T13:11:00Z"
+        "created_at": "2010-12-17T19:49:54+00:00",
+        "updated_at": "2026-09-11T13:11:00+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:24.772487+00:00"
     },
     {
         "user_id": 98219870,
@@ -1984,8 +2125,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Data Consultant, Data Engineer & Enthusiast.",
-        "created_at": "2022-01-22T13:33:20Z",
-        "updated_at": "2026-10-07T11:39:16Z"
+        "created_at": "2022-01-22T13:33:20+00:00",
+        "updated_at": "2026-10-07T11:39:16+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:25.218068+00:00"
     },
     {
         "user_id": 115735904,
@@ -1998,8 +2140,9 @@
         "email": null,
         "is_hireable": true,
         "bio": "Data engineer & full-stack dev building Python/FastAPI, TypeScript, React Native, PostgreSQL/Supabase, AI agents and automation.",
-        "created_at": "2022-10-13T18:06:53Z",
-        "updated_at": "2026-10-21T05:56:24Z"
+        "created_at": "2022-10-13T18:06:53+00:00",
+        "updated_at": "2026-10-21T05:56:24+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:25.666039+00:00"
     },
     {
         "user_id": 37550434,
@@ -2012,8 +2155,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2018-03-19T16:41:23Z",
-        "updated_at": "2026-10-22T15:15:27Z"
+        "created_at": "2018-03-19T16:41:23+00:00",
+        "updated_at": "2026-10-22T15:15:27+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:26.110520+00:00"
     },
     {
         "user_id": 123385188,
@@ -2026,8 +2170,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Learning",
-        "created_at": "2023-01-23T14:06:37Z",
-        "updated_at": "2026-10-22T06:54:02Z"
+        "created_at": "2023-01-23T14:06:37+00:00",
+        "updated_at": "2026-10-22T06:54:02+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:26.571323+00:00"
     },
     {
         "user_id": 7644005,
@@ -2040,8 +2185,9 @@
         "email": "mxyakovenko9@gmail.com",
         "is_hireable": null,
         "bio": "\ud83d\udee0\ufe0f Building things...",
-        "created_at": "2014-05-20T11:23:30Z",
-        "updated_at": "2026-10-16T12:36:33Z"
+        "created_at": "2014-05-20T11:23:30+00:00",
+        "updated_at": "2026-10-16T12:36:33+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:27.027650+00:00"
     },
     {
         "user_id": 110732135,
@@ -2054,8 +2200,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2022-08-06T14:37:23Z",
-        "updated_at": "2026-09-06T08:28:12Z"
+        "created_at": "2022-08-06T14:37:23+00:00",
+        "updated_at": "2026-09-06T08:28:12+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:27.528504+00:00"
     },
     {
         "user_id": 28436330,
@@ -2068,8 +2215,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2017-05-05T10:06:31Z",
-        "updated_at": "2026-10-14T12:10:45Z"
+        "created_at": "2017-05-05T10:06:31+00:00",
+        "updated_at": "2026-10-14T12:10:45+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:27.959134+00:00"
     },
     {
         "user_id": 197832555,
@@ -2082,8 +2230,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2025-02-04T22:18:29Z",
-        "updated_at": "2026-04-11T02:24:17Z"
+        "created_at": "2025-02-04T22:18:29+00:00",
+        "updated_at": "2026-04-11T02:24:17+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:28.421563+00:00"
     },
     {
         "user_id": 70761325,
@@ -2096,8 +2245,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "AI coding \u00b7 automation \u00b7 developer workflows\r\n\r\nBuilding practical tools with GPT/Claude for productivity, engineering, and everyday tasks.",
-        "created_at": "2020-09-04T13:28:00Z",
-        "updated_at": "2026-10-09T05:37:55Z"
+        "created_at": "2020-09-04T13:28:00+00:00",
+        "updated_at": "2026-10-09T05:37:55+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:28.890486+00:00"
     },
     {
         "user_id": 16865646,
@@ -2110,8 +2260,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Director of Engineering @ dltHub\r\nHead of Engineering - AI & Data @ Parloa\r\nDirector of Data @ ResearchGate",
-        "created_at": "2016-01-24T15:32:19Z",
-        "updated_at": "2026-10-17T10:02:19Z"
+        "created_at": "2016-01-24T15:32:19+00:00",
+        "updated_at": "2026-10-17T10:02:19+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:29.337036+00:00"
     },
     {
         "user_id": 56265583,
@@ -2124,8 +2275,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2019-10-07T14:57:05Z",
-        "updated_at": "2026-09-15T06:17:54Z"
+        "created_at": "2019-10-07T14:57:05+00:00",
+        "updated_at": "2026-09-15T06:17:54+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:29.789157+00:00"
     },
     {
         "user_id": 1546610,
@@ -2138,8 +2290,9 @@
         "email": null,
         "is_hireable": true,
         "bio": null,
-        "created_at": "2012-03-17T08:25:39Z",
-        "updated_at": "2026-10-13T20:00:14Z"
+        "created_at": "2012-03-17T08:25:39+00:00",
+        "updated_at": "2026-10-13T20:00:14+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:30.225173+00:00"
     },
     {
         "user_id": 80477044,
@@ -2152,8 +2305,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2021-03-11T16:40:22Z",
-        "updated_at": "2026-09-27T10:48:00Z"
+        "created_at": "2021-03-11T16:40:22+00:00",
+        "updated_at": "2026-09-27T10:48:00+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:30.667174+00:00"
     },
     {
         "user_id": 114025336,
@@ -2166,8 +2320,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2022-09-20T19:49:15Z",
-        "updated_at": "2026-09-11T10:46:53Z"
+        "created_at": "2022-09-20T19:49:15+00:00",
+        "updated_at": "2026-09-11T10:46:53+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:31.145363+00:00"
     },
     {
         "user_id": 33459576,
@@ -2180,8 +2335,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "computer science enginner",
-        "created_at": "2017-11-07T15:45:32Z",
-        "updated_at": "2026-10-16T08:36:08Z"
+        "created_at": "2017-11-07T15:45:32+00:00",
+        "updated_at": "2026-10-16T08:36:08+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:31.585561+00:00"
     },
     {
         "user_id": 217980,
@@ -2194,8 +2350,9 @@
         "email": "willi.mueller@posteo.de",
         "is_hireable": true,
         "bio": "Freelance Data Engineer. I love to optimize for cost efficiency and build lasting data capabilities.",
-        "created_at": "2010-03-07T22:01:49Z",
-        "updated_at": "2026-10-06T07:03:05Z"
+        "created_at": "2010-03-07T22:01:49+00:00",
+        "updated_at": "2026-10-06T07:03:05+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:32.137332+00:00"
     },
     {
         "user_id": 2742655,
@@ -2208,8 +2365,9 @@
         "email": "me@serl.it",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2012-11-07T11:37:01Z",
-        "updated_at": "2026-10-07T20:45:10Z"
+        "created_at": "2012-11-07T11:37:01+00:00",
+        "updated_at": "2026-10-07T20:45:10+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:32.591055+00:00"
     },
     {
         "user_id": 19864447,
@@ -2222,8 +2380,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "This account is the Git committer for all web commits (merge/revert/edit/etc...) made on GitHub.com.",
-        "created_at": "2016-06-10T22:16:20Z",
-        "updated_at": "2020-11-06T19:35:33Z"
+        "created_at": "2016-06-10T22:16:20+00:00",
+        "updated_at": "2020-11-06T19:35:33+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:33.021299+00:00"
     },
     {
         "user_id": 8479617,
@@ -2236,8 +2395,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2014-08-18T12:49:54Z",
-        "updated_at": "2026-05-31T21:06:59Z"
+        "created_at": "2014-08-18T12:49:54+00:00",
+        "updated_at": "2026-05-31T21:06:59+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:33.569443+00:00"
     },
     {
         "user_id": 43811718,
@@ -2250,8 +2410,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2018-10-03T10:36:12Z",
-        "updated_at": "2026-10-04T08:33:57Z"
+        "created_at": "2018-10-03T10:36:12+00:00",
+        "updated_at": "2026-10-04T08:33:57+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:34.082254+00:00"
     },
     {
         "user_id": 73122183,
@@ -2264,8 +2425,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "It's dog Jesus and yes he's a good boy",
-        "created_at": "2020-10-19T14:29:33Z",
-        "updated_at": "2026-10-19T13:41:26Z"
+        "created_at": "2020-10-19T14:29:33+00:00",
+        "updated_at": "2026-10-19T13:41:26+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:34.534925+00:00"
     },
     {
         "user_id": 2592140,
@@ -2278,8 +2440,9 @@
         "email": "bitter-polders0x@icloud.com",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2012-10-18T19:17:49Z",
-        "updated_at": "2026-10-21T12:40:10Z"
+        "created_at": "2012-10-18T19:17:49+00:00",
+        "updated_at": "2026-10-21T12:40:10+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:34.967241+00:00"
     },
     {
         "user_id": 17459600,
@@ -2292,8 +2455,9 @@
         "email": "marian@skrip.sk",
         "is_hireable": null,
         "bio": "Backend and Infrastructure engineer @PowerfulMedical ",
-        "created_at": "2016-02-24T19:04:32Z",
-        "updated_at": "2026-10-08T19:18:29Z"
+        "created_at": "2016-02-24T19:04:32+00:00",
+        "updated_at": "2026-10-08T19:18:29+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:35.407148+00:00"
     },
     {
         "user_id": 141498258,
@@ -2306,8 +2470,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Software Engineer @ Bama | 10x Azure Certified | 5x Red Hat Certified",
-        "created_at": "2023-08-05T12:26:37Z",
-        "updated_at": "2026-10-21T11:07:14Z"
+        "created_at": "2023-08-05T12:26:37+00:00",
+        "updated_at": "2026-10-23T11:11:17+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:35.857568+00:00"
     },
     {
         "user_id": 17438612,
@@ -2320,8 +2485,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Tomas Pousette",
-        "created_at": "2016-02-23T20:24:09Z",
-        "updated_at": "2026-10-08T15:06:30Z"
+        "created_at": "2016-02-23T20:24:09+00:00",
+        "updated_at": "2026-10-08T15:06:30+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:36.297451+00:00"
     },
     {
         "user_id": 1761174,
@@ -2334,8 +2500,9 @@
         "email": "dudanogueira@gmail.com",
         "is_hireable": true,
         "bio": "Open Source Sourcerer @ Weaviate",
-        "created_at": "2012-05-21T20:36:07Z",
-        "updated_at": "2026-10-21T14:00:07Z"
+        "created_at": "2012-05-21T20:36:07+00:00",
+        "updated_at": "2026-10-21T14:00:07+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:36.845179+00:00"
     },
     {
         "user_id": 153497,
@@ -2348,8 +2515,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2009-11-15T09:59:32Z",
-        "updated_at": "2026-10-13T08:45:34Z"
+        "created_at": "2009-11-15T09:59:32+00:00",
+        "updated_at": "2026-10-13T08:45:34+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:37.291656+00:00"
     },
     {
         "user_id": 40656281,
@@ -2362,8 +2530,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "By seeking and blundering we learn.",
-        "created_at": "2018-06-28T07:28:41Z",
-        "updated_at": "2026-06-25T07:37:36Z"
+        "created_at": "2018-06-28T07:28:41+00:00",
+        "updated_at": "2026-06-25T07:37:36+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:37.770809+00:00"
     },
     {
         "user_id": 195545499,
@@ -2376,8 +2545,9 @@
         "email": "charanreddym2007@gmail.com",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2025-01-18T10:30:16Z",
-        "updated_at": "2026-10-22T15:56:03Z"
+        "created_at": "2025-01-18T10:30:16+00:00",
+        "updated_at": "2026-10-22T15:56:03+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:38.281629+00:00"
     },
     {
         "user_id": 65098150,
@@ -2390,8 +2560,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2020-05-10T00:58:19Z",
-        "updated_at": "2026-09-18T16:44:26Z"
+        "created_at": "2020-05-10T00:58:19+00:00",
+        "updated_at": "2026-09-18T16:44:26+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:38.716751+00:00"
     },
     {
         "user_id": 217161641,
@@ -2404,8 +2575,9 @@
         "email": null,
         "is_hireable": true,
         "bio": "\ucc9c\ud604\uc900",
-        "created_at": "2025-06-20T06:39:06Z",
-        "updated_at": "2026-10-09T15:00:24Z"
+        "created_at": "2025-06-20T06:39:06+00:00",
+        "updated_at": "2026-10-25T09:02:04+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:39.158806+00:00"
     },
     {
         "user_id": 51323306,
@@ -2418,8 +2590,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2019-06-03T11:38:39Z",
-        "updated_at": "2026-10-10T16:59:27Z"
+        "created_at": "2019-06-03T11:38:39+00:00",
+        "updated_at": "2026-10-10T16:59:27+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:39.605219+00:00"
     },
     {
         "user_id": 23142316,
@@ -2432,8 +2605,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2016-10-29T19:34:34Z",
-        "updated_at": "2026-08-22T21:42:48Z"
+        "created_at": "2016-10-29T19:34:34+00:00",
+        "updated_at": "2026-08-22T21:42:48+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:40.081611+00:00"
     },
     {
         "user_id": 101747628,
@@ -2446,8 +2620,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2022-03-16T19:26:37Z",
-        "updated_at": "2026-09-10T10:37:38Z"
+        "created_at": "2022-03-16T19:26:37+00:00",
+        "updated_at": "2026-09-10T10:37:38+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:40.536177+00:00"
     },
     {
         "user_id": 326577,
@@ -2460,8 +2635,9 @@
         "email": "julien@huggingface.co",
         "is_hireable": null,
         "bio": "CTO @huggingface",
-        "created_at": "2010-07-08T16:14:10Z",
-        "updated_at": "2026-05-08T13:28:15Z"
+        "created_at": "2010-07-08T16:14:10+00:00",
+        "updated_at": "2026-05-08T13:28:15+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:40.971067+00:00"
     },
     {
         "user_id": 209386420,
@@ -2474,8 +2650,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2025-04-27T19:24:58Z",
-        "updated_at": "2025-11-11T13:51:45Z"
+        "created_at": "2025-04-27T19:24:58+00:00",
+        "updated_at": "2025-11-11T13:51:45+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:41.454571+00:00"
     },
     {
         "user_id": 8754100,
@@ -2488,8 +2665,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2014-09-12T20:25:04Z",
-        "updated_at": "2026-09-20T11:25:58Z"
+        "created_at": "2014-09-12T20:25:04+00:00",
+        "updated_at": "2026-09-20T11:25:58+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:41.912934+00:00"
     },
     {
         "user_id": 184162233,
@@ -2502,8 +2680,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Computer Science Major at the University of Florida",
-        "created_at": "2024-10-07T20:46:40Z",
-        "updated_at": "2026-10-11T16:22:59Z"
+        "created_at": "2024-10-07T20:46:40+00:00",
+        "updated_at": "2026-10-11T16:22:59+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:42.376196+00:00"
     },
     {
         "user_id": 41299387,
@@ -2516,8 +2695,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Sophomore at Carnegie Mellon passionate about computer science, AI safety, and human-computer interaction",
-        "created_at": "2018-07-16T15:20:35Z",
-        "updated_at": "2026-10-22T16:18:27Z"
+        "created_at": "2018-07-16T15:20:35+00:00",
+        "updated_at": "2026-10-22T16:18:27+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:42.818457+00:00"
     },
     {
         "user_id": 183959486,
@@ -2530,8 +2710,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2024-10-06T01:36:55Z",
-        "updated_at": "2026-10-22T07:53:07Z"
+        "created_at": "2024-10-06T01:36:55+00:00",
+        "updated_at": "2026-10-22T07:53:07+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:43.255801+00:00"
     },
     {
         "user_id": 103940545,
@@ -2544,8 +2725,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2022-04-18T12:53:59Z",
-        "updated_at": "2026-10-11T14:18:39Z"
+        "created_at": "2022-04-18T12:53:59+00:00",
+        "updated_at": "2026-10-11T14:18:39+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:43.711831+00:00"
     },
     {
         "user_id": 30752199,
@@ -2558,8 +2740,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2017-08-05T14:04:18Z",
-        "updated_at": "2026-10-22T18:38:49Z"
+        "created_at": "2017-08-05T14:04:18+00:00",
+        "updated_at": "2026-10-22T18:38:49+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:44.157669+00:00"
     },
     {
         "user_id": 53497290,
@@ -2572,8 +2755,9 @@
         "email": null,
         "is_hireable": true,
         "bio": "InfoSec Engineer & Architect",
-        "created_at": "2019-07-30T22:36:17Z",
-        "updated_at": "2026-08-19T18:54:51Z"
+        "created_at": "2019-07-30T22:36:17+00:00",
+        "updated_at": "2026-08-19T18:54:51+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:44.616891+00:00"
     },
     {
         "user_id": 28869070,
@@ -2586,8 +2770,9 @@
         "email": "vrikenz@gmail.com",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2017-05-22T15:24:12Z",
-        "updated_at": "2026-09-30T09:21:23Z"
+        "created_at": "2017-05-22T15:24:12+00:00",
+        "updated_at": "2026-10-24T15:42:14+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:45.052695+00:00"
     },
     {
         "user_id": 76836303,
@@ -2600,8 +2785,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "math + cs at columbia. ai safety. fusion. kolkata.",
-        "created_at": "2021-01-01T09:53:24Z",
-        "updated_at": "2026-10-20T07:29:12Z"
+        "created_at": "2021-01-01T09:53:24+00:00",
+        "updated_at": "2026-10-20T07:29:12+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:45.550353+00:00"
     },
     {
         "user_id": 45850064,
@@ -2614,8 +2800,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2018-12-13T12:47:31Z",
-        "updated_at": "2026-10-06T07:55:44Z"
+        "created_at": "2018-12-13T12:47:31+00:00",
+        "updated_at": "2026-10-06T07:55:44+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:45.977367+00:00"
     },
     {
         "user_id": 119749586,
@@ -2628,8 +2815,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Anis business tech school \r\nAll master\u2019s programs are available",
-        "created_at": "2022-12-03T16:06:24Z",
-        "updated_at": "2026-10-09T13:09:55Z"
+        "created_at": "2022-12-03T16:06:24+00:00",
+        "updated_at": "2026-10-09T13:09:55+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:46.417593+00:00"
     },
     {
         "user_id": 24415187,
@@ -2642,8 +2830,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2016-12-06T16:12:18Z",
-        "updated_at": "2026-09-22T13:07:57Z"
+        "created_at": "2016-12-06T16:12:18+00:00",
+        "updated_at": "2026-09-22T13:07:57+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:46.892752+00:00"
     },
     {
         "user_id": 157260757,
@@ -2656,8 +2845,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2024-01-21T02:08:08Z",
-        "updated_at": "2026-10-01T19:48:51Z"
+        "created_at": "2024-01-21T02:08:08+00:00",
+        "updated_at": "2026-10-01T19:48:51+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:47.355628+00:00"
     },
     {
         "user_id": 55969238,
@@ -2670,8 +2860,9 @@
         "email": "rasseax@gmail.com",
         "is_hireable": true,
         "bio": "Data Engineer",
-        "created_at": "2019-09-30T04:17:53Z",
-        "updated_at": "2026-10-21T06:39:19Z"
+        "created_at": "2019-09-30T04:17:53+00:00",
+        "updated_at": "2026-10-21T06:39:19+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:47.835431+00:00"
     },
     {
         "user_id": 227799,
@@ -2684,8 +2875,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2010-03-22T10:39:46Z",
-        "updated_at": "2026-10-17T10:26:52Z"
+        "created_at": "2010-03-22T10:39:46+00:00",
+        "updated_at": "2026-10-17T10:26:52+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:48.266021+00:00"
     },
     {
         "user_id": 14275545,
@@ -2698,8 +2890,9 @@
         "email": null,
         "is_hireable": true,
         "bio": null,
-        "created_at": "2015-09-14T13:15:03Z",
-        "updated_at": "2026-10-01T11:56:17Z"
+        "created_at": "2015-09-14T13:15:03+00:00",
+        "updated_at": "2026-10-01T11:56:17+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:49.179476+00:00"
     },
     {
         "user_id": 210960858,
@@ -2712,8 +2905,9 @@
         "email": "aryanpardeshi606@gmail.com",
         "is_hireable": true,
         "bio": "I am Aryan Pardeshi",
-        "created_at": "2025-05-09T06:27:43Z",
-        "updated_at": "2026-10-22T14:28:39Z"
+        "created_at": "2025-05-09T06:27:43+00:00",
+        "updated_at": "2026-10-25T07:06:58+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:49.646743+00:00"
     },
     {
         "user_id": 94174684,
@@ -2726,8 +2920,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Data Engineer",
-        "created_at": "2021-11-12T11:41:32Z",
-        "updated_at": "2026-10-20T10:53:12Z"
+        "created_at": "2021-11-12T11:41:32+00:00",
+        "updated_at": "2026-10-20T10:53:12+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:50.113741+00:00"
     },
     {
         "user_id": 16203230,
@@ -2740,8 +2935,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2015-12-08T07:03:09Z",
-        "updated_at": "2026-08-25T22:03:26Z"
+        "created_at": "2015-12-08T07:03:09+00:00",
+        "updated_at": "2026-08-25T22:03:26+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:50.546390+00:00"
     },
     {
         "user_id": 317888479,
@@ -2754,8 +2950,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2026-08-17T11:57:51Z",
-        "updated_at": "2026-08-17T11:57:51Z"
+        "created_at": "2026-08-17T11:57:51+00:00",
+        "updated_at": "2026-08-17T11:57:51+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:51.014246+00:00"
     },
     {
         "user_id": 3058143,
@@ -2768,8 +2965,9 @@
         "email": "mucio@mucio.net",
         "is_hireable": null,
         "bio": null,
-        "created_at": "2012-12-16T21:24:03Z",
-        "updated_at": "2026-10-16T21:14:04Z"
+        "created_at": "2012-12-16T21:24:03+00:00",
+        "updated_at": "2026-10-16T21:14:04+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:51.461980+00:00"
     },
     {
         "user_id": 998369,
@@ -2782,8 +2980,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2011-08-23T08:13:23Z",
-        "updated_at": "2026-10-16T14:54:36Z"
+        "created_at": "2011-08-23T08:13:23+00:00",
+        "updated_at": "2026-10-16T14:54:36+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:52.003269+00:00"
     },
     {
         "user_id": 35984866,
@@ -2796,8 +2995,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2018-01-31T03:55:21Z",
-        "updated_at": "2026-10-08T08:04:03Z"
+        "created_at": "2018-01-31T03:55:21+00:00",
+        "updated_at": "2026-10-08T08:04:03+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:52.445572+00:00"
     },
     {
         "user_id": 264674,
@@ -2810,8 +3010,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2010-05-04T16:00:14Z",
-        "updated_at": "2026-08-19T08:21:09Z"
+        "created_at": "2010-05-04T16:00:14+00:00",
+        "updated_at": "2026-08-19T08:21:09+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:52.873834+00:00"
     },
     {
         "user_id": 288227,
@@ -2824,8 +3025,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2010-05-27T02:00:55Z",
-        "updated_at": "2026-10-18T11:37:24Z"
+        "created_at": "2010-05-27T02:00:55+00:00",
+        "updated_at": "2026-10-18T11:37:24+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:53.348924+00:00"
     },
     {
         "user_id": 47451109,
@@ -2838,8 +3040,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Data Engineer",
-        "created_at": "2019-02-08T12:54:36Z",
-        "updated_at": "2026-09-21T17:40:00Z"
+        "created_at": "2019-02-08T12:54:36+00:00",
+        "updated_at": "2026-09-21T17:40:00+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:54.515988+00:00"
     },
     {
         "user_id": 38354405,
@@ -2852,8 +3055,9 @@
         "email": null,
         "is_hireable": true,
         "bio": "hi",
-        "created_at": "2018-04-13T13:42:41Z",
-        "updated_at": "2026-09-21T19:18:11Z"
+        "created_at": "2018-04-13T13:42:41+00:00",
+        "updated_at": "2026-09-21T19:18:11+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:55.565171+00:00"
     },
     {
         "user_id": 9657318,
@@ -2866,8 +3070,9 @@
         "email": "MrQuarkay@gmail.com",
         "is_hireable": true,
         "bio": "Valar Morghulis",
-        "created_at": "2014-11-10T14:06:16Z",
-        "updated_at": "2026-09-08T16:53:25Z"
+        "created_at": "2014-11-10T14:06:16+00:00",
+        "updated_at": "2026-09-08T16:53:25+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:56.612750+00:00"
     },
     {
         "user_id": 201878497,
@@ -2880,8 +3085,9 @@
         "email": "ashwabh.bhatnagar01@gmail.com",
         "is_hireable": null,
         "bio": "Lost access to the old account and can't recover. Welcome to my new github :) \r\nMe: Graduate Student At SJSU | Data & Software Engineer",
-        "created_at": "2025-03-05T03:58:49Z",
-        "updated_at": "2026-10-06T11:34:48Z"
+        "created_at": "2025-03-05T03:58:49+00:00",
+        "updated_at": "2026-10-06T11:34:48+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:57.662156+00:00"
     },
     {
         "user_id": 110762985,
@@ -2894,8 +3100,9 @@
         "email": null,
         "is_hireable": null,
         "bio": "Back End Developer |\r\nTech Enthusiast |\r\nEthical Hacker |\r\nCybersecurity Mentor\r\n",
-        "created_at": "2022-08-07T08:26:50Z",
-        "updated_at": "2026-10-22T22:05:43Z"
+        "created_at": "2022-08-07T08:26:50+00:00",
+        "updated_at": "2026-10-22T22:05:43+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:58.527651+00:00"
     },
     {
         "user_id": 42340841,
@@ -2908,8 +3115,9 @@
         "email": "pawankapkoti3889@gmail.com",
         "is_hireable": true,
         "bio": null,
-        "created_at": "2018-08-13T09:47:20Z",
-        "updated_at": "2026-10-18T13:03:24Z"
+        "created_at": "2018-08-13T09:47:20+00:00",
+        "updated_at": "2026-10-18T13:03:24+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:59.042439+00:00"
     },
     {
         "user_id": 792045,
@@ -2922,8 +3130,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2011-05-16T22:00:45Z",
-        "updated_at": "2026-09-28T12:09:43Z"
+        "created_at": "2011-05-16T22:00:45+00:00",
+        "updated_at": "2026-09-28T12:09:43+00:00",
+        "ingestion_timestamp": "2026-10-25 12:28:59.567319+00:00"
     },
     {
         "user_id": 48596976,
@@ -2936,8 +3145,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2019-03-15T15:19:58Z",
-        "updated_at": "2026-08-14T14:52:03Z"
+        "created_at": "2019-03-15T15:19:58+00:00",
+        "updated_at": "2026-08-14T14:52:03+00:00",
+        "ingestion_timestamp": "2026-10-25 12:29:00.089978+00:00"
     },
     {
         "user_id": 11338226,
@@ -2950,8 +3160,9 @@
         "email": null,
         "is_hireable": true,
         "bio": "Open Source | Data",
-        "created_at": "2015-03-05T19:31:35Z",
-        "updated_at": "2026-10-07T11:56:20Z"
+        "created_at": "2015-03-05T19:31:35+00:00",
+        "updated_at": "2026-10-07T11:56:20+00:00",
+        "ingestion_timestamp": "2026-10-25 12:29:00.614997+00:00"
     },
     {
         "user_id": 6889971,
@@ -2964,8 +3175,9 @@
         "email": "lui.pillmann@gmail.com",
         "is_hireable": true,
         "bio": "(data) tech lead @ gemma analytics ",
-        "created_at": "2014-03-08T07:14:43Z",
-        "updated_at": "2026-10-22T12:49:07Z"
+        "created_at": "2014-03-08T07:14:43+00:00",
+        "updated_at": "2026-10-22T12:49:07+00:00",
+        "ingestion_timestamp": "2026-10-25 12:29:01.139385+00:00"
     },
     {
         "user_id": 1822197,
@@ -2978,8 +3190,9 @@
         "email": null,
         "is_hireable": true,
         "bio": null,
-        "created_at": "2012-06-06T08:14:03Z",
-        "updated_at": "2026-10-07T18:56:41Z"
+        "created_at": "2012-06-06T08:14:03+00:00",
+        "updated_at": "2026-10-07T18:56:41+00:00",
+        "ingestion_timestamp": "2026-10-25 12:29:01.663634+00:00"
     },
     {
         "user_id": 32450038,
@@ -2992,8 +3205,9 @@
         "email": null,
         "is_hireable": null,
         "bio": null,
-        "created_at": "2017-10-02T08:27:46Z",
-        "updated_at": "2026-10-20T18:38:39Z"
+        "created_at": "2017-10-02T08:27:46+00:00",
+        "updated_at": "2026-10-20T18:38:39+00:00",
+        "ingestion_timestamp": "2026-10-25 12:29:02.186008+00:00"
     },
     {
         "user_id": 58872311,
@@ -3006,8 +3220,9 @@
         "email": null,
         "is_hireable": true,
         "bio": null,
-        "created_at": "2019-12-14T05:18:03Z",
-        "updated_at": "2026-10-23T05:58:07Z"
+        "created_at": "2019-12-14T05:18:03+00:00",
+        "updated_at": "2026-10-23T05:58:07+00:00",
+        "ingestion_timestamp": "2026-10-25 12:29:02.712564+00:00"
     },
     {
         "user_id": 95757821,
@@ -3020,7 +3235,8 @@
         "email": "ashwinupadhyay09@gmail.com",
         "is_hireable": true,
         "bio": "Intensity Driven. Data Driven Decisions. Building AI systems, backend tools, and useful open-source fixes.",
-        "created_at": "2021-12-08T13:32:45Z",
-        "updated_at": "2026-10-22T19:09:47Z"
+        "created_at": "2021-12-08T13:32:45+00:00",
+        "updated_at": "2026-10-22T19:09:47+00:00",
+        "ingestion_timestamp": "2026-10-25 12:29:03.236182+00:00"
     }
 ]

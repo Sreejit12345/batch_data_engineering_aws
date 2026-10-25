@@ -2,6 +2,29 @@
     {
         "org_id": 89419010,
         "repo_id": 452221115,
+        "user_raised_id": 1060085,
+        "pull_request_id": 4985545268,
+        "pull_request_url": "https://github.com/dlt-hub/dlt/pull/4603",
+        "source_branch": "feat/local-serve-open-browser",
+        "target_branch": "devel",
+        "is_draft": true,
+        "state": "open",
+        "title": "fix: makes `--non-interactive` consistently skip browser launch",
+        "created_at": "2026-10-23T15:57:07+00:00",
+        "updated_at": "2026-10-23T17:30:37+00:00",
+        "closed_at": null,
+        "merged_at": null,
+        "pr_comments": 2,
+        "review_comments": 0,
+        "commit_count": 2,
+        "additions": 216,
+        "deletions": 1,
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:23:51.091322+00:00"
+    },
+    {
+        "org_id": 89419010,
+        "repo_id": 452221115,
         "user_raised_id": 114760229,
         "pull_request_id": 4980103280,
         "pull_request_url": "https://github.com/dlt-hub/dlt/pull/4601",
@@ -10,8 +33,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Limit duckdb dependency to <2",
-        "created_at": "2026-10-23T08:36:56Z",
-        "updated_at": "2026-10-23T08:36:56Z",
+        "created_at": "2026-10-23T08:36:56+00:00",
+        "updated_at": "2026-10-23T08:36:56+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -19,7 +42,8 @@
         "commit_count": 1,
         "additions": 25,
         "deletions": 22,
-        "changed_files": 7
+        "changed_files": 7,
+        "ingestion_timestamp": "2026-10-25 12:23:52.094080+00:00"
     },
     {
         "org_id": 89419010,
@@ -32,16 +56,17 @@
         "is_draft": false,
         "state": "open",
         "title": "chore: add compatibility for duckdb2",
-        "created_at": "2026-10-22T17:54:27Z",
-        "updated_at": "2026-10-22T20:14:56Z",
+        "created_at": "2026-10-22T17:54:27+00:00",
+        "updated_at": "2026-10-23T09:21:24+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
-        "review_comments": 0,
+        "review_comments": 1,
         "commit_count": 2,
         "additions": 537,
         "deletions": 519,
-        "changed_files": 14
+        "changed_files": 14,
+        "ingestion_timestamp": "2026-10-25 12:23:52.885426+00:00"
     },
     {
         "org_id": 89419010,
@@ -54,8 +79,8 @@
         "is_draft": false,
         "state": "open",
         "title": "docs: fix BaseConfiguration import example",
-        "created_at": "2026-10-22T15:39:15Z",
-        "updated_at": "2026-10-22T15:39:15Z",
+        "created_at": "2026-10-22T15:39:15+00:00",
+        "updated_at": "2026-10-22T15:39:15+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -63,7 +88,8 @@
         "commit_count": 1,
         "additions": 6,
         "deletions": 4,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:23:53.734942+00:00"
     },
     {
         "org_id": 89419010,
@@ -76,8 +102,8 @@
         "is_draft": true,
         "state": "open",
         "title": "feat(docs): log one line per docs page request with its duration",
-        "created_at": "2026-10-22T12:27:13Z",
-        "updated_at": "2026-10-22T13:34:56Z",
+        "created_at": "2026-10-22T12:27:13+00:00",
+        "updated_at": "2026-10-22T13:34:56+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -85,7 +111,8 @@
         "commit_count": 3,
         "additions": 16,
         "deletions": 1,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:23:54.569178+00:00"
     },
     {
         "org_id": 89419010,
@@ -98,8 +125,8 @@
         "is_draft": false,
         "state": "open",
         "title": "(fix) resolve requirements.txt pins together with the launcher specs",
-        "created_at": "2026-10-22T10:37:41Z",
-        "updated_at": "2026-10-22T11:18:05Z",
+        "created_at": "2026-10-22T10:37:41+00:00",
+        "updated_at": "2026-10-22T11:18:05+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -107,7 +134,8 @@
         "commit_count": 1,
         "additions": 29,
         "deletions": 13,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:23:55.390256+00:00"
     },
     {
         "org_id": 89419010,
@@ -120,8 +148,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(typing): fall back to Any when a generic has no type argument",
-        "created_at": "2026-10-21T14:50:44Z",
-        "updated_at": "2026-10-22T16:14:24Z",
+        "created_at": "2026-10-21T14:50:44+00:00",
+        "updated_at": "2026-10-22T16:14:24+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -129,7 +157,8 @@
         "commit_count": 1,
         "additions": 30,
         "deletions": 1,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:23:56.381884+00:00"
     },
     {
         "org_id": 89419010,
@@ -142,16 +171,17 @@
         "is_draft": false,
         "state": "open",
         "title": "Add a dltHub section to the readme",
-        "created_at": "2026-10-21T09:35:05Z",
-        "updated_at": "2026-10-21T09:39:35Z",
+        "created_at": "2026-10-21T09:35:05+00:00",
+        "updated_at": "2026-10-23T14:24:26+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
-        "review_comments": 0,
+        "review_comments": 1,
         "commit_count": 1,
         "additions": 20,
         "deletions": 1,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:23:57.151628+00:00"
     },
     {
         "org_id": 89419010,
@@ -164,8 +194,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Flatten nested dicts in the order they are read",
-        "created_at": "2026-10-21T01:46:21Z",
-        "updated_at": "2026-10-22T16:14:22Z",
+        "created_at": "2026-10-21T01:46:21+00:00",
+        "updated_at": "2026-10-22T16:14:22+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -173,7 +203,8 @@
         "commit_count": 1,
         "additions": 27,
         "deletions": 11,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:23:57.919248+00:00"
     },
     {
         "org_id": 89419010,
@@ -186,16 +217,17 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(destinations): prevent data loss from mismatched nested table merge dispositions",
-        "created_at": "2026-10-20T09:23:42Z",
-        "updated_at": "2026-10-20T09:23:42Z",
+        "created_at": "2026-10-20T09:23:42+00:00",
+        "updated_at": "2026-10-24T05:00:41+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
         "review_comments": 0,
-        "commit_count": 1,
-        "additions": 105,
+        "commit_count": 2,
+        "additions": 108,
         "deletions": 23,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:23:58.927718+00:00"
     },
     {
         "org_id": 89419010,
@@ -208,16 +240,17 @@
         "is_draft": false,
         "state": "open",
         "title": "bumps dlt to 1.32.0",
-        "created_at": "2026-10-18T21:08:34Z",
-        "updated_at": "2026-10-20T05:26:25Z",
+        "created_at": "2026-10-18T21:08:34+00:00",
+        "updated_at": "2026-10-24T16:54:03+00:00",
         "closed_at": null,
         "merged_at": null,
-        "pr_comments": 1,
+        "pr_comments": 2,
         "review_comments": 0,
-        "commit_count": 7,
-        "additions": 349,
-        "deletions": 68,
-        "changed_files": 18
+        "commit_count": 19,
+        "additions": 879,
+        "deletions": 207,
+        "changed_files": 49,
+        "ingestion_timestamp": "2026-10-25 12:23:59.685629+00:00"
     },
     {
         "org_id": 89419010,
@@ -230,8 +263,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(destinations): raise SchemaCorruptedException instead of bare assert for unsupported replace strategy",
-        "created_at": "2026-10-18T04:11:25Z",
-        "updated_at": "2026-10-18T04:12:05Z",
+        "created_at": "2026-10-18T04:11:25+00:00",
+        "updated_at": "2026-10-18T04:12:05+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -239,7 +272,8 @@
         "commit_count": 4,
         "additions": 70,
         "deletions": 16,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:24:00.615233+00:00"
     },
     {
         "org_id": 89419010,
@@ -252,8 +286,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(sqlalchemy): raise WriteDispositionNotSupported instead of AttributeError for unsupported merge",
-        "created_at": "2026-10-18T04:06:23Z",
-        "updated_at": "2026-10-18T04:12:28Z",
+        "created_at": "2026-10-18T04:06:23+00:00",
+        "updated_at": "2026-10-18T04:12:28+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -261,7 +295,8 @@
         "commit_count": 2,
         "additions": 23,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:01.997547+00:00"
     },
     {
         "org_id": 89419010,
@@ -274,8 +309,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(rest-client): redact additional credential query parameters",
-        "created_at": "2026-10-17T16:25:29Z",
-        "updated_at": "2026-10-17T16:25:29Z",
+        "created_at": "2026-10-17T16:25:29+00:00",
+        "updated_at": "2026-10-17T16:25:29+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -283,7 +318,8 @@
         "commit_count": 1,
         "additions": 74,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:02.867772+00:00"
     },
     {
         "org_id": 89419010,
@@ -296,8 +332,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(destinations): support databricks oidc workload federation auth",
-        "created_at": "2026-10-16T12:35:25Z",
-        "updated_at": "2026-10-21T06:47:52Z",
+        "created_at": "2026-10-16T12:35:25+00:00",
+        "updated_at": "2026-10-21T06:47:52+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -305,7 +341,8 @@
         "commit_count": 2,
         "additions": 143,
         "deletions": 10,
-        "changed_files": 6
+        "changed_files": 6,
+        "ingestion_timestamp": "2026-10-25 12:24:03.777556+00:00"
     },
     {
         "org_id": 89419010,
@@ -318,8 +355,8 @@
         "is_draft": false,
         "state": "open",
         "title": "docs: update rest_api {incremental.last_value} placeholder description",
-        "created_at": "2026-10-15T16:25:50Z",
-        "updated_at": "2026-10-15T16:26:52Z",
+        "created_at": "2026-10-15T16:25:50+00:00",
+        "updated_at": "2026-10-15T16:26:52+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -327,7 +364,8 @@
         "commit_count": 1,
         "additions": 6,
         "deletions": 6,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:24:04.849345+00:00"
     },
     {
         "org_id": 89419010,
@@ -340,8 +378,8 @@
         "is_draft": true,
         "state": "open",
         "title": "(exp) sql_database as dataset",
-        "created_at": "2026-10-15T14:41:44Z",
-        "updated_at": "2026-10-15T15:10:56Z",
+        "created_at": "2026-10-15T14:41:44+00:00",
+        "updated_at": "2026-10-15T15:10:56+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -349,7 +387,8 @@
         "commit_count": 1,
         "additions": 748,
         "deletions": 23,
-        "changed_files": 10
+        "changed_files": 10,
+        "ingestion_timestamp": "2026-10-25 12:24:05.595491+00:00"
     },
     {
         "org_id": 89419010,
@@ -362,8 +401,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(workspace): annotate locked specs with their non-pypi index url",
-        "created_at": "2026-10-14T08:29:14Z",
-        "updated_at": "2026-10-19T17:24:56Z",
+        "created_at": "2026-10-14T08:29:14+00:00",
+        "updated_at": "2026-10-19T17:24:56+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 3,
@@ -371,7 +410,8 @@
         "commit_count": 3,
         "additions": 217,
         "deletions": 31,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:24:06.573613+00:00"
     },
     {
         "org_id": 89419010,
@@ -384,8 +424,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(toolkit): add update command to ai toolkit",
-        "created_at": "2026-10-13T12:53:13Z",
-        "updated_at": "2026-10-20T14:23:17Z",
+        "created_at": "2026-10-13T12:53:13+00:00",
+        "updated_at": "2026-10-20T14:23:17+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -393,7 +433,8 @@
         "commit_count": 4,
         "additions": 1997,
         "deletions": 578,
-        "changed_files": 11
+        "changed_files": 11,
+        "ingestion_timestamp": "2026-10-25 12:24:07.363189+00:00"
     },
     {
         "org_id": 89419010,
@@ -406,8 +447,8 @@
         "is_draft": false,
         "state": "open",
         "title": "DO NOT MERGE: docs: TuBA links list now comes from the website repo",
-        "created_at": "2026-10-12T13:01:51Z",
-        "updated_at": "2026-10-12T13:15:49Z",
+        "created_at": "2026-10-12T13:01:51+00:00",
+        "updated_at": "2026-10-12T13:15:49+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -415,7 +456,8 @@
         "commit_count": 1,
         "additions": 3,
         "deletions": 1,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:24:08.359666+00:00"
     },
     {
         "org_id": 89419010,
@@ -428,8 +470,8 @@
         "is_draft": true,
         "state": "open",
         "title": "docs: generate the dlthub cli, rest api and python sdk references",
-        "created_at": "2026-10-12T12:39:40Z",
-        "updated_at": "2026-10-15T15:47:38Z",
+        "created_at": "2026-10-12T12:39:40+00:00",
+        "updated_at": "2026-10-15T15:47:38+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 3,
@@ -437,7 +479,8 @@
         "commit_count": 17,
         "additions": 1013,
         "deletions": 3103,
-        "changed_files": 14
+        "changed_files": 14,
+        "ingestion_timestamp": "2026-10-25 12:24:08.907840+00:00"
     },
     {
         "org_id": 89419010,
@@ -450,8 +493,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(incremental): preserve state across mixed data formats",
-        "created_at": "2026-10-11T21:45:46Z",
-        "updated_at": "2026-10-14T22:28:06Z",
+        "created_at": "2026-10-11T21:45:46+00:00",
+        "updated_at": "2026-10-14T22:28:06+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -459,7 +502,8 @@
         "commit_count": 1,
         "additions": 165,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:09.828788+00:00"
     },
     {
         "org_id": 89419010,
@@ -472,8 +516,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: support qdrant client 1.19",
-        "created_at": "2026-10-11T15:07:13Z",
-        "updated_at": "2026-10-13T14:18:56Z",
+        "created_at": "2026-10-11T15:07:13+00:00",
+        "updated_at": "2026-10-13T14:18:56+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -481,7 +525,8 @@
         "commit_count": 1,
         "additions": 89,
         "deletions": 7,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:24:10.812618+00:00"
     },
     {
         "org_id": 89419010,
@@ -494,8 +539,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: correct qdrant replace loading",
-        "created_at": "2026-10-11T13:57:03Z",
-        "updated_at": "2026-10-13T14:16:32Z",
+        "created_at": "2026-10-11T13:57:03+00:00",
+        "updated_at": "2026-10-13T14:16:32+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -503,7 +548,8 @@
         "commit_count": 1,
         "additions": 60,
         "deletions": 2,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:11.859523+00:00"
     },
     {
         "org_id": 89419010,
@@ -516,8 +562,8 @@
         "is_draft": true,
         "state": "open",
         "title": "fix(deployment): default agent verbosity to full transcript on runtime runs",
-        "created_at": "2026-10-05T09:00:28Z",
-        "updated_at": "2026-10-06T21:19:55Z",
+        "created_at": "2026-10-05T09:00:28+00:00",
+        "updated_at": "2026-10-06T21:19:55+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -525,7 +571,8 @@
         "commit_count": 2,
         "additions": 50,
         "deletions": 5,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:24:12.485146+00:00"
     },
     {
         "org_id": 89419010,
@@ -538,8 +585,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Fix/2858 limit transformer parents",
-        "created_at": "2026-10-05T05:47:40Z",
-        "updated_at": "2026-10-05T05:47:40Z",
+        "created_at": "2026-10-05T05:47:40+00:00",
+        "updated_at": "2026-10-05T05:47:40+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -547,7 +594,8 @@
         "commit_count": 4,
         "additions": 145,
         "deletions": 4,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:24:13.388925+00:00"
     },
     {
         "org_id": 89419010,
@@ -560,8 +608,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(workspace): warn when profile config is not loaded",
-        "created_at": "2026-10-05T05:46:52Z",
-        "updated_at": "2026-10-05T05:46:52Z",
+        "created_at": "2026-10-05T05:46:52+00:00",
+        "updated_at": "2026-10-05T05:46:52+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -569,7 +617,8 @@
         "commit_count": 3,
         "additions": 197,
         "deletions": 4,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:24:13.988294+00:00"
     },
     {
         "org_id": 89419010,
@@ -582,8 +631,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(sql_database): export Table from the source package",
-        "created_at": "2026-10-05T05:45:34Z",
-        "updated_at": "2026-10-05T05:45:34Z",
+        "created_at": "2026-10-05T05:45:34+00:00",
+        "updated_at": "2026-10-05T05:45:34+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -591,7 +640,8 @@
         "commit_count": 1,
         "additions": 27,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:14.761543+00:00"
     },
     {
         "org_id": 89419010,
@@ -604,8 +654,8 @@
         "is_draft": false,
         "state": "open",
         "title": "docs: fix typos in examples and running in production",
-        "created_at": "2026-10-01T13:12:52Z",
-        "updated_at": "2026-10-01T13:12:52Z",
+        "created_at": "2026-10-01T13:12:52+00:00",
+        "updated_at": "2026-10-01T13:12:52+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -613,7 +663,8 @@
         "commit_count": 1,
         "additions": 5,
         "deletions": 5,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:24:15.964252+00:00"
     },
     {
         "org_id": 89419010,
@@ -626,8 +677,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(logging): preserve airflow 3 log levels via propagation",
-        "created_at": "2026-10-01T06:25:14Z",
-        "updated_at": "2026-10-20T12:12:44Z",
+        "created_at": "2026-10-01T06:25:14+00:00",
+        "updated_at": "2026-10-20T12:12:44+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 5,
@@ -635,7 +686,8 @@
         "commit_count": 5,
         "additions": 363,
         "deletions": 16,
-        "changed_files": 10
+        "changed_files": 10,
+        "ingestion_timestamp": "2026-10-25 12:24:16.783414+00:00"
     },
     {
         "org_id": 89419010,
@@ -648,8 +700,8 @@
         "is_draft": true,
         "state": "open",
         "title": "feat(cli): `dlthub` autocompletion",
-        "created_at": "2026-09-30T02:17:12Z",
-        "updated_at": "2026-09-30T02:24:11Z",
+        "created_at": "2026-09-30T02:17:12+00:00",
+        "updated_at": "2026-09-30T02:24:11+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -657,7 +709,8 @@
         "commit_count": 1,
         "additions": 128,
         "deletions": 2,
-        "changed_files": 5
+        "changed_files": 5,
+        "ingestion_timestamp": "2026-10-25 12:24:17.398662+00:00"
     },
     {
         "org_id": 89419010,
@@ -670,8 +723,8 @@
         "is_draft": true,
         "state": "open",
         "title": "Docs: align the background agents pages with the shipped job inspector",
-        "created_at": "2026-09-29T12:19:59Z",
-        "updated_at": "2026-10-13T12:06:11Z",
+        "created_at": "2026-09-29T12:19:59+00:00",
+        "updated_at": "2026-10-13T12:06:11+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -679,7 +732,8 @@
         "commit_count": 14,
         "additions": 163,
         "deletions": 37,
-        "changed_files": 7
+        "changed_files": 7,
+        "ingestion_timestamp": "2026-10-25 12:24:17.981743+00:00"
     },
     {
         "org_id": 89419010,
@@ -692,8 +746,8 @@
         "is_draft": false,
         "state": "open",
         "title": "remove click, replace CLI echo/confirm/prompt helpers with stdlib",
-        "created_at": "2026-09-28T04:28:03Z",
-        "updated_at": "2026-10-14T04:40:37Z",
+        "created_at": "2026-09-28T04:28:03+00:00",
+        "updated_at": "2026-10-14T04:40:37+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -701,7 +755,8 @@
         "commit_count": 1,
         "additions": 116,
         "deletions": 38,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:24:18.830086+00:00"
     },
     {
         "org_id": 89419010,
@@ -714,8 +769,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(gcp): show service account email for default credentials",
-        "created_at": "2026-09-25T15:11:48Z",
-        "updated_at": "2026-09-25T15:11:48Z",
+        "created_at": "2026-09-25T15:11:48+00:00",
+        "updated_at": "2026-09-25T15:11:48+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -723,7 +778,8 @@
         "commit_count": 3,
         "additions": 136,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:19.649222+00:00"
     },
     {
         "org_id": 89419010,
@@ -736,8 +792,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(incremental): keep explicit range_start, range_end, on_cursor_value_missing on override",
-        "created_at": "2026-09-25T04:54:07Z",
-        "updated_at": "2026-09-25T04:54:07Z",
+        "created_at": "2026-09-25T04:54:07+00:00",
+        "updated_at": "2026-09-25T04:54:07+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -745,7 +801,8 @@
         "commit_count": 1,
         "additions": 39,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:20.482090+00:00"
     },
     {
         "org_id": 89419010,
@@ -758,8 +815,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(pipeline): let KeyboardInterrupt propagate from pipeline steps",
-        "created_at": "2026-09-24T04:55:13Z",
-        "updated_at": "2026-10-09T09:00:32Z",
+        "created_at": "2026-09-24T04:55:13+00:00",
+        "updated_at": "2026-10-09T09:00:32+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -767,7 +824,8 @@
         "commit_count": 2,
         "additions": 18,
         "deletions": 67,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:21.328810+00:00"
     },
     {
         "org_id": 89419010,
@@ -780,8 +838,8 @@
         "is_draft": true,
         "state": "open",
         "title": "Docs: clarify point-in-time backfilling and support for views / materialized views in the Postgres\u2026",
-        "created_at": "2026-09-23T15:26:19Z",
-        "updated_at": "2026-10-05T12:31:27Z",
+        "created_at": "2026-09-23T15:26:19+00:00",
+        "updated_at": "2026-10-05T12:31:27+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -789,7 +847,8 @@
         "commit_count": 3,
         "additions": 107,
         "deletions": 0,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:24:22.262185+00:00"
     },
     {
         "org_id": 89419010,
@@ -802,8 +861,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(schema): merge_table keeps processing hints a resource does not carry",
-        "created_at": "2026-09-19T17:18:14Z",
-        "updated_at": "2026-09-19T17:18:14Z",
+        "created_at": "2026-09-19T17:18:14+00:00",
+        "updated_at": "2026-09-19T17:18:14+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -811,7 +870,8 @@
         "commit_count": 1,
         "additions": 31,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:23.048190+00:00"
     },
     {
         "org_id": 89419010,
@@ -824,8 +884,8 @@
         "is_draft": false,
         "state": "open",
         "title": "docs(dataset): fix the where/filter docstring parameter name",
-        "created_at": "2026-09-17T17:02:04Z",
-        "updated_at": "2026-09-17T17:02:09Z",
+        "created_at": "2026-09-17T17:02:04+00:00",
+        "updated_at": "2026-09-17T17:02:09+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -833,7 +893,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 2,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:24:23.899015+00:00"
     },
     {
         "org_id": 89419010,
@@ -846,8 +907,8 @@
         "is_draft": false,
         "state": "open",
         "title": "docs: fix the self-referencing deploy walkthrough link",
-        "created_at": "2026-09-17T17:01:43Z",
-        "updated_at": "2026-09-17T17:01:49Z",
+        "created_at": "2026-09-17T17:01:43+00:00",
+        "updated_at": "2026-09-17T17:01:49+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -855,7 +916,8 @@
         "commit_count": 1,
         "additions": 1,
         "deletions": 1,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:24:24.777023+00:00"
     },
     {
         "org_id": 89419010,
@@ -868,8 +930,8 @@
         "is_draft": false,
         "state": "open",
         "title": "docs: fix directory depth in the filesystem verified-source links",
-        "created_at": "2026-09-17T17:01:20Z",
-        "updated_at": "2026-09-17T17:01:26Z",
+        "created_at": "2026-09-17T17:01:20+00:00",
+        "updated_at": "2026-09-17T17:01:26+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -877,7 +939,8 @@
         "commit_count": 1,
         "additions": 3,
         "deletions": 3,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:24:25.582546+00:00"
     },
     {
         "org_id": 89419010,
@@ -890,8 +953,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(lancedb): correct the adapter validation message",
-        "created_at": "2026-09-17T17:00:26Z",
-        "updated_at": "2026-09-17T17:00:32Z",
+        "created_at": "2026-09-17T17:00:26+00:00",
+        "updated_at": "2026-09-17T17:00:32+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -899,7 +962,8 @@
         "commit_count": 1,
         "additions": 1,
         "deletions": 1,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:24:26.407021+00:00"
     },
     {
         "org_id": 89419010,
@@ -912,8 +976,8 @@
         "is_draft": true,
         "state": "open",
         "title": "feat(weaviate): named vectors, own vectors and multi-tenancy",
-        "created_at": "2026-09-17T12:30:56Z",
-        "updated_at": "2026-10-22T09:54:48Z",
+        "created_at": "2026-09-17T12:30:56+00:00",
+        "updated_at": "2026-10-22T09:54:48+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -921,7 +985,8 @@
         "commit_count": 4,
         "additions": 1877,
         "deletions": 243,
-        "changed_files": 16
+        "changed_files": 16,
+        "ingestion_timestamp": "2026-10-25 12:24:27.031358+00:00"
     },
     {
         "org_id": 89419010,
@@ -934,8 +999,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(weaviate): honour batch and connection configuration",
-        "created_at": "2026-09-17T12:30:35Z",
-        "updated_at": "2026-10-22T09:54:45Z",
+        "created_at": "2026-09-17T12:30:35+00:00",
+        "updated_at": "2026-10-22T09:54:45+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -943,7 +1008,8 @@
         "commit_count": 5,
         "additions": 896,
         "deletions": 164,
-        "changed_files": 13
+        "changed_files": 13,
+        "ingestion_timestamp": "2026-10-25 12:24:27.861824+00:00"
     },
     {
         "org_id": 89419010,
@@ -956,8 +1022,8 @@
         "is_draft": false,
         "state": "open",
         "title": "docs: remove Pydantic v1 references",
-        "created_at": "2026-09-13T19:19:25Z",
-        "updated_at": "2026-09-13T19:19:25Z",
+        "created_at": "2026-09-13T19:19:25+00:00",
+        "updated_at": "2026-09-13T19:19:25+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -965,7 +1031,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 3,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:24:28.725919+00:00"
     },
     {
         "org_id": 89419010,
@@ -978,8 +1045,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(providers): serialize vault cache resolution",
-        "created_at": "2026-09-09T09:30:24Z",
-        "updated_at": "2026-09-30T11:08:09Z",
+        "created_at": "2026-09-09T09:30:24+00:00",
+        "updated_at": "2026-09-30T11:08:09+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -987,7 +1054,8 @@
         "commit_count": 2,
         "additions": 201,
         "deletions": 20,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:24:29.524544+00:00"
     },
     {
         "org_id": 89419010,
@@ -1000,8 +1068,8 @@
         "is_draft": true,
         "state": "open",
         "title": "feat: declarative SQL source (#4337)",
-        "created_at": "2026-09-08T19:38:12Z",
-        "updated_at": "2026-09-08T23:01:15Z",
+        "created_at": "2026-09-08T19:38:12+00:00",
+        "updated_at": "2026-09-08T23:01:15+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -1009,7 +1077,8 @@
         "commit_count": 9,
         "additions": 1124,
         "deletions": 14,
-        "changed_files": 6
+        "changed_files": 6,
+        "ingestion_timestamp": "2026-10-25 12:24:30.281124+00:00"
     },
     {
         "org_id": 89419010,
@@ -1022,8 +1091,8 @@
         "is_draft": false,
         "state": "open",
         "title": "docs(dataset): align where/filter docstring params with the signature",
-        "created_at": "2026-09-08T16:58:13Z",
-        "updated_at": "2026-09-24T14:06:50Z",
+        "created_at": "2026-09-08T16:58:13+00:00",
+        "updated_at": "2026-09-24T14:06:50+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -1031,7 +1100,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 2,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:24:31.061510+00:00"
     },
     {
         "org_id": 89419010,
@@ -1044,8 +1114,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(rest-client): fall back to other stop conditions on null total with default total_path",
-        "created_at": "2026-09-08T11:47:24Z",
-        "updated_at": "2026-09-14T07:17:35Z",
+        "created_at": "2026-09-08T11:47:24+00:00",
+        "updated_at": "2026-09-14T07:17:35+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1053,7 +1123,8 @@
         "commit_count": 2,
         "additions": 126,
         "deletions": 21,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:32.049117+00:00"
     },
     {
         "org_id": 89419010,
@@ -1066,8 +1137,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(azure): support azure_storage_token bearer auth for OneLake/ABFS",
-        "created_at": "2026-09-06T16:40:45Z",
-        "updated_at": "2026-09-11T15:21:50Z",
+        "created_at": "2026-09-06T16:40:45+00:00",
+        "updated_at": "2026-09-11T15:21:50+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -1075,7 +1146,8 @@
         "commit_count": 4,
         "additions": 130,
         "deletions": 9,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:24:32.970651+00:00"
     },
     {
         "org_id": 89419010,
@@ -1088,8 +1160,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(extract): warn when incremental lag unit is inferred from a string cursor format",
-        "created_at": "2026-08-26T13:16:01Z",
-        "updated_at": "2026-08-26T17:10:39Z",
+        "created_at": "2026-08-26T13:16:01+00:00",
+        "updated_at": "2026-08-26T17:10:39+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -1097,7 +1169,8 @@
         "commit_count": 1,
         "additions": 78,
         "deletions": 0,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:24:33.583871+00:00"
     },
     {
         "org_id": 89419010,
@@ -1110,8 +1183,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(fabric): add a timeout to the token initialization request",
-        "created_at": "2026-08-24T02:15:02Z",
-        "updated_at": "2026-08-24T02:15:02Z",
+        "created_at": "2026-08-24T02:15:02+00:00",
+        "updated_at": "2026-08-24T02:15:02+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1119,7 +1192,8 @@
         "commit_count": 1,
         "additions": 272,
         "deletions": 264,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:24:34.155277+00:00"
     },
     {
         "org_id": 89419010,
@@ -1132,8 +1206,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(workspace): keep the AiContextApiError contract for invalid API bodies",
-        "created_at": "2026-08-24T02:11:44Z",
-        "updated_at": "2026-08-24T02:11:44Z",
+        "created_at": "2026-08-24T02:11:44+00:00",
+        "updated_at": "2026-08-24T02:11:44+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1141,7 +1215,8 @@
         "commit_count": 1,
         "additions": 34,
         "deletions": 1,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:35.137042+00:00"
     },
     {
         "org_id": 89419010,
@@ -1154,8 +1229,8 @@
         "is_draft": false,
         "state": "open",
         "title": "chore: move flake8 config from tox.ini to pyproject.toml",
-        "created_at": "2026-08-23T04:22:04Z",
-        "updated_at": "2026-10-08T19:45:04Z",
+        "created_at": "2026-08-23T04:22:04+00:00",
+        "updated_at": "2026-10-08T19:45:04+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -1163,7 +1238,8 @@
         "commit_count": 1,
         "additions": 72,
         "deletions": 37,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:24:36.041019+00:00"
     },
     {
         "org_id": 89419010,
@@ -1176,8 +1252,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(config): resolve GCP credentials from a file path, aggregate union parse errors",
-        "created_at": "2026-08-19T01:05:01Z",
-        "updated_at": "2026-09-24T07:18:23Z",
+        "created_at": "2026-08-19T01:05:01+00:00",
+        "updated_at": "2026-09-24T07:18:23+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -1185,7 +1261,8 @@
         "commit_count": 1,
         "additions": 106,
         "deletions": 8,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:24:36.965737+00:00"
     },
     {
         "org_id": 89419010,
@@ -1198,8 +1275,8 @@
         "is_draft": false,
         "state": "open",
         "title": "docs: rename Notifications sidebar category to Alerts",
-        "created_at": "2026-08-18T15:23:48Z",
-        "updated_at": "2026-08-18T17:27:00Z",
+        "created_at": "2026-08-18T15:23:48+00:00",
+        "updated_at": "2026-08-18T17:27:00+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1207,7 +1284,8 @@
         "commit_count": 1,
         "additions": 1,
         "deletions": 1,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:24:37.828264+00:00"
     },
     {
         "org_id": 89419010,
@@ -1220,8 +1298,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(clickhouse): parallel writes job",
-        "created_at": "2026-08-17T18:25:52Z",
-        "updated_at": "2026-10-15T09:28:02Z",
+        "created_at": "2026-08-17T18:25:52+00:00",
+        "updated_at": "2026-10-15T09:28:02+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1229,7 +1307,8 @@
         "commit_count": 9,
         "additions": 390,
         "deletions": 11,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:24:38.452648+00:00"
     },
     {
         "org_id": 89419010,
@@ -1242,8 +1321,8 @@
         "is_draft": true,
         "state": "open",
         "title": "Docs: document module-level jobs and dunders, plus an example for setting instance size",
-        "created_at": "2026-08-14T12:29:56Z",
-        "updated_at": "2026-08-28T12:49:07Z",
+        "created_at": "2026-08-14T12:29:56+00:00",
+        "updated_at": "2026-08-28T12:49:07+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 4,
@@ -1251,7 +1330,8 @@
         "commit_count": 3,
         "additions": 85,
         "deletions": 9,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:39.113768+00:00"
     },
     {
         "org_id": 89419010,
@@ -1264,8 +1344,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(mssql): load parquet with mssql-python native arrow bulk copy",
-        "created_at": "2026-08-13T12:30:17Z",
-        "updated_at": "2026-09-27T07:45:33Z",
+        "created_at": "2026-08-13T12:30:17+00:00",
+        "updated_at": "2026-09-27T07:45:33+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1273,7 +1353,8 @@
         "commit_count": 33,
         "additions": 2744,
         "deletions": 574,
-        "changed_files": 37
+        "changed_files": 37,
+        "ingestion_timestamp": "2026-10-25 12:24:39.742020+00:00"
     },
     {
         "org_id": 89419010,
@@ -1286,8 +1367,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Add PR triage GitHub workflow",
-        "created_at": "2026-08-13T10:41:16Z",
-        "updated_at": "2026-10-06T13:03:09Z",
+        "created_at": "2026-08-13T10:41:16+00:00",
+        "updated_at": "2026-10-06T13:03:09+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 3,
@@ -1295,7 +1376,8 @@
         "commit_count": 3,
         "additions": 573,
         "deletions": 0,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:24:40.550179+00:00"
     },
     {
         "org_id": 89419010,
@@ -1308,8 +1390,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat: `yaml` config provider",
-        "created_at": "2026-08-11T20:39:56Z",
-        "updated_at": "2026-08-19T15:42:34Z",
+        "created_at": "2026-08-11T20:39:56+00:00",
+        "updated_at": "2026-08-19T15:42:34+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1317,7 +1399,8 @@
         "commit_count": 2,
         "additions": 992,
         "deletions": 112,
-        "changed_files": 19
+        "changed_files": 19,
+        "ingestion_timestamp": "2026-10-25 12:24:41.368055+00:00"
     },
     {
         "org_id": 89419010,
@@ -1330,8 +1413,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(sql_database): reflect timestamp/datetime precision at full_with_precision",
-        "created_at": "2026-08-11T15:01:51Z",
-        "updated_at": "2026-08-11T15:01:51Z",
+        "created_at": "2026-08-11T15:01:51+00:00",
+        "updated_at": "2026-08-11T15:01:51+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1339,7 +1422,8 @@
         "commit_count": 1,
         "additions": 34,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:42.238574+00:00"
     },
     {
         "org_id": 89419010,
@@ -1352,8 +1436,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(sql_database): map FLOAT/REAL/DOUBLE to double under SQLAlchemy 2.1",
-        "created_at": "2026-08-11T14:57:48Z",
-        "updated_at": "2026-08-11T14:57:48Z",
+        "created_at": "2026-08-11T14:57:48+00:00",
+        "updated_at": "2026-08-11T14:57:48+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1361,7 +1445,8 @@
         "commit_count": 1,
         "additions": 39,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:43.107901+00:00"
     },
     {
         "org_id": 89419010,
@@ -1374,8 +1459,8 @@
         "is_draft": false,
         "state": "open",
         "title": "docs(hub): document refresh a single resource in triggers",
-        "created_at": "2026-08-07T13:46:24Z",
-        "updated_at": "2026-09-01T16:56:01Z",
+        "created_at": "2026-08-07T13:46:24+00:00",
+        "updated_at": "2026-09-01T16:56:01+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -1383,7 +1468,8 @@
         "commit_count": 2,
         "additions": 66,
         "deletions": 2,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:24:43.869576+00:00"
     },
     {
         "org_id": 89419010,
@@ -1396,8 +1482,8 @@
         "is_draft": true,
         "state": "open",
         "title": "feat: `dlt.Dataset` interface over load packages",
-        "created_at": "2026-08-06T21:34:56Z",
-        "updated_at": "2026-08-11T13:37:41Z",
+        "created_at": "2026-08-06T21:34:56+00:00",
+        "updated_at": "2026-08-11T13:37:41+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -1405,7 +1491,8 @@
         "commit_count": 4,
         "additions": 140,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:44.787998+00:00"
     },
     {
         "org_id": 89419010,
@@ -1418,8 +1505,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Feat/3545 redshift column descriptions",
-        "created_at": "2026-08-05T17:00:58Z",
-        "updated_at": "2026-08-05T17:00:58Z",
+        "created_at": "2026-08-05T17:00:58+00:00",
+        "updated_at": "2026-08-05T17:00:58+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1427,7 +1514,8 @@
         "commit_count": 2,
         "additions": 65,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:45.772816+00:00"
     },
     {
         "org_id": 89419010,
@@ -1440,8 +1528,8 @@
         "is_draft": false,
         "state": "open",
         "title": "(feat) lancedb enterprise destination",
-        "created_at": "2026-08-04T21:28:12Z",
-        "updated_at": "2026-08-07T06:58:25Z",
+        "created_at": "2026-08-04T21:28:12+00:00",
+        "updated_at": "2026-08-07T06:58:25+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 3,
@@ -1449,7 +1537,8 @@
         "commit_count": 24,
         "additions": 3436,
         "deletions": 1613,
-        "changed_files": 50
+        "changed_files": 50,
+        "ingestion_timestamp": "2026-10-25 12:24:46.378423+00:00"
     },
     {
         "org_id": 89419010,
@@ -1462,8 +1551,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(fabric): widen tinyint integer precision to smallint",
-        "created_at": "2026-08-04T18:37:42Z",
-        "updated_at": "2026-09-27T07:45:33Z",
+        "created_at": "2026-08-04T18:37:42+00:00",
+        "updated_at": "2026-09-27T07:45:33+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1471,7 +1560,8 @@
         "commit_count": 1,
         "additions": 27,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:47.239708+00:00"
     },
     {
         "org_id": 89419010,
@@ -1484,8 +1574,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(filesystem): normalize OneLake directory probes",
-        "created_at": "2026-07-31T14:30:55Z",
-        "updated_at": "2026-09-27T07:45:33Z",
+        "created_at": "2026-07-31T14:30:55+00:00",
+        "updated_at": "2026-09-27T07:45:33+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -1493,7 +1583,8 @@
         "commit_count": 2,
         "additions": 168,
         "deletions": 10,
-        "changed_files": 5
+        "changed_files": 5,
+        "ingestion_timestamp": "2026-10-25 12:24:48.395077+00:00"
     },
     {
         "org_id": 89419010,
@@ -1506,8 +1597,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(filesystem): preserve native nested types in parquet",
-        "created_at": "2026-07-30T20:51:09Z",
-        "updated_at": "2026-09-23T12:53:55Z",
+        "created_at": "2026-07-30T20:51:09+00:00",
+        "updated_at": "2026-09-23T12:53:55+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1515,7 +1606,8 @@
         "commit_count": 2,
         "additions": 41,
         "deletions": 1,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:49.220054+00:00"
     },
     {
         "org_id": 89419010,
@@ -1528,8 +1620,8 @@
         "is_draft": true,
         "state": "open",
         "title": "feat(filesystem): tag s3fs user agent with dlt version",
-        "created_at": "2026-07-30T19:59:19Z",
-        "updated_at": "2026-07-30T19:59:19Z",
+        "created_at": "2026-07-30T19:59:19+00:00",
+        "updated_at": "2026-07-30T19:59:19+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1537,7 +1629,8 @@
         "commit_count": 2,
         "additions": 11,
         "deletions": 4,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:24:50.082646+00:00"
     },
     {
         "org_id": 89419010,
@@ -1550,8 +1643,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(incremental): do not close bounded arrow source on all-null cursor batch",
-        "created_at": "2026-07-27T07:31:19Z",
-        "updated_at": "2026-07-27T07:31:19Z",
+        "created_at": "2026-07-27T07:31:19+00:00",
+        "updated_at": "2026-07-27T07:31:19+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1559,7 +1652,8 @@
         "commit_count": 1,
         "additions": 31,
         "deletions": 1,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:50.913361+00:00"
     },
     {
         "org_id": 89419010,
@@ -1572,8 +1666,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(incremental): do not close bounded source on all-null arrow cursor batch",
-        "created_at": "2026-07-25T08:28:27Z",
-        "updated_at": "2026-07-25T08:28:27Z",
+        "created_at": "2026-07-25T08:28:27+00:00",
+        "updated_at": "2026-07-25T08:28:27+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1581,7 +1675,8 @@
         "commit_count": 1,
         "additions": 31,
         "deletions": 1,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:51.886130+00:00"
     },
     {
         "org_id": 89419010,
@@ -1594,8 +1689,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(providers): add azure key vault configuration provider",
-        "created_at": "2026-07-23T10:12:57Z",
-        "updated_at": "2026-09-27T07:45:33Z",
+        "created_at": "2026-07-23T10:12:57+00:00",
+        "updated_at": "2026-09-27T07:45:33+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1603,7 +1698,8 @@
         "commit_count": 13,
         "additions": 2036,
         "deletions": 64,
-        "changed_files": 24
+        "changed_files": 24,
+        "ingestion_timestamp": "2026-10-25 12:24:52.835073+00:00"
     },
     {
         "org_id": 89419010,
@@ -1616,8 +1712,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(sql_database): map mssql money and smallmoney to decimal",
-        "created_at": "2026-07-19T23:34:29Z",
-        "updated_at": "2026-09-27T07:45:33Z",
+        "created_at": "2026-07-19T23:34:29+00:00",
+        "updated_at": "2026-09-27T07:45:33+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -1625,7 +1721,8 @@
         "commit_count": 3,
         "additions": 69,
         "deletions": 5,
-        "changed_files": 6
+        "changed_files": 6,
+        "ingestion_timestamp": "2026-10-25 12:24:53.497186+00:00"
     },
     {
         "org_id": 89419010,
@@ -1638,8 +1735,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(sql_database): add mssql_arrow backend for native arrow batches",
-        "created_at": "2026-07-19T23:34:12Z",
-        "updated_at": "2026-09-27T07:45:33Z",
+        "created_at": "2026-07-19T23:34:12+00:00",
+        "updated_at": "2026-09-27T07:45:33+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1647,7 +1744,8 @@
         "commit_count": 33,
         "additions": 2478,
         "deletions": 464,
-        "changed_files": 36
+        "changed_files": 36,
+        "ingestion_timestamp": "2026-10-25 12:24:54.140724+00:00"
     },
     {
         "org_id": 89419010,
@@ -1660,8 +1758,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(extract): preserve nested hint path separators",
-        "created_at": "2026-07-17T08:32:04Z",
-        "updated_at": "2026-07-17T08:32:04Z",
+        "created_at": "2026-07-17T08:32:04+00:00",
+        "updated_at": "2026-07-17T08:32:04+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1669,7 +1767,8 @@
         "commit_count": 1,
         "additions": 13,
         "deletions": 18,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:54.984438+00:00"
     },
     {
         "org_id": 89419010,
@@ -1682,8 +1781,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(config): remove nested none values before toml serialization",
-        "created_at": "2026-07-17T08:03:26Z",
-        "updated_at": "2026-07-17T09:46:13Z",
+        "created_at": "2026-07-17T08:03:26+00:00",
+        "updated_at": "2026-07-17T09:46:13+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1691,7 +1790,8 @@
         "commit_count": 2,
         "additions": 33,
         "deletions": 2,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:55.878094+00:00"
     },
     {
         "org_id": 89419010,
@@ -1704,8 +1804,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(extract): call arrow callable primary key with a row, not the table",
-        "created_at": "2026-07-16T02:19:45Z",
-        "updated_at": "2026-07-16T16:27:10Z",
+        "created_at": "2026-07-16T02:19:45+00:00",
+        "updated_at": "2026-07-16T16:27:10+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1713,7 +1813,8 @@
         "commit_count": 1,
         "additions": 87,
         "deletions": 1,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:24:56.728842+00:00"
     },
     {
         "org_id": 89419010,
@@ -1726,8 +1827,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: allow key-only hard deletes with required columns",
-        "created_at": "2026-07-14T15:30:20Z",
-        "updated_at": "2026-07-14T15:30:20Z",
+        "created_at": "2026-07-14T15:30:20+00:00",
+        "updated_at": "2026-07-14T15:30:20+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1735,7 +1836,8 @@
         "commit_count": 1,
         "additions": 155,
         "deletions": 2,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:24:57.525914+00:00"
     },
     {
         "org_id": 89419010,
@@ -1748,8 +1850,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat: add client_secret_basic support to OAuth2ClientCredentials",
-        "created_at": "2026-07-13T03:08:54Z",
-        "updated_at": "2026-07-21T15:08:13Z",
+        "created_at": "2026-07-13T03:08:54+00:00",
+        "updated_at": "2026-07-21T15:08:13+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -1757,7 +1859,8 @@
         "commit_count": 2,
         "additions": 21,
         "deletions": 9,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:24:58.345780+00:00"
     },
     {
         "org_id": 89419010,
@@ -1770,8 +1873,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(deployment): disable fastmcp host-origin guard behind the runtime proxy",
-        "created_at": "2026-07-11T00:04:34Z",
-        "updated_at": "2026-07-11T00:04:40Z",
+        "created_at": "2026-07-11T00:04:34+00:00",
+        "updated_at": "2026-07-11T00:04:40+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1779,7 +1882,8 @@
         "commit_count": 1,
         "additions": 65,
         "deletions": 1,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:24:58.979077+00:00"
     },
     {
         "org_id": 89419010,
@@ -1792,8 +1896,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(cli): make deploy origin error name the deployment method",
-        "created_at": "2026-07-08T18:48:57Z",
-        "updated_at": "2026-07-08T18:49:04Z",
+        "created_at": "2026-07-08T18:48:57+00:00",
+        "updated_at": "2026-07-08T18:49:04+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1801,7 +1905,8 @@
         "commit_count": 1,
         "additions": 37,
         "deletions": 6,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:24:59.820319+00:00"
     },
     {
         "org_id": 89419010,
@@ -1814,8 +1919,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(schema): interpolate table name in missing root_key error",
-        "created_at": "2026-07-07T10:33:37Z",
-        "updated_at": "2026-07-07T10:33:37Z",
+        "created_at": "2026-07-07T10:33:37+00:00",
+        "updated_at": "2026-07-07T10:33:37+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1823,7 +1928,8 @@
         "commit_count": 1,
         "additions": 12,
         "deletions": 1,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:00.667222+00:00"
     },
     {
         "org_id": 89419010,
@@ -1836,8 +1942,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(normalizers): collapse all-underscore identifiers to _ in sql naming",
-        "created_at": "2026-07-07T07:49:01Z",
-        "updated_at": "2026-07-07T07:49:01Z",
+        "created_at": "2026-07-07T07:49:01+00:00",
+        "updated_at": "2026-07-07T07:49:01+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1845,7 +1951,8 @@
         "commit_count": 1,
         "additions": 8,
         "deletions": 2,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:01.541564+00:00"
     },
     {
         "org_id": 89419010,
@@ -1858,8 +1965,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(config): add Azure Key Vault secrets provider",
-        "created_at": "2026-07-07T03:14:03Z",
-        "updated_at": "2026-07-07T03:14:03Z",
+        "created_at": "2026-07-07T03:14:03+00:00",
+        "updated_at": "2026-07-07T03:14:03+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1867,7 +1974,8 @@
         "commit_count": 1,
         "additions": 1015,
         "deletions": 563,
-        "changed_files": 10
+        "changed_files": 10,
+        "ingestion_timestamp": "2026-10-25 12:25:02.723641+00:00"
     },
     {
         "org_id": 89419010,
@@ -1880,8 +1988,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(snowflake): reject DECFLOAT columns in parquet files",
-        "created_at": "2026-07-06T06:48:38Z",
-        "updated_at": "2026-07-06T06:48:38Z",
+        "created_at": "2026-07-06T06:48:38+00:00",
+        "updated_at": "2026-07-06T06:48:38+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1889,7 +1997,8 @@
         "commit_count": 1,
         "additions": 74,
         "deletions": 9,
-        "changed_files": 5
+        "changed_files": 5,
+        "ingestion_timestamp": "2026-10-25 12:25:03.380345+00:00"
     },
     {
         "org_id": 89419010,
@@ -1902,8 +2011,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(normalize): fail early on unsupported data type for file format",
-        "created_at": "2026-07-05T02:18:58Z",
-        "updated_at": "2026-07-05T02:18:58Z",
+        "created_at": "2026-07-05T02:18:58+00:00",
+        "updated_at": "2026-07-05T02:18:58+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1911,7 +2020,8 @@
         "commit_count": 2,
         "additions": 51,
         "deletions": 1,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:25:04.220416+00:00"
     },
     {
         "org_id": 89419010,
@@ -1924,8 +2034,8 @@
         "is_draft": true,
         "state": "open",
         "title": "[WIP] Concurrent schema updates ",
-        "created_at": "2026-07-03T09:06:28Z",
-        "updated_at": "2026-07-14T09:07:57Z",
+        "created_at": "2026-07-03T09:06:28+00:00",
+        "updated_at": "2026-07-14T09:07:57+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -1933,7 +2043,8 @@
         "commit_count": 3,
         "additions": 480,
         "deletions": 14,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:25:04.986415+00:00"
     },
     {
         "org_id": 89419010,
@@ -1946,8 +2057,8 @@
         "is_draft": false,
         "state": "open",
         "title": "docs(website): add status link to navbar and footer",
-        "created_at": "2026-07-02T12:59:26Z",
-        "updated_at": "2026-08-24T13:30:38Z",
+        "created_at": "2026-07-02T12:59:26+00:00",
+        "updated_at": "2026-08-24T13:30:38+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -1955,7 +2066,8 @@
         "commit_count": 2,
         "additions": 70,
         "deletions": 0,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:25:05.559690+00:00"
     },
     {
         "org_id": 89419010,
@@ -1968,8 +2080,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Honor normalize loader_file_format config",
-        "created_at": "2026-07-01T12:05:50Z",
-        "updated_at": "2026-07-11T16:43:09Z",
+        "created_at": "2026-07-01T12:05:50+00:00",
+        "updated_at": "2026-07-11T16:43:09+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -1977,7 +2089,8 @@
         "commit_count": 1,
         "additions": 53,
         "deletions": 2,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:25:06.459669+00:00"
     },
     {
         "org_id": 89419010,
@@ -1990,8 +2103,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(mssql,fabric): add Entra ID authentication and NotebookUtils credential",
-        "created_at": "2026-07-01T07:40:18Z",
-        "updated_at": "2026-09-27T07:45:33Z",
+        "created_at": "2026-07-01T07:40:18+00:00",
+        "updated_at": "2026-09-27T07:45:33+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -1999,7 +2112,8 @@
         "commit_count": 7,
         "additions": 1454,
         "deletions": 60,
-        "changed_files": 16
+        "changed_files": 16,
+        "ingestion_timestamp": "2026-10-25 12:25:07.482391+00:00"
     },
     {
         "org_id": 89419010,
@@ -2012,8 +2126,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(fabric): support staging-optimized replace via DDL transactions",
-        "created_at": "2026-06-30T20:53:02Z",
-        "updated_at": "2026-09-27T07:45:33Z",
+        "created_at": "2026-06-30T20:53:02+00:00",
+        "updated_at": "2026-09-27T07:45:33+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2021,7 +2135,8 @@
         "commit_count": 2,
         "additions": 123,
         "deletions": 9,
-        "changed_files": 5
+        "changed_files": 5,
+        "ingestion_timestamp": "2026-10-25 12:25:08.438896+00:00"
     },
     {
         "org_id": 89419010,
@@ -2034,8 +2149,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(mssql): replace pyODBC + ODBC installation dependency with Microsoft's mssql-python",
-        "created_at": "2026-06-30T18:33:58Z",
-        "updated_at": "2026-09-27T07:45:34Z",
+        "created_at": "2026-06-30T18:33:58+00:00",
+        "updated_at": "2026-09-27T07:45:34+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 5,
@@ -2043,7 +2158,8 @@
         "commit_count": 23,
         "additions": 2155,
         "deletions": 453,
-        "changed_files": 30
+        "changed_files": 30,
+        "ingestion_timestamp": "2026-10-25 12:25:09.100513+00:00"
     },
     {
         "org_id": 89419010,
@@ -2056,8 +2172,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: suppress pyarrow nullability warning for primary keys",
-        "created_at": "2026-06-28T22:53:57Z",
-        "updated_at": "2026-06-28T22:53:57Z",
+        "created_at": "2026-06-28T22:53:57+00:00",
+        "updated_at": "2026-06-28T22:53:57+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2065,7 +2181,8 @@
         "commit_count": 1,
         "additions": 37,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:09.901221+00:00"
     },
     {
         "org_id": 89419010,
@@ -2078,8 +2195,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(incremental): bound boundary-dedup state growth (#4030)",
-        "created_at": "2026-06-28T16:55:39Z",
-        "updated_at": "2026-06-28T16:56:18Z",
+        "created_at": "2026-06-28T16:55:39+00:00",
+        "updated_at": "2026-06-28T16:56:18+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2087,7 +2204,8 @@
         "commit_count": 1,
         "additions": 95,
         "deletions": 4,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:25:10.514988+00:00"
     },
     {
         "org_id": 89419010,
@@ -2100,8 +2218,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(dataset): add row_factory to Relation fetch methods",
-        "created_at": "2026-06-27T16:34:29Z",
-        "updated_at": "2026-08-13T20:48:07Z",
+        "created_at": "2026-06-27T16:34:29+00:00",
+        "updated_at": "2026-08-13T20:48:07+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2109,7 +2227,8 @@
         "commit_count": 4,
         "additions": 171,
         "deletions": 8,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:25:11.167545+00:00"
     },
     {
         "org_id": 89419010,
@@ -2122,8 +2241,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: start extract resource timing before first item",
-        "created_at": "2026-06-24T17:10:42Z",
-        "updated_at": "2026-07-06T01:51:10Z",
+        "created_at": "2026-06-24T17:10:42+00:00",
+        "updated_at": "2026-07-06T01:51:10+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2131,7 +2250,8 @@
         "commit_count": 1,
         "additions": 59,
         "deletions": 2,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:25:11.761203+00:00"
     },
     {
         "org_id": 89419010,
@@ -2144,8 +2264,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: guard source resource lookup before init",
-        "created_at": "2026-06-24T09:50:41Z",
-        "updated_at": "2026-06-24T09:50:41Z",
+        "created_at": "2026-06-24T09:50:41+00:00",
+        "updated_at": "2026-06-24T09:50:41+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2153,7 +2273,8 @@
         "commit_count": 1,
         "additions": 18,
         "deletions": 3,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:12.598251+00:00"
     },
     {
         "org_id": 89419010,
@@ -2166,8 +2287,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: emit Oracle SCD2 timestamp expressions",
-        "created_at": "2026-06-24T02:41:29Z",
-        "updated_at": "2026-06-24T02:41:29Z",
+        "created_at": "2026-06-24T02:41:29+00:00",
+        "updated_at": "2026-06-24T02:41:29+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2175,7 +2296,8 @@
         "commit_count": 1,
         "additions": 100,
         "deletions": 5,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:25:13.216819+00:00"
     },
     {
         "org_id": 89419010,
@@ -2188,8 +2310,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: warn when type adapter drops reflected type",
-        "created_at": "2026-06-23T21:29:36Z",
-        "updated_at": "2026-06-23T21:29:36Z",
+        "created_at": "2026-06-23T21:29:36+00:00",
+        "updated_at": "2026-06-23T21:29:36+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2197,7 +2319,8 @@
         "commit_count": 1,
         "additions": 37,
         "deletions": 4,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:25:14.877781+00:00"
     },
     {
         "org_id": 89419010,
@@ -2210,8 +2333,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: isolate extra provider config resolution",
-        "created_at": "2026-06-23T17:45:52Z",
-        "updated_at": "2026-06-23T17:45:52Z",
+        "created_at": "2026-06-23T17:45:52+00:00",
+        "updated_at": "2026-06-23T17:45:52+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2219,7 +2342,8 @@
         "commit_count": 1,
         "additions": 33,
         "deletions": 2,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:15.777118+00:00"
     },
     {
         "org_id": 89419010,
@@ -2232,8 +2356,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Clear key hints when apply_hints receives empty keys",
-        "created_at": "2026-06-23T14:28:55Z",
-        "updated_at": "2026-06-23T14:28:55Z",
+        "created_at": "2026-06-23T14:28:55+00:00",
+        "updated_at": "2026-06-23T14:28:55+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2241,7 +2365,8 @@
         "commit_count": 1,
         "additions": 53,
         "deletions": 1,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:16.646124+00:00"
     },
     {
         "org_id": 89419010,
@@ -2254,8 +2379,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: include first-response wait in extract progress timing",
-        "created_at": "2026-06-23T12:12:13Z",
-        "updated_at": "2026-06-23T12:13:13Z",
+        "created_at": "2026-06-23T12:12:13+00:00",
+        "updated_at": "2026-06-23T12:13:13+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2263,7 +2388,8 @@
         "commit_count": 1,
         "additions": 31,
         "deletions": 1,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:17.515664+00:00"
     },
     {
         "org_id": 89419010,
@@ -2276,8 +2402,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: clear stale dashboard pipeline on profile switch",
-        "created_at": "2026-06-23T09:04:50Z",
-        "updated_at": "2026-06-23T19:50:37Z",
+        "created_at": "2026-06-23T09:04:50+00:00",
+        "updated_at": "2026-06-23T19:50:37+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2285,7 +2411,8 @@
         "commit_count": 1,
         "additions": 40,
         "deletions": 1,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:18.367207+00:00"
     },
     {
         "org_id": 89419010,
@@ -2298,8 +2425,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Update incremental troubleshooting docs page",
-        "created_at": "2026-06-21T22:12:28Z",
-        "updated_at": "2026-06-21T22:12:28Z",
+        "created_at": "2026-06-21T22:12:28+00:00",
+        "updated_at": "2026-06-21T22:12:28+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2307,7 +2434,8 @@
         "commit_count": 1,
         "additions": 22,
         "deletions": 1,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:25:19.244819+00:00"
     },
     {
         "org_id": 89419010,
@@ -2320,8 +2448,8 @@
         "is_draft": false,
         "state": "open",
         "title": "docs(databricks): correct default staging_volume_name in docstrings",
-        "created_at": "2026-06-15T13:25:16Z",
-        "updated_at": "2026-06-15T13:34:57Z",
+        "created_at": "2026-06-15T13:25:16+00:00",
+        "updated_at": "2026-06-15T13:34:57+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2329,7 +2457,8 @@
         "commit_count": 2,
         "additions": 6,
         "deletions": 2,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:20.177997+00:00"
     },
     {
         "org_id": 89419010,
@@ -2342,8 +2471,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(databricks): validate staging_volume_name format at config time",
-        "created_at": "2026-06-15T13:23:57Z",
-        "updated_at": "2026-06-15T13:34:55Z",
+        "created_at": "2026-06-15T13:23:57+00:00",
+        "updated_at": "2026-06-15T13:34:55+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2351,7 +2480,8 @@
         "commit_count": 2,
         "additions": 56,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:21.094098+00:00"
     },
     {
         "org_id": 89419010,
@@ -2364,8 +2494,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(cli): route dlthub handoff NOTE to stderr so piping isn't broken",
-        "created_at": "2026-06-15T03:50:51Z",
-        "updated_at": "2026-06-22T18:54:33Z",
+        "created_at": "2026-06-15T03:50:51+00:00",
+        "updated_at": "2026-06-22T18:54:33+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -2373,7 +2503,8 @@
         "commit_count": 1,
         "additions": 18,
         "deletions": 9,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:25:21.686483+00:00"
     },
     {
         "org_id": 89419010,
@@ -2386,8 +2517,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(hf): don't print huggingface_hub progress bars by default",
-        "created_at": "2026-06-15T02:37:49Z",
-        "updated_at": "2026-06-15T03:16:48Z",
+        "created_at": "2026-06-15T02:37:49+00:00",
+        "updated_at": "2026-06-15T03:16:48+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2395,7 +2526,8 @@
         "commit_count": 2,
         "additions": 106,
         "deletions": 0,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:25:22.677528+00:00"
     },
     {
         "org_id": 89419010,
@@ -2408,8 +2540,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(sql_database): warn when type_adapter_callback returns None and clarify docs",
-        "created_at": "2026-06-14T20:54:33Z",
-        "updated_at": "2026-06-16T19:40:01Z",
+        "created_at": "2026-06-14T20:54:33+00:00",
+        "updated_at": "2026-06-16T19:40:01+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -2417,7 +2549,8 @@
         "commit_count": 1,
         "additions": 68,
         "deletions": 4,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:25:23.350090+00:00"
     },
     {
         "org_id": 89419010,
@@ -2430,8 +2563,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(extract): start resource progress timer at pipe loop start (#3518)",
-        "created_at": "2026-06-09T21:18:19Z",
-        "updated_at": "2026-08-23T18:05:51Z",
+        "created_at": "2026-06-09T21:18:19+00:00",
+        "updated_at": "2026-08-23T18:05:51+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 3,
@@ -2439,7 +2572,8 @@
         "commit_count": 1,
         "additions": 205,
         "deletions": 0,
-        "changed_files": 6
+        "changed_files": 6,
+        "ingestion_timestamp": "2026-10-25 12:25:23.973802+00:00"
     },
     {
         "org_id": 89419010,
@@ -2452,8 +2586,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(cli): order CLI commands deterministically",
-        "created_at": "2026-06-05T11:22:59Z",
-        "updated_at": "2026-06-05T11:36:56Z",
+        "created_at": "2026-06-05T11:22:59+00:00",
+        "updated_at": "2026-06-05T11:36:56+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2461,7 +2595,8 @@
         "commit_count": 2,
         "additions": 221,
         "deletions": 182,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:25:24.584625+00:00"
     },
     {
         "org_id": 89419010,
@@ -2474,8 +2609,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: resolve GCP service-account vs oauth credentials correctly (#3328)",
-        "created_at": "2026-06-05T05:26:34Z",
-        "updated_at": "2026-07-04T19:31:25Z",
+        "created_at": "2026-06-05T05:26:34+00:00",
+        "updated_at": "2026-07-04T19:31:25+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -2483,7 +2618,8 @@
         "commit_count": 1,
         "additions": 108,
         "deletions": 3,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:25.378431+00:00"
     },
     {
         "org_id": 89419010,
@@ -2496,8 +2632,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(sqlalchemy): do not emit CREATE SCHEMA on Oracle (#3939)",
-        "created_at": "2026-05-29T21:27:32Z",
-        "updated_at": "2026-08-13T20:40:59Z",
+        "created_at": "2026-05-29T21:27:32+00:00",
+        "updated_at": "2026-08-13T20:40:59+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 5,
@@ -2505,7 +2641,8 @@
         "commit_count": 2,
         "additions": 114,
         "deletions": 11,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:25:26.018651+00:00"
     },
     {
         "org_id": 89419010,
@@ -2518,8 +2655,8 @@
         "is_draft": false,
         "state": "open",
         "title": "snowflake: add snowflake_adapter for table/column comments and tags",
-        "created_at": "2026-05-21T20:31:10Z",
-        "updated_at": "2026-06-30T12:55:49Z",
+        "created_at": "2026-05-21T20:31:10+00:00",
+        "updated_at": "2026-06-30T12:55:49+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2527,7 +2664,8 @@
         "commit_count": 1,
         "additions": 483,
         "deletions": 2,
-        "changed_files": 6
+        "changed_files": 6,
+        "ingestion_timestamp": "2026-10-25 12:25:26.620988+00:00"
     },
     {
         "org_id": 89419010,
@@ -2540,8 +2678,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Allow attaching to ducklake without specifying data storage location",
-        "created_at": "2026-05-18T15:34:39Z",
-        "updated_at": "2026-05-18T15:34:39Z",
+        "created_at": "2026-05-18T15:34:39+00:00",
+        "updated_at": "2026-05-18T15:34:39+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2549,7 +2687,8 @@
         "commit_count": 1,
         "additions": 170,
         "deletions": 45,
-        "changed_files": 5
+        "changed_files": 5,
+        "ingestion_timestamp": "2026-10-25 12:25:27.240014+00:00"
     },
     {
         "org_id": 89419010,
@@ -2562,8 +2701,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat: dataframe support via `narwhals`",
-        "created_at": "2026-05-05T02:47:50Z",
-        "updated_at": "2026-06-08T09:06:33Z",
+        "created_at": "2026-05-05T02:47:50+00:00",
+        "updated_at": "2026-06-08T09:06:33+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 8,
@@ -2571,7 +2710,8 @@
         "commit_count": 9,
         "additions": 56,
         "deletions": 93,
-        "changed_files": 7
+        "changed_files": 7,
+        "ingestion_timestamp": "2026-10-25 12:25:27.827085+00:00"
     },
     {
         "org_id": 89419010,
@@ -2584,8 +2724,8 @@
         "is_draft": false,
         "state": "open",
         "title": "BigQuery: update column descriptions on existing columns",
-        "created_at": "2026-04-20T15:27:14Z",
-        "updated_at": "2026-08-11T20:28:38Z",
+        "created_at": "2026-04-20T15:27:14+00:00",
+        "updated_at": "2026-08-11T20:28:38+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2593,7 +2733,8 @@
         "commit_count": 4,
         "additions": 181,
         "deletions": 0,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:25:28.721861+00:00"
     },
     {
         "org_id": 89419010,
@@ -2606,8 +2747,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(fabric): support interactive notebook-user auth for Fabric Warehouse + OneLake staging",
-        "created_at": "2026-04-16T11:29:00Z",
-        "updated_at": "2026-04-29T13:52:59Z",
+        "created_at": "2026-04-16T11:29:00+00:00",
+        "updated_at": "2026-04-29T13:52:59+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -2615,7 +2756,8 @@
         "commit_count": 16,
         "additions": 591,
         "deletions": 27,
-        "changed_files": 13
+        "changed_files": 13,
+        "ingestion_timestamp": "2026-10-25 12:25:29.338305+00:00"
     },
     {
         "org_id": 89419010,
@@ -2628,8 +2770,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: strip trailing slash from FilesystemClient.dataset_path and get_table_dir",
-        "created_at": "2026-04-15T09:23:09Z",
-        "updated_at": "2026-04-28T19:21:39Z",
+        "created_at": "2026-04-15T09:23:09+00:00",
+        "updated_at": "2026-04-28T19:21:39+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -2637,7 +2779,8 @@
         "commit_count": 5,
         "additions": 46,
         "deletions": 14,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:25:30.340216+00:00"
     },
     {
         "org_id": 89419010,
@@ -2650,8 +2793,8 @@
         "is_draft": false,
         "state": "open",
         "title": "[Enhancement] \u2013 Add native BigQuery GEOGRAPHY data type support via destination adapter",
-        "created_at": "2026-04-11T08:58:32Z",
-        "updated_at": "2026-05-02T17:36:00Z",
+        "created_at": "2026-04-11T08:58:32+00:00",
+        "updated_at": "2026-05-02T17:36:00+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -2659,7 +2802,8 @@
         "commit_count": 2,
         "additions": 116,
         "deletions": 13,
-        "changed_files": 5
+        "changed_files": 5,
+        "ingestion_timestamp": "2026-10-25 12:25:30.918801+00:00"
     },
     {
         "org_id": 89419010,
@@ -2672,8 +2816,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat: add scope parameter to insert-only merge strategy (#3827)",
-        "created_at": "2026-04-09T10:28:03Z",
-        "updated_at": "2026-04-16T10:20:20Z",
+        "created_at": "2026-04-09T10:28:03+00:00",
+        "updated_at": "2026-04-16T10:20:20+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2681,7 +2825,8 @@
         "commit_count": 16,
         "additions": 793,
         "deletions": 22,
-        "changed_files": 10
+        "changed_files": 10,
+        "ingestion_timestamp": "2026-10-25 12:25:31.503662+00:00"
     },
     {
         "org_id": 89419010,
@@ -2694,8 +2839,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat: propagate column comments as schema descriptions",
-        "created_at": "2026-03-30T15:51:38Z",
-        "updated_at": "2026-04-16T10:20:20Z",
+        "created_at": "2026-03-30T15:51:38+00:00",
+        "updated_at": "2026-04-16T10:20:20+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2703,7 +2848,8 @@
         "commit_count": 1,
         "additions": 59,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:32.548775+00:00"
     },
     {
         "org_id": 89419010,
@@ -2716,8 +2862,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Feat/3525 update dataset schema api clean",
-        "created_at": "2026-03-29T20:47:47Z",
-        "updated_at": "2026-04-16T10:20:20Z",
+        "created_at": "2026-03-29T20:47:47+00:00",
+        "updated_at": "2026-04-16T10:20:20+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2725,7 +2871,8 @@
         "commit_count": 5,
         "additions": 111,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:33.128248+00:00"
     },
     {
         "org_id": 89419010,
@@ -2738,8 +2885,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: drop Iceberg tables from catalog when using refresh='drop_sources'",
-        "created_at": "2026-03-29T17:37:11Z",
-        "updated_at": "2026-04-16T10:20:20Z",
+        "created_at": "2026-03-29T17:37:11+00:00",
+        "updated_at": "2026-04-16T10:20:20+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2747,7 +2894,8 @@
         "commit_count": 1,
         "additions": 110,
         "deletions": 0,
-        "changed_files": 4
+        "changed_files": 4,
+        "ingestion_timestamp": "2026-10-25 12:25:33.729716+00:00"
     },
     {
         "org_id": 89419010,
@@ -2760,8 +2908,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat: add column documentation support for Iceberg tables",
-        "created_at": "2026-03-26T18:33:16Z",
-        "updated_at": "2026-09-04T13:49:42Z",
+        "created_at": "2026-03-26T18:33:16+00:00",
+        "updated_at": "2026-09-04T13:49:42+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -2769,7 +2917,8 @@
         "commit_count": 2,
         "additions": 220,
         "deletions": 4,
-        "changed_files": 5
+        "changed_files": 5,
+        "ingestion_timestamp": "2026-10-25 12:25:34.338421+00:00"
     },
     {
         "org_id": 89419010,
@@ -2782,8 +2931,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Sort CLI commands alphabetically for deterministic output",
-        "created_at": "2026-03-24T10:31:35Z",
-        "updated_at": "2026-04-16T10:20:20Z",
+        "created_at": "2026-03-24T10:31:35+00:00",
+        "updated_at": "2026-04-16T10:20:20+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -2791,7 +2940,8 @@
         "commit_count": 2,
         "additions": 467,
         "deletions": 356,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:34.941394+00:00"
     },
     {
         "org_id": 89419010,
@@ -2804,8 +2954,8 @@
         "is_draft": true,
         "state": "open",
         "title": "feat(incremental): set-based incremental",
-        "created_at": "2026-03-24T08:50:31Z",
-        "updated_at": "2026-04-16T10:20:20Z",
+        "created_at": "2026-03-24T08:50:31+00:00",
+        "updated_at": "2026-04-16T10:20:20+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -2813,7 +2963,8 @@
         "commit_count": 1,
         "additions": 103,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:35.860354+00:00"
     },
     {
         "org_id": 89419010,
@@ -2826,8 +2977,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(iceberg): stream Iceberg writes with constant memory",
-        "created_at": "2026-03-17T13:56:19Z",
-        "updated_at": "2026-07-27T09:49:37Z",
+        "created_at": "2026-03-17T13:56:19+00:00",
+        "updated_at": "2026-07-27T09:49:37+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 15,
@@ -2835,7 +2986,8 @@
         "commit_count": 4,
         "additions": 508,
         "deletions": 36,
-        "changed_files": 5
+        "changed_files": 5,
+        "ingestion_timestamp": "2026-10-25 12:25:44.786176+00:00"
     },
     {
         "org_id": 89419010,
@@ -2848,8 +3000,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix tox issue #3346",
-        "created_at": "2026-03-09T22:37:16Z",
-        "updated_at": "2026-04-16T10:20:20Z",
+        "created_at": "2026-03-09T22:37:16+00:00",
+        "updated_at": "2026-04-16T10:20:20+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -2857,7 +3009,8 @@
         "commit_count": 1,
         "additions": 51,
         "deletions": 36,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:25:45.416832+00:00"
     },
     {
         "org_id": 89419010,
@@ -2870,8 +3023,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat: add retrieve_file_metadata option to file reading functions",
-        "created_at": "2026-03-06T16:41:49Z",
-        "updated_at": "2026-08-12T16:07:56Z",
+        "created_at": "2026-03-06T16:41:49+00:00",
+        "updated_at": "2026-08-12T16:07:56+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2879,7 +3032,8 @@
         "commit_count": 2,
         "additions": 165,
         "deletions": 3,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:46.117596+00:00"
     },
     {
         "org_id": 89419010,
@@ -2892,8 +3046,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Add dlt.sources.raw_export for exporting extracted data to object storage",
-        "created_at": "2026-03-04T20:13:53Z",
-        "updated_at": "2026-04-28T16:48:49Z",
+        "created_at": "2026-03-04T20:13:53+00:00",
+        "updated_at": "2026-04-28T16:48:49+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 3,
@@ -2901,7 +3055,8 @@
         "commit_count": 3,
         "additions": 1670,
         "deletions": 4,
-        "changed_files": 9
+        "changed_files": 9,
+        "ingestion_timestamp": "2026-10-25 12:25:46.898286+00:00"
     },
     {
         "org_id": 89419010,
@@ -2914,8 +3069,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(pipeline): context manager for pre/post operation on `pipeline.run()`",
-        "created_at": "2026-02-24T20:57:25Z",
-        "updated_at": "2026-08-11T18:57:10Z",
+        "created_at": "2026-02-24T20:57:25+00:00",
+        "updated_at": "2026-08-11T18:57:10+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -2923,7 +3078,8 @@
         "commit_count": 2,
         "additions": 226,
         "deletions": 15,
-        "changed_files": 5
+        "changed_files": 5,
+        "ingestion_timestamp": "2026-10-25 12:25:48.349537+00:00"
     },
     {
         "org_id": 89419010,
@@ -2936,8 +3092,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat: `clickhouse_cluster` destination",
-        "created_at": "2026-02-05T06:24:38Z",
-        "updated_at": "2026-04-16T10:20:21Z",
+        "created_at": "2026-02-05T06:24:38+00:00",
+        "updated_at": "2026-04-16T10:20:21+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -2945,7 +3101,8 @@
         "commit_count": 63,
         "additions": 3325,
         "deletions": 371,
-        "changed_files": 63
+        "changed_files": 63,
+        "ingestion_timestamp": "2026-10-25 12:25:49.399162+00:00"
     },
     {
         "org_id": 89419010,
@@ -2958,8 +3115,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: save replication progress after each finished batch",
-        "created_at": "2026-10-13T13:39:46Z",
-        "updated_at": "2026-10-13T13:39:46Z",
+        "created_at": "2026-10-13T13:39:46+00:00",
+        "updated_at": "2026-10-13T13:39:46+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2967,7 +3124,8 @@
         "commit_count": 1,
         "additions": 56,
         "deletions": 1,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:54.516923+00:00"
     },
     {
         "org_id": 89419010,
@@ -2980,8 +3138,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(mongodb): restore collection resource iteration",
-        "created_at": "2026-10-08T22:44:10Z",
-        "updated_at": "2026-10-08T22:44:10Z",
+        "created_at": "2026-10-08T22:44:10+00:00",
+        "updated_at": "2026-10-08T22:44:10+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -2989,7 +3147,8 @@
         "commit_count": 1,
         "additions": 75,
         "deletions": 2,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:55.362674+00:00"
     },
     {
         "org_id": 89419010,
@@ -3002,8 +3161,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat: add SAP verified source (tables, CDS, BICS, ODP)",
-        "created_at": "2026-09-13T17:33:56Z",
-        "updated_at": "2026-10-10T04:56:23Z",
+        "created_at": "2026-09-13T17:33:56+00:00",
+        "updated_at": "2026-10-10T04:56:23+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -3011,7 +3170,8 @@
         "commit_count": 2,
         "additions": 665,
         "deletions": 165,
-        "changed_files": 9
+        "changed_files": 9,
+        "ingestion_timestamp": "2026-10-25 12:25:56.278412+00:00"
     },
     {
         "org_id": 89419010,
@@ -3024,8 +3184,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(pg_replication): declare SQLAlchemy in dependency manifests",
-        "created_at": "2026-09-13T05:16:38Z",
-        "updated_at": "2026-09-13T05:16:38Z",
+        "created_at": "2026-09-13T05:16:38+00:00",
+        "updated_at": "2026-09-13T05:16:38+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3033,7 +3193,8 @@
         "commit_count": 1,
         "additions": 70,
         "deletions": 2,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:25:57.087286+00:00"
     },
     {
         "org_id": 89419010,
@@ -3046,8 +3207,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix(pg_replication): correct ItemGenerator optional defaults",
-        "created_at": "2026-08-19T02:36:54Z",
-        "updated_at": "2026-08-19T02:37:56Z",
+        "created_at": "2026-08-19T02:36:54+00:00",
+        "updated_at": "2026-08-19T02:37:56+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3055,7 +3216,8 @@
         "commit_count": 1,
         "additions": 16,
         "deletions": 2,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:25:57.850536+00:00"
     },
     {
         "org_id": 89419010,
@@ -3068,8 +3230,8 @@
         "is_draft": false,
         "state": "open",
         "title": "pg_replication: Create snapshot tables as UNLOGGED",
-        "created_at": "2026-07-08T10:49:58Z",
-        "updated_at": "2026-07-08T11:03:17Z",
+        "created_at": "2026-07-08T10:49:58+00:00",
+        "updated_at": "2026-07-08T11:03:17+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3077,7 +3239,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 1,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:25:58.662074+00:00"
     },
     {
         "org_id": 89419010,
@@ -3090,8 +3253,8 @@
         "is_draft": false,
         "state": "open",
         "title": "[salesforce] Add primary key to resource definitions in __init__.py",
-        "created_at": "2026-06-30T14:28:39Z",
-        "updated_at": "2026-07-03T10:02:06Z",
+        "created_at": "2026-06-30T14:28:39+00:00",
+        "updated_at": "2026-07-03T10:02:06+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3099,7 +3262,8 @@
         "commit_count": 1,
         "additions": 7,
         "deletions": 7,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:25:59.710526+00:00"
     },
     {
         "org_id": 89419010,
@@ -3112,8 +3276,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: ignore pgoutput Type messages",
-        "created_at": "2026-06-24T10:12:03Z",
-        "updated_at": "2026-07-06T14:17:31Z",
+        "created_at": "2026-06-24T10:12:03+00:00",
+        "updated_at": "2026-07-06T14:17:31+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -3121,7 +3285,8 @@
         "commit_count": 1,
         "additions": 13,
         "deletions": 0,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:26:00.512462+00:00"
     },
     {
         "org_id": 89419010,
@@ -3134,8 +3299,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Map Pipedrive V2 custom fields",
-        "created_at": "2026-05-28T16:31:09Z",
-        "updated_at": "2026-06-17T15:18:03Z",
+        "created_at": "2026-05-28T16:31:09+00:00",
+        "updated_at": "2026-06-17T15:18:03+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -3143,7 +3308,8 @@
         "commit_count": 2,
         "additions": 366,
         "deletions": 12,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:26:01.474514+00:00"
     },
     {
         "org_id": 89419010,
@@ -3156,8 +3322,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Fix Pipedrive set custom field string mapping",
-        "created_at": "2026-05-27T17:34:27Z",
-        "updated_at": "2026-06-09T08:58:37Z",
+        "created_at": "2026-05-27T17:34:27+00:00",
+        "updated_at": "2026-06-09T08:58:37+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -3165,7 +3331,8 @@
         "commit_count": 1,
         "additions": 39,
         "deletions": 1,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:26:02.385508+00:00"
     },
     {
         "org_id": 89419010,
@@ -3178,8 +3345,8 @@
         "is_draft": false,
         "state": "open",
         "title": "[FEAT] support extracting all google_sheets values as text",
-        "created_at": "2026-01-20T18:31:59Z",
-        "updated_at": "2026-07-03T11:05:21Z",
+        "created_at": "2026-01-20T18:31:59+00:00",
+        "updated_at": "2026-07-03T11:05:21+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3187,7 +3354,8 @@
         "commit_count": 1,
         "additions": 46,
         "deletions": 11,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:26:03.212033+00:00"
     },
     {
         "org_id": 89419010,
@@ -3200,8 +3368,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Update Hubspot Source to use API Incrementally",
-        "created_at": "2025-10-23T17:05:34Z",
-        "updated_at": "2026-07-27T05:39:30Z",
+        "created_at": "2025-10-23T17:05:34+00:00",
+        "updated_at": "2026-07-27T05:39:30+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 4,
@@ -3209,7 +3377,8 @@
         "commit_count": 7,
         "additions": 303,
         "deletions": 39,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:26:04.174815+00:00"
     },
     {
         "org_id": 89419010,
@@ -3222,8 +3391,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Implement SharePoint data extraction sources and configuration classes",
-        "created_at": "2025-10-23T13:35:14Z",
-        "updated_at": "2026-01-13T16:02:56Z",
+        "created_at": "2025-10-23T13:35:14+00:00",
+        "updated_at": "2026-01-13T16:02:56+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 5,
@@ -3231,7 +3400,8 @@
         "commit_count": 20,
         "additions": 1581,
         "deletions": 0,
-        "changed_files": 9
+        "changed_files": 9,
+        "ingestion_timestamp": "2026-10-25 12:26:05.044496+00:00"
     },
     {
         "org_id": 89419010,
@@ -3244,8 +3414,8 @@
         "is_draft": false,
         "state": "open",
         "title": "refactor common sources to work with dlt+",
-        "created_at": "2025-05-22T17:04:07Z",
-        "updated_at": "2025-11-30T21:09:37Z",
+        "created_at": "2025-05-22T17:04:07+00:00",
+        "updated_at": "2025-11-30T21:09:37+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -3253,7 +3423,8 @@
         "commit_count": 8,
         "additions": 232,
         "deletions": 245,
-        "changed_files": 9
+        "changed_files": 9,
+        "ingestion_timestamp": "2026-10-25 12:26:05.750671+00:00"
     },
     {
         "org_id": 89419010,
@@ -3266,8 +3437,8 @@
         "is_draft": false,
         "state": "open",
         "title": "add option for including ticket comments from zendesk",
-        "created_at": "2024-11-01T17:49:16Z",
-        "updated_at": "2025-11-30T21:09:37Z",
+        "created_at": "2024-11-01T17:49:16+00:00",
+        "updated_at": "2025-11-30T21:09:37+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3275,7 +3446,8 @@
         "commit_count": 1,
         "additions": 32,
         "deletions": 2,
-        "changed_files": 2
+        "changed_files": 2,
+        "ingestion_timestamp": "2026-10-25 12:26:06.713847+00:00"
     },
     {
         "org_id": 89419010,
@@ -3288,8 +3460,8 @@
         "is_draft": true,
         "state": "open",
         "title": "Response detections",
-        "created_at": "2024-03-20T13:39:43Z",
-        "updated_at": "2024-04-13T19:35:59Z",
+        "created_at": "2024-03-20T13:39:43+00:00",
+        "updated_at": "2024-04-13T19:35:59+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3297,7 +3469,8 @@
         "commit_count": 18,
         "additions": 6418,
         "deletions": 2109,
-        "changed_files": 37
+        "changed_files": 37,
+        "ingestion_timestamp": "2026-10-25 12:26:08.965110+00:00"
     },
     {
         "org_id": 89419010,
@@ -3310,8 +3483,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Feat: push up helpers",
-        "created_at": "2023-08-09T07:04:55Z",
-        "updated_at": "2023-08-09T09:40:56Z",
+        "created_at": "2023-08-09T07:04:55+00:00",
+        "updated_at": "2023-08-09T09:40:56+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 2,
@@ -3319,7 +3492,8 @@
         "commit_count": 1,
         "additions": 1399,
         "deletions": 0,
-        "changed_files": 7
+        "changed_files": 7,
+        "ingestion_timestamp": "2026-10-25 12:26:09.734607+00:00"
     },
     {
         "org_id": 89419010,
@@ -3332,8 +3506,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Add Hacker News Who's Hiring pipeline and dashboard",
-        "created_at": "2026-06-22T12:55:47Z",
-        "updated_at": "2026-06-22T12:55:59Z",
+        "created_at": "2026-06-22T12:55:47+00:00",
+        "updated_at": "2026-06-22T12:55:59+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3341,7 +3515,8 @@
         "commit_count": 1,
         "additions": 1072,
         "deletions": 0,
-        "changed_files": 11
+        "changed_files": 11,
+        "ingestion_timestamp": "2026-10-25 12:26:17.253995+00:00"
     },
     {
         "org_id": 89419010,
@@ -3354,8 +3529,8 @@
         "is_draft": false,
         "state": "open",
         "title": "GitHub Search App with Parallel and LanceDB",
-        "created_at": "2026-04-26T23:40:01Z",
-        "updated_at": "2026-04-28T22:14:57Z",
+        "created_at": "2026-04-26T23:40:01+00:00",
+        "updated_at": "2026-04-28T22:14:57+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3363,7 +3538,8 @@
         "commit_count": 2,
         "additions": 4000,
         "deletions": 0,
-        "changed_files": 11
+        "changed_files": 11,
+        "ingestion_timestamp": "2026-10-25 12:26:17.971014+00:00"
     },
     {
         "org_id": 89419010,
@@ -3376,8 +3552,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Moving dbt-expectations from Calogica to Metaplane",
-        "created_at": "2025-03-22T16:53:58Z",
-        "updated_at": "2025-03-22T16:53:58Z",
+        "created_at": "2025-03-22T16:53:58+00:00",
+        "updated_at": "2025-03-22T16:53:58+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3385,7 +3561,8 @@
         "commit_count": 1,
         "additions": 1,
         "deletions": 1,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:20.370455+00:00"
     },
     {
         "org_id": 89419010,
@@ -3398,8 +3575,8 @@
         "is_draft": true,
         "state": "open",
         "title": "Use rest_api_resources in generated sources",
-        "created_at": "2026-05-25T19:47:28Z",
-        "updated_at": "2026-05-25T19:47:28Z",
+        "created_at": "2026-05-25T19:47:28+00:00",
+        "updated_at": "2026-05-25T19:47:28+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3407,7 +3584,8 @@
         "commit_count": 1,
         "additions": 20,
         "deletions": 8,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:26:28.363587+00:00"
     },
     {
         "org_id": 89419010,
@@ -3420,8 +3598,8 @@
         "is_draft": true,
         "state": "open",
         "title": "Fix config loading without source name",
-        "created_at": "2026-05-25T18:55:48Z",
-        "updated_at": "2026-05-25T19:41:09Z",
+        "created_at": "2026-05-25T18:55:48+00:00",
+        "updated_at": "2026-05-25T19:41:09+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3429,7 +3607,8 @@
         "commit_count": 1,
         "additions": 65,
         "deletions": 1,
-        "changed_files": 3
+        "changed_files": 3,
+        "ingestion_timestamp": "2026-10-25 12:26:29.220369+00:00"
     },
     {
         "org_id": 89419010,
@@ -3442,8 +3621,8 @@
         "is_draft": false,
         "state": "open",
         "title": "docs: add quickstart",
-        "created_at": "2024-11-20T11:55:43Z",
-        "updated_at": "2024-11-20T11:55:43Z",
+        "created_at": "2024-11-20T11:55:43+00:00",
+        "updated_at": "2024-11-20T11:55:43+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3451,7 +3630,8 @@
         "commit_count": 1,
         "additions": 18,
         "deletions": 0,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:30.004216+00:00"
     },
     {
         "org_id": 89419010,
@@ -3464,8 +3644,8 @@
         "is_draft": false,
         "state": "open",
         "title": "fix: update requirements.txt",
-        "created_at": "2024-11-20T11:32:52Z",
-        "updated_at": "2024-11-20T11:32:52Z",
+        "created_at": "2024-11-20T11:32:52+00:00",
+        "updated_at": "2024-11-20T11:32:52+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3473,7 +3653,8 @@
         "commit_count": 1,
         "additions": 1,
         "deletions": 1,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:30.704058+00:00"
     },
     {
         "org_id": 89419010,
@@ -3486,8 +3667,8 @@
         "is_draft": false,
         "state": "open",
         "title": "docs: fix running instructions",
-        "created_at": "2024-11-20T10:52:18Z",
-        "updated_at": "2024-11-20T10:53:30Z",
+        "created_at": "2024-11-20T10:52:18+00:00",
+        "updated_at": "2024-11-20T10:53:30+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3495,7 +3676,8 @@
         "commit_count": 1,
         "additions": 1,
         "deletions": 1,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:31.484567+00:00"
     },
     {
         "org_id": 89419010,
@@ -3508,8 +3690,8 @@
         "is_draft": false,
         "state": "open",
         "title": "small improvements",
-        "created_at": "2025-09-02T07:31:20Z",
-        "updated_at": "2025-09-03T09:45:37Z",
+        "created_at": "2025-09-02T07:31:20+00:00",
+        "updated_at": "2025-09-03T09:45:37+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3517,7 +3699,8 @@
         "commit_count": 2,
         "additions": 28,
         "deletions": 24,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:34.052674+00:00"
     },
     {
         "org_id": 89419010,
@@ -3530,8 +3713,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Orchestrator course",
-        "created_at": "2025-09-01T07:56:29Z",
-        "updated_at": "2025-09-10T09:57:16Z",
+        "created_at": "2025-09-01T07:56:29+00:00",
+        "updated_at": "2025-09-10T09:57:16+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3539,7 +3722,8 @@
         "commit_count": 5,
         "additions": 457,
         "deletions": 0,
-        "changed_files": 9
+        "changed_files": 9,
+        "ingestion_timestamp": "2026-10-25 12:26:34.936688+00:00"
     },
     {
         "org_id": 89419010,
@@ -3552,8 +3736,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Fix deprecations for new dbt engine compatibility",
-        "created_at": "2025-05-23T15:35:52Z",
-        "updated_at": "2025-05-23T15:35:52Z",
+        "created_at": "2025-05-23T15:35:52+00:00",
+        "updated_at": "2025-05-23T15:35:52+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3561,7 +3745,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 2,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:37.183745+00:00"
     },
     {
         "org_id": 89419010,
@@ -3574,8 +3759,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Fix deprecations for new dbt engine compatibility",
-        "created_at": "2025-05-23T15:36:41Z",
-        "updated_at": "2025-05-23T15:36:41Z",
+        "created_at": "2025-05-23T15:36:41+00:00",
+        "updated_at": "2025-05-23T15:36:41+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3583,7 +3768,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 2,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:38.903971+00:00"
     },
     {
         "org_id": 89419010,
@@ -3596,8 +3782,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Fix deprecations for new dbt engine compatibility",
-        "created_at": "2025-05-23T15:36:55Z",
-        "updated_at": "2025-05-23T15:36:55Z",
+        "created_at": "2025-05-23T15:36:55+00:00",
+        "updated_at": "2025-05-23T15:36:55+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3605,7 +3791,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 2,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:40.428162+00:00"
     },
     {
         "org_id": 89419010,
@@ -3618,8 +3805,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Fix deprecations for new dbt engine compatibility",
-        "created_at": "2025-05-23T15:37:09Z",
-        "updated_at": "2025-05-23T15:37:09Z",
+        "created_at": "2025-05-23T15:37:09+00:00",
+        "updated_at": "2025-05-23T15:37:09+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3627,7 +3814,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 2,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:41.799318+00:00"
     },
     {
         "org_id": 89419010,
@@ -3640,8 +3828,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Fix deprecations for new dbt engine compatibility",
-        "created_at": "2025-05-23T15:35:09Z",
-        "updated_at": "2025-05-23T15:35:09Z",
+        "created_at": "2025-05-23T15:35:09+00:00",
+        "updated_at": "2025-05-23T15:35:09+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3649,7 +3837,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 2,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:43.049703+00:00"
     },
     {
         "org_id": 89419010,
@@ -3662,8 +3851,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Fix deprecations for new dbt engine compatibility",
-        "created_at": "2025-05-23T15:35:23Z",
-        "updated_at": "2025-05-23T15:35:23Z",
+        "created_at": "2025-05-23T15:35:23+00:00",
+        "updated_at": "2025-05-23T15:35:23+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3671,7 +3860,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 2,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:44.405064+00:00"
     },
     {
         "org_id": 89419010,
@@ -3684,8 +3874,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Fix deprecations for new dbt engine compatibility",
-        "created_at": "2025-05-23T15:36:28Z",
-        "updated_at": "2025-05-23T15:36:28Z",
+        "created_at": "2025-05-23T15:36:28+00:00",
+        "updated_at": "2025-05-23T15:36:28+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3693,7 +3883,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 2,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:45.687330+00:00"
     },
     {
         "org_id": 89419010,
@@ -3706,8 +3897,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Fix deprecations for new dbt engine compatibility",
-        "created_at": "2025-05-23T15:35:38Z",
-        "updated_at": "2025-05-23T15:35:38Z",
+        "created_at": "2025-05-23T15:35:38+00:00",
+        "updated_at": "2025-05-23T15:35:38+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3715,7 +3906,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 2,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:49.760738+00:00"
     },
     {
         "org_id": 89419010,
@@ -3728,8 +3920,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Fix deprecations for new dbt engine compatibility",
-        "created_at": "2025-05-23T15:36:06Z",
-        "updated_at": "2025-05-23T15:36:06Z",
+        "created_at": "2025-05-23T15:36:06+00:00",
+        "updated_at": "2025-05-23T15:36:06+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3737,7 +3929,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 2,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:51.862082+00:00"
     },
     {
         "org_id": 89419010,
@@ -3750,8 +3943,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Fix deprecations for new dbt engine compatibility",
-        "created_at": "2025-05-23T15:37:22Z",
-        "updated_at": "2025-05-23T15:37:23Z",
+        "created_at": "2025-05-23T15:37:22+00:00",
+        "updated_at": "2025-05-23T15:37:23+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3759,7 +3952,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 2,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:53.195334+00:00"
     },
     {
         "org_id": 89419010,
@@ -3772,8 +3966,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Fix deprecations for new dbt engine compatibility",
-        "created_at": "2025-05-23T15:34:50Z",
-        "updated_at": "2025-05-23T15:34:50Z",
+        "created_at": "2025-05-23T15:34:50+00:00",
+        "updated_at": "2025-05-23T15:34:50+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3781,7 +3975,8 @@
         "commit_count": 1,
         "additions": 2,
         "deletions": 2,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:26:54.583450+00:00"
     },
     {
         "org_id": 89419010,
@@ -3794,8 +3989,8 @@
         "is_draft": false,
         "state": "open",
         "title": "add dltHub AI Workbench references",
-        "created_at": "2026-04-30T07:07:10Z",
-        "updated_at": "2026-04-30T07:07:49Z",
+        "created_at": "2026-04-30T07:07:10+00:00",
+        "updated_at": "2026-04-30T07:07:49+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3803,7 +3998,8 @@
         "commit_count": 1,
         "additions": 16,
         "deletions": 0,
-        "changed_files": 1
+        "changed_files": 1,
+        "ingestion_timestamp": "2026-10-25 12:27:02.384827+00:00"
     },
     {
         "org_id": 89419010,
@@ -3816,8 +4012,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Add the api-change-monitor background agent and the add-api-change-source skill",
-        "created_at": "2026-10-20T12:07:45Z",
-        "updated_at": "2026-10-20T14:06:59Z",
+        "created_at": "2026-10-20T12:07:45+00:00",
+        "updated_at": "2026-10-20T14:06:59+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3825,7 +4021,8 @@
         "commit_count": 5,
         "additions": 4429,
         "deletions": 2,
-        "changed_files": 27
+        "changed_files": 27,
+        "ingestion_timestamp": "2026-10-25 12:27:04.922848+00:00"
     },
     {
         "org_id": 89419010,
@@ -3838,8 +4035,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Rename AI workbench to dltHub AI Harness in names, URLs and prose",
-        "created_at": "2026-10-19T10:54:33Z",
-        "updated_at": "2026-10-19T10:54:52Z",
+        "created_at": "2026-10-19T10:54:33+00:00",
+        "updated_at": "2026-10-19T10:54:52+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3847,7 +4044,8 @@
         "commit_count": 1,
         "additions": 56,
         "deletions": 45,
-        "changed_files": 26
+        "changed_files": 26,
+        "ingestion_timestamp": "2026-10-25 12:27:05.779343+00:00"
     },
     {
         "org_id": 89419010,
@@ -3860,8 +4058,8 @@
         "is_draft": false,
         "state": "open",
         "title": "refactor: make dlthub-platform the parent of non-ingestion toolkits",
-        "created_at": "2026-10-14T13:23:34Z",
-        "updated_at": "2026-10-14T14:26:00Z",
+        "created_at": "2026-10-14T13:23:34+00:00",
+        "updated_at": "2026-10-14T14:26:00+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3869,7 +4067,8 @@
         "commit_count": 1,
         "additions": 7,
         "deletions": 7,
-        "changed_files": 7
+        "changed_files": 7,
+        "ingestion_timestamp": "2026-10-25 12:27:06.591845+00:00"
     },
     {
         "org_id": 89419010,
@@ -3882,8 +4081,8 @@
         "is_draft": true,
         "state": "open",
         "title": "(feat) adds dlthub agents",
-        "created_at": "2026-09-10T14:24:25Z",
-        "updated_at": "2026-09-24T18:22:43Z",
+        "created_at": "2026-09-10T14:24:25+00:00",
+        "updated_at": "2026-09-24T18:22:43+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 1,
@@ -3891,7 +4090,8 @@
         "commit_count": 1,
         "additions": 1001,
         "deletions": 27,
-        "changed_files": 9
+        "changed_files": 9,
+        "ingestion_timestamp": "2026-10-25 12:27:07.173946+00:00"
     },
     {
         "org_id": 89419010,
@@ -3904,8 +4104,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Universal secrets-read guard for Claude Code, Codex, and Cursor",
-        "created_at": "2026-07-02T07:45:13Z",
-        "updated_at": "2026-09-24T18:22:42Z",
+        "created_at": "2026-07-02T07:45:13+00:00",
+        "updated_at": "2026-09-24T18:22:42+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3913,7 +4113,8 @@
         "commit_count": 17,
         "additions": 2071,
         "deletions": 2,
-        "changed_files": 8
+        "changed_files": 8,
+        "ingestion_timestamp": "2026-10-25 12:27:07.924982+00:00"
     },
     {
         "org_id": 89419010,
@@ -3926,8 +4127,8 @@
         "is_draft": false,
         "state": "open",
         "title": "hot fix: rename sql-database skills",
-        "created_at": "2026-06-17T12:44:34Z",
-        "updated_at": "2026-09-24T18:22:42Z",
+        "created_at": "2026-06-17T12:44:34+00:00",
+        "updated_at": "2026-09-24T18:22:42+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3935,7 +4136,8 @@
         "commit_count": 1,
         "additions": 37,
         "deletions": 37,
-        "changed_files": 17
+        "changed_files": 17,
+        "ingestion_timestamp": "2026-10-25 12:27:08.641268+00:00"
     },
     {
         "org_id": 89419010,
@@ -3948,8 +4150,8 @@
         "is_draft": false,
         "state": "open",
         "title": "feat(dev): add an agent jobs workspace and make workspace-agent",
-        "created_at": "2026-09-16T22:54:56Z",
-        "updated_at": "2026-09-17T14:43:36Z",
+        "created_at": "2026-09-16T22:54:56+00:00",
+        "updated_at": "2026-09-17T14:43:36+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3957,7 +4159,8 @@
         "commit_count": 5,
         "additions": 843,
         "deletions": 1,
-        "changed_files": 17
+        "changed_files": 17,
+        "ingestion_timestamp": "2026-10-25 12:27:10.883460+00:00"
     },
     {
         "org_id": 89419010,
@@ -3970,8 +4173,8 @@
         "is_draft": false,
         "state": "open",
         "title": "Install universal secrets-read guard hook for Claude, Cursor, and Codex",
-        "created_at": "2026-07-03T11:32:28Z",
-        "updated_at": "2026-07-03T11:32:34Z",
+        "created_at": "2026-07-03T11:32:28+00:00",
+        "updated_at": "2026-07-03T11:32:34+00:00",
         "closed_at": null,
         "merged_at": null,
         "pr_comments": 0,
@@ -3979,6 +4182,7 @@
         "commit_count": 1,
         "additions": 413,
         "deletions": 2,
-        "changed_files": 8
+        "changed_files": 8,
+        "ingestion_timestamp": "2026-10-25 12:27:11.604420+00:00"
     }
 ]

@@ -85,7 +85,6 @@ def load_github_datasets():
     #write_json(query_pull_requests_fact_t,'src/data/pull_requests_fact')
     #write_json(query_user_dimension_full,'src/data/user_dim')
 
-
     write_table('org',org_dim_full,logger,config['bronze']['database_name'],
                 config['general']['glue_catalog'],config['general']['aws-region'])
 

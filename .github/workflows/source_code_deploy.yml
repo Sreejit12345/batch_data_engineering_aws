@@ -11,5 +11,15 @@ jobs:
 
         steps:
 
-            - uses: actions/checkout@v2
-            - run : python setup.py bdist_wheel
+            - name: checkoutJob
+              uses: actions/checkout@v2
+            
+            - name: buildwheel
+              run : python setup.py bdist_wheel
+            
+            - uses: actions/upload-artifact@v7
+              with:
+                name: wheel-file
+                path: dist/
+                            
+            

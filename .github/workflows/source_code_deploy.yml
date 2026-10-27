@@ -1,0 +1,15 @@
+name: source_code_deployment
+
+on:
+    push:
+        branches :
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+
+            - uses: actions/checkout@v2
+            - run : python setup.py bdist_wheel

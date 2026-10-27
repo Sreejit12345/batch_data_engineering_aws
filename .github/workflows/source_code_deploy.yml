@@ -19,7 +19,13 @@ jobs:
             
             - uses: actions/upload-artifact@v7
               with:
-                name: wheel-file
+                name: wheel-file-upload
                 path: dist/
+            
+            - uses: actions/upload-artifact@v7
+              with:
+                name: ingestion-entry-point-upload
+                path: ./src/extract/ingestion.py
+            
                             
             

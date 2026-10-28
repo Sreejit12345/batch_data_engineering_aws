@@ -10,11 +10,11 @@ import uuid
 
 #CONSTANTS per batch
 ingestion_ts= datetime.now(timezone.utc) # at module level so all records in batch have same ingestion timestamps.
-my_uuid = uuid.uuid4() # at module level, so all records in bacth have same batch_id
+my_uuid = str(uuid.uuid4()) # at module level, so all records in bacth have same batch_id
 source= "GITHUBDATA"
 
 
-def add_bronze_audit_columns(d):
+def add_raw_audit_columns(d):
      # add ingestion date
 
      d['ingestion_timestamp'] = ingestion_ts
@@ -134,7 +134,7 @@ def query_org_dimension(client,logger):
                  "updated_at":parse_github_timestamp(resp["updated_at"])
                  }
 
-            add_bronze_audit_columns(org_dim_dict)
+            add_raw_audit_columns(org_dim_dict)
 
             all_orgs.append(org_dim_dict)
 
@@ -204,7 +204,7 @@ def query_repository_dimension(pages_reqd,org_dim,client,logger):
                         "updated_at": parse_github_timestamp(repo_details['updated_at'])
                     }
 
-                    add_bronze_audit_columns(repo_dim_dict)
+                    add_raw_audit_columns(repo_dim_dict)
 
                     all_repo.append(repo_dim_dict)
 
@@ -281,7 +281,7 @@ def query_repo_language_bridge(repo_dim,client,logger):
 
                 merged_dict= base_dict| add_dict
 
-                add_bronze_audit_columns(merged_dict)
+                add_raw_audit_columns(merged_dict)
 
                 all_languages.append(merged_dict)
 
@@ -316,7 +316,7 @@ def query_language_dimension(repo_language_bridge,client,logger):
                     'language_description': f"This is language {lang}"
                }
 
-               add_bronze_audit_columns(lang_rec)
+               add_raw_audit_columns(lang_rec)
 
                languages_map[lang] = lang_rec
 
@@ -381,7 +381,7 @@ def query_commit_facts_default_branch(pages_reqd,repo_dim,client,logger):
                             "authored_at":parse_github_timestamp(commits['commit']['author']['date'])
                     }
 
-                    add_bronze_audit_columns(commits_fct_dict)
+                    add_raw_audit_columns(commits_fct_dict)
 
                     all_commits.append(commits_fct_dict)
 
@@ -476,7 +476,7 @@ def query_pull_requests_fact(pages_reqd,repo_dim,client,logger):
 
                         pull_requests_fct_dict.update(get_api_dict)
 
-                        add_bronze_audit_columns(pull_requests_fct_dict)
+                        add_raw_audit_columns(pull_requests_fct_dict)
 
 
                         all_pull_requests.append(pull_requests_fct_dict)
@@ -537,7 +537,7 @@ def query_user_dimension(commits_fact_incr,query_pull_requests_fact_t,client,log
                     'updated_at': parse_github_timestamp(user_resp['updated_at'])
                }
 
-               add_bronze_audit_columns(user_dict)
+               add_raw_audit_columns(user_dict)
 
                all_users_dict.append(user_dict)
 

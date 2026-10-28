@@ -17,6 +17,8 @@ ORG_DIM_SCHEMA = pa.schema([
     pa.field("created_at", TIMESTAMP_TYPE, nullable=False),
     pa.field("updated_at", TIMESTAMP_TYPE, nullable=False),
     pa.field("ingestion_timestamp", TIMESTAMP_TYPE, nullable=False),
+    pa.field("batch_id", pa.string(), nullable=False),
+    pa.field("source", pa.string(), nullable=False),
 ])
 
 REPO_DIM_SCHEMA = pa.schema([
@@ -39,6 +41,8 @@ REPO_DIM_SCHEMA = pa.schema([
     pa.field("created_at", TIMESTAMP_TYPE, nullable=False),
     pa.field("updated_at", TIMESTAMP_TYPE, nullable=False),
     pa.field("ingestion_timestamp", TIMESTAMP_TYPE, nullable=False),
+    pa.field("batch_id", pa.string(), nullable=False),
+    pa.field("source", pa.string(), nullable=False),
 ])
 
 REPO_LANGUAGE_BRIDGE_SCHEMA = pa.schema([
@@ -47,12 +51,16 @@ REPO_LANGUAGE_BRIDGE_SCHEMA = pa.schema([
     pa.field("language", pa.string(), nullable=False),
     pa.field("weightage", pa.float64(), nullable=False),
     pa.field("ingestion_timestamp", TIMESTAMP_TYPE, nullable=False),
+    pa.field("batch_id", pa.string(), nullable=False),
+    pa.field("source", pa.string(), nullable=False),
 ])
 
 LANGUAGE_DIM_SCHEMA = pa.schema([
     pa.field("language_name", pa.string(), nullable=False),
     pa.field("language_description", pa.string(), nullable=False),
     pa.field("ingestion_timestamp", TIMESTAMP_TYPE, nullable=False),
+    pa.field("batch_id", pa.string(), nullable=False),
+    pa.field("source", pa.string(), nullable=False),
 ])
 
 COMMITS_FACT_SCHEMA = pa.schema([
@@ -70,6 +78,8 @@ COMMITS_FACT_SCHEMA = pa.schema([
     pa.field("committed_at", TIMESTAMP_TYPE, nullable=False),
     pa.field("authored_at", TIMESTAMP_TYPE, nullable=False),
     pa.field("ingestion_timestamp", TIMESTAMP_TYPE, nullable=False),
+    pa.field("batch_id", pa.string(), nullable=False),
+    pa.field("source", pa.string(), nullable=False),
 ])
 
 PULL_REQUESTS_FACT_SCHEMA = pa.schema([
@@ -94,6 +104,8 @@ PULL_REQUESTS_FACT_SCHEMA = pa.schema([
     pa.field("deletions", pa.int32(), nullable=False),
     pa.field("changed_files", pa.int32(), nullable=False),
     pa.field("ingestion_timestamp", TIMESTAMP_TYPE, nullable=False),
+    pa.field("batch_id", pa.string(), nullable=False),
+    pa.field("source", pa.string(), nullable=False),
 ])
 
 USER_DIM_SCHEMA = pa.schema([
@@ -110,6 +122,8 @@ USER_DIM_SCHEMA = pa.schema([
     pa.field("created_at", TIMESTAMP_TYPE, nullable=False),
     pa.field("updated_at", TIMESTAMP_TYPE, nullable=False),
     pa.field("ingestion_timestamp", TIMESTAMP_TYPE, nullable=False),
+    pa.field("batch_id", pa.string(), nullable=False),
+    pa.field("source", pa.string(), nullable=False),
 ])
 
 ARROW_SCHEMAS = {

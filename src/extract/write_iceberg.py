@@ -6,7 +6,7 @@ from pyiceberg.partitioning import PartitionSpec, PartitionField
 from pyiceberg.transforms import DayTransform, IdentityTransform
 
 
-# database bronze-githubanalytics-dev has already been creasted by cloudformation with location pointing to s3://bronze-githubanalytics-dev/warehouse/
+# database raw-githubanalytics-dev has already been creasted by cloudformation with location pointing to s3://raw-githubanalytics-dev/warehouse/
 # for local auth the user executing must have aws cli installed and necessary iam permissions .
 # In aws glue it is governed by iam role policies
 

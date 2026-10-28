@@ -19,7 +19,7 @@ def get_env(logger):
     return env
 
 
-def get_secret(logger):
+def get_secret(logger,config):
      load_dotenv()
      secret= os.getenv('github_pat')
      if(secret is None):
@@ -32,7 +32,6 @@ def get_secret(logger):
 
 def read_config(logger):
     environemnt= get_env(logger)
-    secret =  get_secret(logger)
     config=configparser.ConfigParser()
     config_path = Path(extract_package.__file__).parent / "config" / f"constants-{environemnt}.ini"
     config.read(config_path)
@@ -43,10 +42,25 @@ def read_config(logger):
          env_dict[section]=dict(config.items(section))
 
     env_dict["env"]=environemnt
-    env_dict["secret"]=secret
 
     return env_dict
 
+
+def initialize_context_dict(logger):
+
+     logger.info("Initializing context dictionary....")
+     config_dict= read_config(logger=logger)
+     secret= get_secret(logger=logger,config=config_dict)
+     config_dict['secret']=secret
+
+     return config_dict
+
+
+
+
+
+     
+     
 
 
 

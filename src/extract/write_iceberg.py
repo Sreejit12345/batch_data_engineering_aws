@@ -47,10 +47,10 @@ def write_table(table_name,df,logger,database_name,catalog_name,aws_region):
                 spec_upd.add_field("ingestion_timestamp", DayTransform(), "ingestion_day")
 
 
-        table = catalog.load_table(identifier)
-        arrow_table = pa.Table.from_pylist(df, schema=table.schema().as_arrow())
+    table = catalog.load_table(identifier)
+    arrow_table = pa.Table.from_pylist(df, schema=table.schema().as_arrow())
 
-        table.append(arrow_table)
+    table.append(arrow_table)
 
-        logger.info(f"loaded table {identifier} with {len(arrow_table)} rows")
+    logger.info(f"loaded table {identifier} with {len(arrow_table)} rows")
 

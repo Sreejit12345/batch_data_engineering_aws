@@ -4,7 +4,7 @@ import logging
 from src.extract.write_iceberg import *
 import boto3
 import sys
-from src.extract.utils.read_config_file import read_config
+from src.extract.utils.read_config_file import initialize_context_dict
 
 
 root_logger = logging.getLogger()
@@ -26,9 +26,7 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logger = logging.getLogger("Extract Job")
 
 
-config_dict=read_config(logger)
-
-print(config_dict)
+config_dict=initialize_context_dict(logger)
 
 
 def load_github_datasets():

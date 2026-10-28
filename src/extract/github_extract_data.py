@@ -104,7 +104,7 @@ def query_org_dimension(client,logger):
 
      Natural Key: org_id
      Grain: 1 record per org
-     Watermark Column: updated_at
+  
      '''
 
      all_orgs= []
@@ -326,34 +326,26 @@ def query_language_dimension(repo_language_bridge,client,logger):
 def query_commit_facts_default_branch(pages_reqd,repo_dim,client,logger):
      
      """
-     Queries commits on the defualt branch and populates facts incrementally based on watermark.
-     Remember, commits are immutable and cant be updated. Only comments can be added later to a commit, but we dont care about it
-     - so we call comments metric as comments_at_ingestion.
-
-     Also, we dont get a last updated field in commits, since they are immutable. So even if someone adds comments later its hard
-     to ingest the update. So we should do a full pull, but not reqd as this is not an important metric to track.
+     Queries commits on the defualt branch and populates facts.
+     We do a full pull becuase we can get hard deletes from source
     
      PK: commit_sha
      FK: org_id,repo_id,author_user_id_verified
      """
-
-     def get_last_watermark():
-          return '2025-01-01T00:00:00Z'
 
      all_commits=[]
      
      for r in repo_dim:
 
           i=1
-          since=get_last_watermark()
 
-          logger.info(f"Getting the commits for repo {r['name']} from {since} ")
+          logger.info(f"Getting the commits for repo {r['name']}")
 
           org_id=r["org_id"]
           repo_id=r["repo_id"]
 
           
-          full_url= client.repo_base_url + r['full_name'] + '/commits' + f"?since={since}" +"&per_page=100"
+          full_url= client.repo_base_url + r['full_name'] + '/commits' + f"?per_page=100"
 
           try:
             while(i<=pages_reqd):
@@ -403,13 +395,10 @@ def query_commit_facts_default_branch(pages_reqd,repo_dim,client,logger):
 def query_pull_requests_fact(pages_reqd,repo_dim,client,logger):
      
      '''
-     Responsible to pull data for all Pull requests. 
+     Responsible to pull data for all Pull requests. We do a full pull because we can get hard deletes on source.
 
      '''
 
-     def is_first_load():
-               
-               return False
      
      all_pull_requests=[]
         
@@ -417,16 +406,12 @@ def query_pull_requests_fact(pages_reqd,repo_dim,client,logger):
     
             i=1
 
-            since=is_first_load()
             logger.info(f"Getting the pull requests for repo {r['repo_id']}")
     
             org_id=r["org_id"]
             repo_id=r["repo_id"]
     
-            if(since==True):
-                 state="all"
-            else:
-                 state="open"
+            state= "all"
 
             full_url= client.repo_base_url + r['full_name'] + '/pulls' + f"?state={state}" +"&per_page=100"
      

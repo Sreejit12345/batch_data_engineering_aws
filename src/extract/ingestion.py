@@ -1,13 +1,10 @@
 from src.extract.github_api_client import *
 from src.extract.github_extract_data import *
-import src.extract as extract_package
-import os
 import logging
-from pathlib import Path
 from src.extract.write_iceberg import *
 import boto3
 import sys
-import configparser
+from src.extract.utils.read_config_file import read_config
 
 
 root_logger = logging.getLogger()
@@ -29,30 +26,9 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logger = logging.getLogger("Extract Job")
 
 
-# load from env if running locally
+config_dict=read_config(logger)
 
-load_dotenv()
-secret=os.getenv('github_pat')
-env= os.getenv('env')
-
-if ( env is None):
-        logger.info("No env variable found - loading from glue...")
-        #read from glue job parameter
-        from awsglue.utils import getResolvedOptions
-        expected_params = ['env']
-        args = getResolvedOptions(sys.argv, expected_params)
-        env = args['env']
-
-config=configparser.ConfigParser()
-config_path = Path(extract_package.__file__).parent / "config" / f"constants-{env}.ini"
-config.read(config_path)
-
-
-if(secret is None):
-        logger.info("No env variable found - loading from secret manager...")
-        #read from secret manager
-        boto_client= boto3.client("secretsmanager", region_name='ap-south-1')
-        secret=boto_client.get_secret_value(SecretId=config['general']['secret_name'])['SecretString']
+print(config_dict)
 
 
 def load_github_datasets():
@@ -60,12 +36,12 @@ def load_github_datasets():
             
     headers={'Accept':'application/vnd.github+json',
     'X-GitHub-Api-Version':'2026-03-10',
-    'Authorization': f'Bearer {secret}'},
+    'Authorization': f'Bearer {config_dict["secret"]}'},
 
-    org_base_url=config['general']['org_base_url'],
-    repo_base_url= config['general']['repo_base_url'],
-    user_base_url= config['general']['user_base_url'],
-    org_list= config['general']['org_list'].split(',')
+    org_base_url=config_dict['general']['org_base_url'],
+    repo_base_url= config_dict['general']['repo_base_url'],
+    user_base_url= config_dict['general']['user_base_url'],
+    org_list= config_dict['general']['org_list'].split(',')
     )
 
     org_dim_full =query_org_dimension(client=client_obj,logger=logger)
@@ -85,26 +61,26 @@ def load_github_datasets():
     #write_json(query_pull_requests_fact_t,'src/data/pull_requests_fact')
     #write_json(query_user_dimension_full,'src/data/user_dim')
 
-    write_table('org',org_dim_full,logger,config['raw']['database_name'],
-                config['general']['glue_catalog'],config['general']['aws-region'])
+    write_table('org',org_dim_full,logger,config_dict['raw']['database_name'],
+                config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
-    write_table('repo',repo_dim_full,logger,config['raw']['database_name'],
-                        config['general']['glue_catalog'],config['general']['aws-region'])
+    write_table('repo',repo_dim_full,logger,config_dict['raw']['database_name'],
+                        config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
    
-    write_table('repo_language',repo_language_bridge_full,logger,config['raw']['database_name'],
-                        config['general']['glue_catalog'],config['general']['aws-region'])
+    write_table('repo_language',repo_language_bridge_full,logger,config_dict['raw']['database_name'],
+                        config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
-    write_table('language',language_dim_full,logger,config['raw']['database_name'],
-                        config['general']['glue_catalog'],config['general']['aws-region'])
+    write_table('language',language_dim_full,logger,config_dict['raw']['database_name'],
+                        config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
-    write_table('commits',commits_fact_incr,logger,config['raw']['database_name'],
-                        config['general']['glue_catalog'],config['general']['aws-region'])
+    write_table('commits',commits_fact_incr,logger,config_dict['raw']['database_name'],
+                        config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
-    write_table('pull_requests',query_pull_requests_fact_t,logger,config['raw']['database_name'],
-                        config['general']['glue_catalog'],config['general']['aws-region'])
+    write_table('pull_requests',query_pull_requests_fact_t,logger,config_dict['raw']['database_name'],
+                        config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
-    write_table('user',query_user_dimension_full,logger,config['raw']['database_name'],
-                        config['general']['glue_catalog'],config['general']['aws-region'])
+    write_table('user',query_user_dimension_full,logger,config_dict['raw']['database_name'],
+                        config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
 
 load_github_datasets()

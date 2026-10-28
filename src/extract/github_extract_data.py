@@ -4,7 +4,6 @@ import json
 from src.extract.github_api_client import GitHubClient
 from tenacity import retry,wait_exponential,stop_after_attempt
 from requests.exceptions import HTTPError
-from dotenv import load_dotenv
 from datetime import datetime, timezone
 import uuid
 

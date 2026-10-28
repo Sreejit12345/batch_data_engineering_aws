@@ -24,6 +24,8 @@ def initialize_catalog(catalog_name,aws_region):
 
 def write_table(table_name,df,logger,database_name,catalog_name,aws_region):
 
+    # appends df to iceberg table 'table_name'. Also creates 1 if it does not exist
+
     logger.info("Looking up schema for table %s", table_name)
 
     schema= ARROW_SCHEMAS[table_name]

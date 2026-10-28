@@ -85,25 +85,25 @@ def load_github_datasets():
     #write_json(query_pull_requests_fact_t,'src/data/pull_requests_fact')
     #write_json(query_user_dimension_full,'src/data/user_dim')
 
-    write_table('org',org_dim_full,logger,config['bronze']['database_name'],
+    write_table('org',org_dim_full,logger,config['raw']['database_name'],
                 config['general']['glue_catalog'],config['general']['aws-region'])
 
-    write_table('repo',repo_dim_full,logger,config['bronze']['database_name'],
+    write_table('repo',repo_dim_full,logger,config['raw']['database_name'],
                         config['general']['glue_catalog'],config['general']['aws-region'])
    
-    write_table('repo_language',repo_language_bridge_full,logger,config['bronze']['database_name'],
+    write_table('repo_language',repo_language_bridge_full,logger,config['raw']['database_name'],
                         config['general']['glue_catalog'],config['general']['aws-region'])
 
-    write_table('language',language_dim_full,logger,config['bronze']['database_name'],
+    write_table('language',language_dim_full,logger,config['raw']['database_name'],
                         config['general']['glue_catalog'],config['general']['aws-region'])
 
-    write_table('commits',commits_fact_incr,logger,config['bronze']['database_name'],
+    write_table('commits',commits_fact_incr,logger,config['raw']['database_name'],
                         config['general']['glue_catalog'],config['general']['aws-region'])
 
-    write_table('pull_requests',query_pull_requests_fact_t,logger,config['bronze']['database_name'],
+    write_table('pull_requests',query_pull_requests_fact_t,logger,config['raw']['database_name'],
                         config['general']['glue_catalog'],config['general']['aws-region'])
 
-    write_table('user',query_user_dimension_full,logger,config['bronze']['database_name'],
+    write_table('user',query_user_dimension_full,logger,config['raw']['database_name'],
                         config['general']['glue_catalog'],config['general']['aws-region'])
 
 

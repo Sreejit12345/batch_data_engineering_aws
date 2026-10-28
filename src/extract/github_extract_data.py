@@ -6,13 +6,20 @@ from tenacity import retry,wait_exponential,stop_after_attempt
 from requests.exceptions import HTTPError
 from dotenv import load_dotenv
 from datetime import datetime, timezone
-from typing import Optional
+import uuid
+
+#CONSTANTS per batch
+ingestion_ts= datetime.now(timezone.utc) # at module level so all records in batch have same ingestion timestamps.
+my_uuid = uuid.uuid4() # at module level, so all records in bacth have same batch_id
+source= "GITHUBDATA"
+
 
 def add_bronze_audit_columns(d):
      # add ingestion date
 
-     current_date = datetime.now(timezone.utc)
-     d['ingestion_timestamp'] = current_date
+     d['ingestion_timestamp'] = ingestion_ts
+     d['batch_id']=my_uuid
+     d['source']=source
 
      
 def parse_github_timestamp(value):

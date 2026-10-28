@@ -50,7 +50,7 @@ jobs:
                 path: /tmp
 
             - name: upload ingestion to s3
-              run:  aws s3 /tmp/ingestion.py s3://sourcecode-githubanalytics-${{ github.ref_name }}/src/extract
+              run:  aws s3 cp /tmp/ingestion.py s3://sourcecode-githubanalytics-${{ github.ref_name }}/src/extract
 
 
          

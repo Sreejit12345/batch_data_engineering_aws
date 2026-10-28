@@ -5,7 +5,7 @@ setup(
     version='1.0.0',
     author='Sreejit',
     description='GitHub Analytics DE project',
-    packages=find_packages(include=["src", "src.*"]),
+    packages=find_packages(),
    package_data={
     "src.extract": ["config/*.ini"],
 },

@@ -2,40 +2,70 @@ from src.extract.github_api_client import *
 from src.extract.github_extract_data import *
 import logging
 from src.extract.write_iceberg import *
-import boto3
 import sys
 from src.extract.utils.read_config_file import initialize_context_dict
+from pyiceberg.partitioning import PartitionSpec, PartitionField
+from pyiceberg.transforms import DayTransform, IdentityTransform
+from pyiceberg.catalog import load_catalog
+import datetime
+from src.extract.schema.schema import ARROW_SCHEMAS
+import pyarrow as pa
+
+# database raw-githubanalytics-<env> has already been creasted by cloudformation with location pointing to s3://raw-githubanalytics-<env>/warehouse/
+# for local auth the user executing must have aws cli installed and necessary iam permissions .
+# In aws glue it is governed by iam role policies
+
+def initialize_catalog(catalog_name,aws_region):
+
+    glue_catalog=load_catalog(
+            name=catalog_name,
+            **{
+                'type': 'glue',
+                'client.region': aws_region,
+            }
+    )
+    return glue_catalog
 
 
-root_logger = logging.getLogger()
-root_logger.setLevel(logging.INFO)
+def write_table(table_name,df,logger,database_name,catalog_name,aws_region):
 
-if not root_logger.handlers:
-  handler = logging.StreamHandler(sys.stdout)
-  handler.setLevel(logging.INFO)
-  handler.setFormatter(
-      logging.Formatter(
-          "%(asctime)s [%(levelname)s] (%(name)s): %(message)s",
-          datefmt="%Y-%m-%d %H:%M:%S",
-      )
-  )
-  root_logger.addHandler(handler)
+    # appends df to iceberg table 'table_name'. Also creates 1 if it does not exist
 
-logging.getLogger("urllib3").setLevel(logging.WARNING)
+    logger.info("Looking up schema for table %s", table_name)
 
-logger = logging.getLogger("Extract Job")
+    schema= ARROW_SCHEMAS[table_name]
+    catalog = initialize_catalog(catalog_name,aws_region)
+    identifier = f"{database_name}.{table_name}"
+
+    if not catalog.table_exists(identifier):
+
+        logger.info(f" Table {identifier} does not exist! creating new table ")
+        catalog.create_table(
+            identifier=identifier,
+            schema=schema,
+        )
+
+        table = catalog.load_table(identifier)
+
+        with table.transaction() as txn:
+            with txn.update_spec() as spec_upd:
+                spec_upd.add_field("ingestion_timestamp", DayTransform(), "ingestion_day")
 
 
-config_dict=initialize_context_dict(logger)
+    table = catalog.load_table(identifier)
+    arrow_table = pa.Table.from_pylist(df, schema=table.schema().as_arrow())
+
+    table.append(arrow_table)
+
+    logger.info(f"loaded table {identifier} with {len(arrow_table)} rows")
 
 
-def load_github_datasets():
+def load_github_datasets(config_dict):
+        
     client_obj = GitHubClient(
-            
     headers={'Accept':'application/vnd.github+json',
     'X-GitHub-Api-Version':'2026-03-10',
     'Authorization': f'Bearer {config_dict["secret"]}'},
-
     org_base_url=config_dict['general']['org_base_url'],
     repo_base_url= config_dict['general']['repo_base_url'],
     user_base_url= config_dict['general']['user_base_url'],
@@ -64,7 +94,7 @@ def load_github_datasets():
 
     write_table('repo',repo_dim_full,logger,config_dict['raw']['database_name'],
                         config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
-   
+
     write_table('repo_language',repo_language_bridge_full,logger,config_dict['raw']['database_name'],
                         config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
@@ -81,8 +111,30 @@ def load_github_datasets():
                         config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
 
-load_github_datasets()
 
+# Entry point for src to raw ingestion job.
+if(__name__=='__main__'):
 
+    root_logger = logging.getLogger()
+    root_logger.setLevel(logging.INFO)
 
-logger.info("Extract Job Finished.....")
+    if not root_logger.handlers:
+        handler = logging.StreamHandler(sys.stdout)
+        handler.setLevel(logging.INFO)
+        handler.setFormatter(
+            logging.Formatter(
+                "%(asctime)s [%(levelname)s] (%(name)s): %(message)s",
+                datefmt="%Y-%m-%d %H:%M:%S",
+            )
+        )
+        root_logger.addHandler(handler)
+
+    logging.getLogger("urllib3").setLevel(logging.WARNING)
+
+    logger = logging.getLogger("Extract Job")
+
+    config_dict=initialize_context_dict(logger)
+
+    load_github_datasets(config_dict)
+
+    logger.info("Extract Job Finished.....")

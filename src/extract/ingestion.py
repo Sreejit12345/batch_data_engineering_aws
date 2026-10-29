@@ -1,7 +1,6 @@
 from src.extract.github_api_client import *
 from src.extract.github_extract_data import *
 import logging
-from src.extract.write_iceberg import *
 import sys
 from src.extract.utils.read_config_file import initialize_context_dict
 from pyiceberg.partitioning import PartitionSpec, PartitionField
@@ -60,7 +59,7 @@ def write_table(table_name,df,logger,database_name,catalog_name,aws_region):
     logger.info(f"loaded table {identifier} with {len(arrow_table)} rows")
 
 
-def load_github_datasets(config_dict):
+def load_github_datasets(logger,config_dict):
         
     client_obj = GitHubClient(
     headers={'Accept':'application/vnd.github+json',
@@ -135,6 +134,6 @@ if(__name__=='__main__'):
 
     config_dict=initialize_context_dict(logger)
 
-    load_github_datasets(config_dict)
+    load_github_datasets(logger,config_dict)
 
     logger.info("Extract Job Finished.....")

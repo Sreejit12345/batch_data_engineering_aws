@@ -1,4 +1,3 @@
-# Entry point for raw to bronze ingestion job.
 # high level - this code is responsible to generate a changelog along with delta column(insert,update,delete) by comparing 
 # the [last processed bronze batchId by bronze] vs [the next batchId in raw].
 
@@ -24,7 +23,7 @@ from src.extract.utils.common_functions import *
 from src.extract.utils.read_config_file import *
 import logging
 
-
+# Entry point for raw to bronze ingestion job.
 if(__name__=='__main__'):
 
     root_logger = logging.getLogger()
@@ -46,13 +45,56 @@ if(__name__=='__main__'):
 
     config_dict=initialize_context_dict(logger)
 
+    metadata_table_name=f"glue_catalog.{config_dict['metadata']['database_name']}.{config_dict['metadata']['raw_bronze_table']}"
+
     spark_sess=get_spark_session()
 
     metadata_tble_existence= does_table_exists(spark_sess,config_dict['metadata']['database_name'],
                                                config_dict['metadata']['raw_bronze_table'])
 
     if(metadata_tble_existence==False):
-        logger.info(f"Metadata table does not exist- creating table raw-bronze-batch-progress-{config_dict['env']}")
+        logger.info(f"Metadata table does not exist- creating table {metadata_table_name}")
+
+
+        spark_sess.sql(f"""
+            CREATE TABLE IF NOT EXISTS {metadata_table_name} (
+            database_name STRING,
+            table_name STRING,
+            layer STRING,
+            batch_ordering_columns STRING,
+            partition_for_last_processed_batch_id STRING,
+            natural_primary_keys STRING,
+            last_batch_id_processed_successfully_by_bronze STRING
+        )
+        USING iceberg
+        """)
+
+        logger.info(f"Metadata table {metadata_table_name} created...")
+
+
+        logger.info("populating entries for table with null values...")
+
+        spark_sess.sql(f"""
+        INSERT INTO {metadata_table_name}
+        VALUES
+        ('raw-githubanalytics-dev', 'org', 'raw', 'updated_at,ingestion_timestamp', NULL, 'org_id', NULL),
+        ('raw-githubanalytics-dev', 'repo', 'raw', 'updated_at,ingestion_timestamp', NULL, 'repo_id', NULL),
+        ('raw-githubanalytics-dev', 'repo_language', 'raw', 'ingestion_timestamp', NULL, 'repo_id,language', NULL),
+        ('raw-githubanalytics-dev', 'language', 'raw', 'ingestion_timestamp', NULL, 'language_name', NULL),
+        ('raw-githubanalytics-dev', 'commits', 'raw', 'committed_at,ingestion_timestamp', NULL, 'commit_sha', NULL),
+        ('raw-githubanalytics-dev', 'pull_requests', 'raw', 'updated_at,ingestion_timestamp', NULL, 'pull_request_id', NULL),
+        ('raw-githubanalytics-dev', 'User', 'raw', 'updated_at,ingestion_timestamp', NULL, 'user_id', NULL)
+        """)
+
+    else:
+
+        logger.info("Skipping metadata table creation- table already exists")
+
+
+    raw_bronze_table_metadata= spark_sess.read.table(metadata_table_name).collect()
+
+    
+    
 
 
 

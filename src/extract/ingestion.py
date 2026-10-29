@@ -29,6 +29,7 @@ def initialize_catalog(catalog_name,aws_region):
 def write_table(table_name,df,logger,database_name,catalog_name,aws_region):
 
     # appends df to iceberg table 'table_name'. Also creates 1 if it does not exist
+    # also for each df passed here we expect a "ingestion_timestamp" paramter which is used in iceberg table partition
 
     logger.info("Looking up schema for table %s", table_name)
 
@@ -57,6 +58,21 @@ def write_table(table_name,df,logger,database_name,catalog_name,aws_region):
     table.append(arrow_table)
 
     logger.info(f"loaded table {identifier} with {len(arrow_table)} rows")
+
+
+def clean_up_batch(catalog_name,aws_region,table,database,batch_id,source,ingestion_ts):
+
+    catalog=initialize_catalog(catalog_name,aws_region)
+
+    table = catalog.load_table(f"{database}.{table}")
+
+    table.delete(
+        delete_filter=(
+            f"batch_id == '{batch_id}' "
+            f"AND source == '{source}' "
+            f"AND ingestion_timestamp == TIMESTAMP '{ingestion_ts.isoformat()}'"
+        )
+    )
 
 
 def load_github_datasets(logger,config_dict):
@@ -88,27 +104,100 @@ def load_github_datasets(logger,config_dict):
     #write_json(query_pull_requests_fact_t,'src/data/pull_requests_fact')
     #write_json(query_user_dimension_full,'src/data/user_dim')
 
-    write_table('org',org_dim_full,logger,config_dict['raw']['database_name'],
-                config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
-    write_table('repo',repo_dim_full,logger,config_dict['raw']['database_name'],
-                        config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
+    try:
+        write_table('org',org_dim_full,logger,config_dict['raw']['database_name'],
+                    config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
-    write_table('repo_language',repo_language_bridge_full,logger,config_dict['raw']['database_name'],
-                        config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
+        write_table('repo',repo_dim_full,logger,config_dict['raw']['database_name'],
+                            config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
-    write_table('language',language_dim_full,logger,config_dict['raw']['database_name'],
-                        config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
+        write_table('repo_language',repo_language_bridge_full,logger,config_dict['raw']['database_name'],
+                            config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
-    write_table('commits',commits_fact_incr,logger,config_dict['raw']['database_name'],
-                        config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
+        write_table('language',language_dim_full,logger,config_dict['raw']['database_name'],
+                            config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
-    write_table('pull_requests',query_pull_requests_fact_t,logger,config_dict['raw']['database_name'],
-                        config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
+        write_table('commits',commits_fact_incr,logger,config_dict['raw']['database_name'],
+                            config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
-    write_table('user',query_user_dimension_full,logger,config_dict['raw']['database_name'],
-                        config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
+        write_table('pull_requests',query_pull_requests_fact_t,logger,config_dict['raw']['database_name'],
+                            config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
 
+        write_table('user',query_user_dimension_full,logger,config_dict['raw']['database_name'],
+                            config_dict['general']['glue_catalog'],config_dict['general']['aws-region'])
+
+    except Exception as e:
+
+        logger.info("Something went wrong in ingestion")
+
+        logger.info(f"need to delete batch {my_uuid} and ingestion_timestamp {ingestion_ts} for source {source}")
+
+        clean_up_batch(
+            config_dict['general']['glue_catalog'],
+            config_dict['general']['aws-region'],
+            "org",
+            config_dict['raw']['database_name'],
+            my_uuid,
+            source,
+            ingestion_ts,
+        )
+        clean_up_batch(
+            config_dict['general']['glue_catalog'],
+            config_dict['general']['aws-region'],
+            "repo",
+            config_dict['raw']['database_name'],
+            my_uuid,
+            source,
+            ingestion_ts,
+        )
+        clean_up_batch(
+            config_dict['general']['glue_catalog'],
+            config_dict['general']['aws-region'],
+            "repo_language",
+            config_dict['raw']['database_name'],
+            my_uuid,
+            source,
+            ingestion_ts,
+        )
+        clean_up_batch(
+            config_dict['general']['glue_catalog'],
+            config_dict['general']['aws-region'],
+            "language",
+            config_dict['raw']['database_name'],
+            my_uuid,
+            source,
+            ingestion_ts,
+        )
+        clean_up_batch(
+            config_dict['general']['glue_catalog'],
+            config_dict['general']['aws-region'],
+            "commits",
+            config_dict['raw']['database_name'],
+            my_uuid,
+            source,
+            ingestion_ts,
+        )
+        clean_up_batch(
+            config_dict['general']['glue_catalog'],
+            config_dict['general']['aws-region'],
+            "pull_requests",
+            config_dict['raw']['database_name'],
+            my_uuid,
+            source,
+            ingestion_ts,
+        )
+        clean_up_batch(
+            config_dict['general']['glue_catalog'],
+            config_dict['general']['aws-region'],
+            "user",
+            config_dict['raw']['database_name'],
+            my_uuid,
+            source,
+            ingestion_ts,
+        )
+
+        raise
 
 
 # Entry point for src to raw ingestion job.

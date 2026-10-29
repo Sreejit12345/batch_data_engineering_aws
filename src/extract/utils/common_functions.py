@@ -11,3 +11,4 @@ def get_spark_session():
     spark=SparkSession.builder.appName("bronze job").getOrCreate()
 
     return spark
+

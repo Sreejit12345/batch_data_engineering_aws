@@ -2,8 +2,7 @@ from dotenv import load_dotenv
 import os
 import sys
 import configparser
-from pathlib import Path
-import src.extract as extract_package
+from importlib import resources
 import boto3
 
 def get_env(logger):
@@ -33,8 +32,11 @@ def get_secret(logger,config):
 def read_config(logger):
     environemnt= get_env(logger)
     config=configparser.ConfigParser()
-    config_path = Path(extract_package.__file__).parent / "config" / f"constants-{environemnt}.ini"
-    config.read(config_path)
+    config_file = resources.files("src.extract").joinpath(
+        "config", f"constants-{environemnt}.ini"
+    )
+    with config_file.open(encoding="utf-8") as file:
+        config.read_file(file)
 
     env_dict={}
 
@@ -61,10 +63,6 @@ def initialize_context_dict(logger):
 
      
      
-
-
-
-
 
 
 

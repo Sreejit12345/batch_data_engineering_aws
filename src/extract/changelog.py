@@ -56,6 +56,10 @@ if(__name__=='__main__'):
     config_dict=initialize_context_dict(logger)
 
     metadata_table_name=f"{config_dict['metadata']['database_name']}.{config_dict['metadata']['raw_bronze_table']}"
+    metadata_table_sql_name = (
+        f"`{config_dict['metadata']['database_name']}`."
+        f"`{config_dict['metadata']['raw_bronze_table']}`"
+    )
 
     spark_sess=get_spark_session()
 
@@ -67,7 +71,7 @@ if(__name__=='__main__'):
         logger.info(f"Metadata table does not exist- creating table {metadata_table_name}")
 
         spark_sess.sql(f"""
-            CREATE TABLE IF NOT EXISTS {metadata_table_name} (
+            CREATE TABLE IF NOT EXISTS {metadata_table_sql_name} (
             database_name STRING,
             table_name STRING,
             layer STRING,
@@ -85,7 +89,7 @@ if(__name__=='__main__'):
         logger.info("populating entries for table with null values...")
 
         spark_sess.sql(f"""
-        INSERT INTO {metadata_table_name}
+        INSERT INTO {metadata_table_sql_name}
         VALUES
         ('raw-githubanalytics-{config_dict['env']}', 'org', 'raw', 'ingestion_timestamp', NULL, 'org_id', NULL),
         ('raw-githubanalytics-{config_dict['env']}', 'repo', 'raw', 'ingestion_timestamp', NULL, 'repo_id', NULL),
@@ -110,6 +114,10 @@ if(__name__=='__main__'):
         # bronze and raw share same table names , only database name is different.
         bronze_table_full_name=config_dict['bronze']['database_name'] + '.' + r['table_name']
         raw_table_full_name = r['database_name'] + '.' + r['table_name']
+        bronze_table_sql_name = (
+            f"`{config_dict['bronze']['database_name']}`.`{r['table_name']}`"
+        )
+        raw_table_sql_name = f"`{r['database_name']}`.`{r['table_name']}`"
 
 
         logger.info(f"Raw to Bronze Processing for table : {r['table_name']}")
@@ -137,16 +145,16 @@ if(__name__=='__main__'):
             source_query= f"""
 
             with first_batch as(
-            select min({batch_order}) as first_batch_ts from {raw_table_full_name}
+            select min({batch_order}) as first_batch_ts from {raw_table_sql_name}
             )
-            select r.* from {raw_table_full_name} r cross join first_batch f
+            select r.* from {raw_table_sql_name} r cross join first_batch f
             where r.{batch_order}=f.first_batch_ts
             """
 
             # next batch - empty
             target_query= f"""
             select *
-            from {raw_table_full_name}
+            from {raw_table_sql_name}
             where 1=2      
             """
             
@@ -162,12 +170,12 @@ if(__name__=='__main__'):
             # new unprocessed batch
             source_query= f"""
                  with first_batch as(
-                        select min({batch_order}) as first_batch_ts from {raw_table_full_name}
+                        select min({batch_order}) as first_batch_ts from {raw_table_sql_name}
                          where ingestion_timestamp >='{last_batch_processed_ts}'
                                         and batch_id != '{last_batch_processed}'
                         )
                     select r.* from 
-                    {raw_table_full_name} r
+                    {raw_table_sql_name} r
                     cross join first_batch f
                     where r.{batch_order}=f.first_batch_ts
             """
@@ -175,7 +183,7 @@ if(__name__=='__main__'):
             # batch already processed by bronze pipeline, but we pick up from raw
             target_query= f"""
             select * from 
-                {raw_table_full_name} 
+                {raw_table_sql_name} 
                 where ingestion_timestamp ='{last_batch_processed_ts}'
                 and batch_id = '{last_batch_processed}'     
             """
@@ -209,7 +217,7 @@ if(__name__=='__main__'):
             logger.info(f"Table {bronze_table_full_name} processed successfully")
 
             spark_sess.sql(f"""
-            UPDATE {metadata_table_name} 
+            UPDATE {metadata_table_sql_name} 
             SET ts_for_last_processed_batch_id_by_bronze =
                 CAST('{row['ingestion_timestamp']}' AS TIMESTAMP),
             last_batch_id_processed_successfully_by_bronze = '{row['batch_id']}'
@@ -222,12 +230,12 @@ if(__name__=='__main__'):
 
         except:
             spark_sess.sql(f"""
-            DELETE FROM {bronze_table_full_name}
+            DELETE FROM {bronze_table_sql_name}
             WHERE bronze_batch_id = '{my_uuid}'
             """)
 
             spark_sess.sql(f"""
-            UPDATE {metadata_table_name}
+            UPDATE {metadata_table_sql_name}
             SET ts_for_last_processed_batch_id_by_bronze =
                 {("NULL" if r['ts_for_last_processed_batch_id_by_bronze'] is None else "CAST('" + str(r['ts_for_last_processed_batch_id_by_bronze']) + "' AS TIMESTAMP)")},
                 last_batch_id_processed_successfully_by_bronze =

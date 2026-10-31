@@ -72,7 +72,7 @@ if(__name__=='__main__'):
             table_name STRING,
             layer STRING,
             batch_ordering_columns STRING,
-            ts_for_last_processed_batch_id_by_bronze STRING,
+            ts_for_last_processed_batch_id_by_bronze TIMESTAMP,
             natural_primary_keys STRING,
             last_batch_id_processed_successfully_by_bronze STRING
         )
@@ -210,7 +210,8 @@ if(__name__=='__main__'):
 
             spark_sess.sql(f"""
             UPDATE {metadata_table_name} 
-            SET ts_for_last_processed_batch_id_by_bronze ='{row['ingestion_timestamp']}' ,
+            SET ts_for_last_processed_batch_id_by_bronze =
+                CAST('{row['ingestion_timestamp']}' AS TIMESTAMP),
             last_batch_id_processed_successfully_by_bronze = '{row['batch_id']}'
             WHERE table_name = '{r['table_name']}'
             and database_name = '{r['database_name']}'
@@ -228,26 +229,16 @@ if(__name__=='__main__'):
             spark_sess.sql(f"""
             UPDATE {metadata_table_name}
             SET ts_for_last_processed_batch_id_by_bronze =
-                {("NULL" if r['ts_for_last_processed_batch_id_by_bronze'] is None else "'" + str(r['ts_for_last_processed_batch_id_by_bronze']) + "'")},
+                {("NULL" if r['ts_for_last_processed_batch_id_by_bronze'] is None else "CAST('" + str(r['ts_for_last_processed_batch_id_by_bronze']) + "' AS TIMESTAMP)")},
                 last_batch_id_processed_successfully_by_bronze =
                 {("NULL" if r['last_batch_id_processed_successfully_by_bronze'] is None else "'" + str(r['last_batch_id_processed_successfully_by_bronze']) + "'")}
             WHERE table_name = '{r['table_name']}'
             AND database_name = '{r['database_name']}'
             """)
+
             raise
         
 
-           
-
-
-
-
-
-
-            
-
-
-
-
+        
     
     

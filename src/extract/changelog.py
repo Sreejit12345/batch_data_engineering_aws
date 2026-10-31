@@ -131,7 +131,7 @@ if(__name__=='__main__'):
 
 
         #create bronze tables - with same names as raw tables
-        create_partitioned_table_if_not_exists(spark_sess,config_dict['bronze']['database_name'],r['table_name'],
+        create_partitioned_table_if_not_exists(spark_sess,f"`{config_dict['bronze']['database_name']}`",r['table_name'],
                                                spark_schema,["bronze_ingestion_timestamp"])
 
 

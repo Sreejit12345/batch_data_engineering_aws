@@ -105,7 +105,7 @@ if(__name__=='__main__'):
         logger.info("Skipping metadata table creation- table already exists")
 
 
-    raw_bronze_table_metadata= spark_sess.read.table(metadata_table_name).collect()
+    raw_bronze_table_metadata = spark_sess.read.table(metadata_table_sql_name).collect()
 
     
     for r in raw_bronze_table_metadata:
@@ -212,7 +212,7 @@ if(__name__=='__main__'):
 
         try:
         
-            final_df.writeTo(f"{bronze_table_full_name}").append()
+            final_df.writeTo(bronze_table_sql_name).append()
 
             logger.info(f"Table {bronze_table_full_name} processed successfully")
 

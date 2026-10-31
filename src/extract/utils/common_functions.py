@@ -54,7 +54,7 @@ def create_partitioned_table_if_not_exists(spark,database,table_name,schema,part
         format("iceberg").\
         partitionBy(*partitionBy). \
         mode("append"). \
-        saveAsTable(f"{database}.{table_name}")
+        saveAsTable(f"`{database}`.`{table_name}`")
 
 def generate_chagelog(new_batch,processed_batch,join_cols):
     # join columns are natural keys and must be present in both dfs . These are used to join and find diff in batches.

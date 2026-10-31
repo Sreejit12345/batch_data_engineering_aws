@@ -138,7 +138,7 @@ def generate_chagelog(new_batch,processed_batch,join_cols):
 
     processed_cols_wo_audit_exp=[]
     for i in processed_cols_wo_audit:
-            k=F.coalesce(F.col(i),'UNKNOWN')
+            k=F.coalesce(F.col(i),F.lit('UNKNOWN'))
             processed_cols_wo_audit_exp.append(k)
     
 

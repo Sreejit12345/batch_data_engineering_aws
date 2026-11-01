@@ -3,9 +3,9 @@ from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 from src.extract.schema.bronze_schema import *
 
-def does_table_exists(spark,database,tbl_name):
+def does_table_exists(spark,tbl_name):
 
-    exists = spark.catalog.tableExists(tbl_name,database)
+    exists = spark.catalog.tableExists(tbl_name)
     return exists
 
 def get_spark_session():
@@ -42,7 +42,7 @@ def deduplicate_on_key(df,keys,order_dict):
     return df
 
 
-def create_partitioned_table_if_not_exists(spark,database,table_name,schema,partitionBy):
+def create_partitioned_table_if_not_exists(spark,catalog,database,table_name,schema,partitionBy):
 
     table_exists=does_table_exists(spark,database,table_name)
 
@@ -54,7 +54,7 @@ def create_partitioned_table_if_not_exists(spark,database,table_name,schema,part
         format("iceberg").\
         partitionBy(*partitionBy). \
         mode("append"). \
-        saveAsTable(f"`{database}`.`{table_name}`")
+        saveAsTable(f"{catalog}.`{database}`.`{table_name}`")
 
 def generate_chagelog(new_batch,processed_batch,join_cols):
     # join columns are natural keys and must be present in both dfs . These are used to join and find diff in batches.

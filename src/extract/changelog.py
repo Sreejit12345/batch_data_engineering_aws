@@ -55,20 +55,15 @@ if(__name__=='__main__'):
 
     config_dict=initialize_context_dict(logger)
 
-    metadata_table_name=f"{config_dict['metadata']['database_name']}.{config_dict['metadata']['raw_bronze_table']}"
-    metadata_table_sql_name = (
-        f"`{config_dict['metadata']['database_name']}`."
-        f"`{config_dict['metadata']['raw_bronze_table']}`"
-    )
+    metadata_table_sql_name = f"glue_catalog.`{config_dict['metadata']['database_name']}`.`{config_dict['metadata']['raw_bronze_table']}`"
 
     spark_sess=get_spark_session()
 
-    metadata_tble_existence= does_table_exists(spark_sess,config_dict['metadata']['database_name'],
-                                               config_dict['metadata']['raw_bronze_table'])
+    metadata_tble_existence= does_table_exists(spark_sess,metadata_table_sql_name)
 
 
     if(metadata_tble_existence==False):
-        logger.info(f"Metadata table does not exist- creating table {metadata_table_name}")
+        logger.info(f"Metadata table does not exist- creating table {metadata_table_sql_name}")
 
         spark_sess.sql(f"""
             CREATE TABLE IF NOT EXISTS {metadata_table_sql_name} (
@@ -83,7 +78,7 @@ if(__name__=='__main__'):
         USING iceberg
         """)
 
-        logger.info(f"Metadata table {metadata_table_name} created...")
+        logger.info(f"Metadata table {metadata_table_sql_name} created...")
 
 
         logger.info("populating entries for table with null values...")
@@ -112,12 +107,11 @@ if(__name__=='__main__'):
 
 
         # bronze and raw share same table names , only database name is different.
-        bronze_table_full_name=config_dict['bronze']['database_name'] + '.' + r['table_name']
-        raw_table_full_name = r['database_name'] + '.' + r['table_name']
+
         bronze_table_sql_name = (
-            f"`{config_dict['bronze']['database_name']}`.`{r['table_name']}`"
+            f"glue_catalog.`{config_dict['bronze']['database_name']}`.`{r['table_name']}`"
         )
-        raw_table_sql_name = f"`{r['database_name']}`.`{r['table_name']}`"
+        raw_table_sql_name = f"glue_catalog.`{r['database_name']}`.`{r['table_name']}`"
 
 
         logger.info(f"Raw to Bronze Processing for table : {r['table_name']}")
@@ -127,16 +121,16 @@ if(__name__=='__main__'):
         natural_keys= r['natural_primary_keys']
         batch_order= r['batch_ordering_columns']
         
-        logger.info(f"{raw_table_full_name}'s corresponding bronze table name is {bronze_table_full_name}")
+        logger.info(f"{raw_table_sql_name}'s corresponding bronze table name is {bronze_table_sql_name}")
 
 
         #create bronze tables - with same names as raw tables
-        create_partitioned_table_if_not_exists(spark_sess,config_dict['bronze']['database_name'],r['table_name'],
+        create_partitioned_table_if_not_exists(spark_sess,"glue_catalog",config_dict['bronze']['database_name'],r['table_name'],
                                                spark_schema,["bronze_ingestion_timestamp"])
 
 
         if(r['last_batch_id_processed_successfully_by_bronze'] is None and r['ts_for_last_processed_batch_id_by_bronze'] is None ):
-            logger.info(f"No processed batch found for table {raw_table_full_name}")
+            logger.info(f"No processed batch found for table {raw_table_sql_name}")
 
             # finds the next batch based on batch_order
             # Ideally we dont have parallel writes on ingestion so ingestion_timestamp wont be same.
@@ -214,7 +208,7 @@ if(__name__=='__main__'):
         
             final_df.writeTo(bronze_table_sql_name).append()
 
-            logger.info(f"Table {bronze_table_full_name} processed successfully")
+            logger.info(f"Table {bronze_table_sql_name} processed successfully")
 
             spark_sess.sql(f"""
             UPDATE {metadata_table_sql_name} 
@@ -226,7 +220,7 @@ if(__name__=='__main__'):
                         
             """)
 
-            logger.info(f"Table {bronze_table_full_name} metadata processed successfully")
+            logger.info(f"Table {bronze_table_sql_name} metadata processed successfully")
 
         except:
             spark_sess.sql(f"""

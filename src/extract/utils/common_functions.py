@@ -103,6 +103,7 @@ def generate_chagelog(new_batch,processed_batch,join_cols):
     select(*new_batch_rename_list,*processed_batch_rename_list)
 
     #natural keys renamed
+    #natural keys are non-nullabale so comparing 1 is enough
 
     natural_keys_new=['new_'+i for i in join_cols]
     natural_keys_processed=['processed_'+i for i in join_cols]
@@ -138,24 +139,23 @@ def generate_chagelog(new_batch,processed_batch,join_cols):
 
     processed_cols_wo_audit_exp=[]
     for i in processed_cols_wo_audit:
-            k=F.coalesce(F.col(i).cast('string'),F.lit('UNKNOWN'))
-            processed_cols_wo_audit_exp.append(k)
+        k=F.coalesce(F.col(i).cast('string'),F.lit('UNKNOWN'))
+        processed_cols_wo_audit_exp.append(k)
     
 
     update_df= update_df.withColumn('new_col_hash',F.sha2(F.concat_ws(':',*new_cols_wo_audit_exp),256)).\
-    withColumn('processed_col_hash',F.hash(F.concat_ws(':',*processed_cols_wo_audit_exp))).\
+    withColumn('processed_col_hash',F.sha2(F.concat_ws(':',*processed_cols_wo_audit_exp),256)).\
     filter("new_col_hash!=processed_col_hash").\
     select(*new_batch_col_list)
 
     update_df=update_df.withColumn("delta_type",F.lit('update'))
 
 
-    full_df= insert_df.unionByName(update_df).unionByName(delete_df)
+    full_df= insert_df.union(update_df).union(delete_df)
 
     all_cols= full_df.columns
     all_cols.remove('delta_type')
 
-    rename_exp=[]
     for i in range(0,len(all_cols)):
 
         full_df=full_df.withColumnRenamed(all_cols[i],new_batch.columns[i])

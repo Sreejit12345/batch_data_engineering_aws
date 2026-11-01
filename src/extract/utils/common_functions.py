@@ -133,7 +133,7 @@ def generate_chagelog(new_batch,processed_batch,join_cols):
 
     new_cols_wo_audit_exp=[]
     for i in new_cols_wo_audit:
-        k=F.coalesce(F.col(i),'UNKNOWN')
+        k=F.coalesce(F.col(i),F.lit('UNKNOWN'))
         new_cols_wo_audit_exp.append(k)
 
     processed_cols_wo_audit_exp=[]
@@ -142,7 +142,7 @@ def generate_chagelog(new_batch,processed_batch,join_cols):
             processed_cols_wo_audit_exp.append(k)
     
 
-    update_df= update_df.withColumn('new_col_hash',F.hash(F.concat_ws(':',*new_cols_wo_audit_exp))).\
+    update_df= update_df.withColumn('new_col_hash',F.sha2(F.concat_ws(':',*new_cols_wo_audit_exp),256)).\
     withColumn('processed_col_hash',F.hash(F.concat_ws(':',*processed_cols_wo_audit_exp))).\
     filter("new_col_hash!=processed_col_hash").\
     select(*new_batch_col_list)

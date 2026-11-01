@@ -44,7 +44,7 @@ def deduplicate_on_key(df,keys,order_dict):
 
 def create_partitioned_table_if_not_exists(spark,catalog,database,table_name,schema,partitionBy):
 
-    table_exists=does_table_exists(spark,database,table_name)
+    table_exists=does_table_exists(spark,f"{catalog}.`{database}`.`{table_name}`")
 
     if(table_exists==False):
 

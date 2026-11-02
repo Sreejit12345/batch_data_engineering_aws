@@ -36,6 +36,11 @@ jobs:
                 name: bronze-entry-point-upload
                 path: ./src/extract/changelog.py
 
+            - uses: actions/upload-artifact@v7
+              with:
+                name: silver-entry-point-upload
+                path: ./src/transform/silver_transform.py
+
     deploy:
           runs-on: ubuntu-latest
           needs: build
@@ -58,6 +63,7 @@ jobs:
               run: |
                     aws s3 cp /tmp/changelog.py s3://sourcecode-githubanalytics-${{ github.ref_name }}/src/extract/
                     aws s3 cp /tmp/ingestion.py s3://sourcecode-githubanalytics-${{ github.ref_name }}/src/extract/
+                    aws s3 cp /tmp/silver_transform.py s3://sourcecode-githubanalytics-${{ github.ref_name }}/src/transform/
                     aws s3 cp /tmp/githubanalytics-1.0.0-py3-none-any.whl s3://sourcecode-githubanalytics-${{ github.ref_name }}/src/
 
 

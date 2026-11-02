@@ -10,12 +10,12 @@
 It first checks if the target Glue database has an explicitly defined database location (databaseUri).
 Because your 3 databases already have locations present, Iceberg will successfully use databaseUri as the default storage location for any new table created within those databases.
 
-
+Although we have the warehouse set in database level- we need to set a dummy spark warehouse for glue to start:  --conf spark.sql.catalog.glue_catalog.warehouse=s3://idfk/
 
 create a key named --conf and put the value as - this is done with the help of cloudformation:
 
 
-spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.sql.catalog.glue_catalog=org.apache.iceberg.spark.SparkCatalog --conf spark.sql.catalog.glue_catalog.catalog-impl=org.apache.iceberg.aws.glue.GlueCatalog --conf spark.sql.catalog.glue_catalog.io-impl=org.apache.iceberg.aws.s3.S3FileIO --conf spark.eventLog.rolling.enabled=true --conf spark.sql.catalog.glue_catalog.glue.skip-name-validation=true --conf spark.sql.defaultCatalog=glue_catalog
+spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.sql.catalog.glue_catalog=org.apache.iceberg.spark.SparkCatalog --conf spark.sql.catalog.glue_catalog.catalog-impl=org.apache.iceberg.aws.glue.GlueCatalog --conf spark.sql.catalog.glue_catalog.io-impl=org.apache.iceberg.aws.s3.S3FileIO --conf spark.eventLog.rolling.enabled=true --conf spark.sql.catalog.glue_catalog.glue.skip-name-validation=true --conf spark.sql.defaultCatalog=glue_catalog --conf spark.sql.catalog.glue_catalog.warehouse=s3://idfk/
 
 '''
 

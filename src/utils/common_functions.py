@@ -13,6 +13,12 @@ def get_spark_session():
 
     return spark
 
+def derive_max_surrogate_key(spark,catalog,database,table_name,sk_col_name):
+
+    val=spark.sql(f"select coalesce(max({sk_col_name}),0) mx_key from {catalog}.`{database}`.`{table_name}` ").collect()[0]
+
+    return val['mx_key']
+
 
 def deduplicate_on_key(df,keys,order_dict):
 

@@ -172,8 +172,16 @@ if(__name__=='__main__'):
                              where r.{batch_order}=f.first_batch_ts
                      """
 
+        source_df= spark_sess.sql(source_query)
 
-            
+        source_df.drop("")
+
+        if(load_type=='scd1'):
+
+            logger.info(f"Proceeding to do scd1 for silver table {silver_table_sql_name}")
+
+            scd1_implementation()
+    
             
 
 

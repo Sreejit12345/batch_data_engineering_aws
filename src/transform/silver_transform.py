@@ -26,6 +26,7 @@ import sys
 from src.utils.read_config_file import *
 from src.utils.common_functions import *
 from src.transform.schema.silver_schema import *
+from src.transform.scd1 import *
 
 # Entry point for bronze to silver generic transformation job.
 if(__name__=='__main__'):
@@ -117,6 +118,11 @@ if(__name__=='__main__'):
 
         spark_schema=SILVER_SCHEMAS[r['table_name']]
         partition=SILVER_PARTITIONS[r['table_name']]
+        load_type= r['tgt_load_type']
+
+        last_batch_processed_ts= r['ts_for_last_processed_batch_id_by_silver']
+        last_batch_processed = r['last_batch_id_processed_successfully_by_silver']
+
 
         natural_keys= r['natural_primary_keys']
         batch_order= r['batch_ordering_columns']
@@ -137,6 +143,42 @@ if(__name__=='__main__'):
 
               create_partitioned_table_if_not_exists(spark_sess,"glue_catalog",config_dict['silver']['database_name'],r['table_name'],
                                                             spark_schema,partition)
+
+
+
+        if(r['last_batch_id_processed_successfully_by_silver'] is None and r['ts_for_last_processed_batch_id_by_silver'] is None ):
+
+            logger.info(f"No processed batch found for table {bronze_table_sql_name}")
+
+            source_query= f"""
+                        with first_batch as(
+                        select min({batch_order}) as first_batch_ts from {bronze_table_sql_name}
+                        )
+                        select r.* from {bronze_table_sql_name} r cross join first_batch f
+                        where r.{batch_order}=f.first_batch_ts
+                    """
+
+        else:
+
+            source_query= f"""
+                          with first_batch as(
+                                 select min({batch_order}) as first_batch_ts from {bronze_table_sql_name}
+                                  where ingestion_timestamp >='{last_batch_processed_ts}'
+                                                 and batch_id != '{last_batch_processed}'
+                                 )
+                             select r.* from 
+                             {bronze_table_sql_name} r
+                             cross join first_batch f
+                             where r.{batch_order}=f.first_batch_ts
+                     """
+
+
+            
+            
+
+
+
+
 
 
 

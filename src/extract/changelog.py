@@ -187,7 +187,7 @@ if(__name__=='__main__'):
 
         if(new_batch.count()==0):
             logger.info("no new batches exist , quiting workflow.....")
-            sys.exit()
+            sys.exit(0)
 
         processed_batch= spark_sess.sql(target_query)
 

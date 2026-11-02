@@ -23,6 +23,7 @@ REPO_LANGUAGE_BRIDGE_SCHEMA = StructType([
     StructField("valid_from_timestamp", TimestampType(), nullable=False),
     StructField("valid_to_timestamp", TimestampType(), nullable=True),
     StructField("is_active", BooleanType(), nullable=False),
+    StructField("is_deleted", BooleanType(), nullable=False),
 ])
 
 LANGUAGE_DIM_SCHEMA = StructType([
@@ -34,6 +35,7 @@ LANGUAGE_DIM_SCHEMA = StructType([
     StructField("bronze_ingestion_timestamp", TimestampType(), nullable=False),
     StructField("silver_batch_id", StringType(), nullable=False),
     StructField("silver_ingestion_timestamp", TimestampType(), nullable=False),
+    StructField("is_deleted", BooleanType(), nullable=False),
 ])
 
 COMMITS_FACT_SCHEMA = StructType([
@@ -55,6 +57,7 @@ COMMITS_FACT_SCHEMA = StructType([
     StructField("bronze_ingestion_timestamp", TimestampType(), nullable=False),
     StructField("silver_batch_id", StringType(), nullable=False),
     StructField("silver_ingestion_timestamp", TimestampType(), nullable=False),
+    StructField("is_deleted", BooleanType(), nullable=False),
 ])
 
 PULL_REQUESTS_FACT_SCHEMA = StructType([
@@ -83,6 +86,7 @@ PULL_REQUESTS_FACT_SCHEMA = StructType([
     StructField("bronze_ingestion_timestamp", TimestampType(), nullable=False),
     StructField("silver_batch_id", StringType(), nullable=False),
     StructField("silver_ingestion_timestamp", TimestampType(), nullable=False),
+    StructField("is_deleted", BooleanType(), nullable=False),
 ])
 
 USER_DIM_SCHEMA = StructType([
@@ -107,6 +111,7 @@ USER_DIM_SCHEMA = StructType([
     StructField("valid_from_timestamp", TimestampType(), nullable=False),
     StructField("valid_to_timestamp", TimestampType(), nullable=True),
     StructField("is_active", BooleanType(), nullable=False),
+    StructField("is_deleted", BooleanType(), nullable=False),
 ])
 
 SILVER_SCHEMAS = {

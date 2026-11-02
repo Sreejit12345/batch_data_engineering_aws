@@ -126,7 +126,7 @@ if(__name__=='__main__'):
 
         #create bronze tables - with same names as raw tables
         create_partitioned_table_if_not_exists(spark_sess,"glue_catalog",config_dict['bronze']['database_name'],r['table_name'],
-                                               spark_schema,["bronze_ingestion_timestamp"])
+                                               spark_schema,"PARTITIONED BY (days(bronze_ingestion_timestamp))")
 
 
         if(r['last_batch_id_processed_successfully_by_bronze'] is None and r['ts_for_last_processed_batch_id_by_bronze'] is None ):

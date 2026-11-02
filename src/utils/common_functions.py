@@ -46,15 +46,33 @@ def create_partitioned_table_if_not_exists(spark,catalog,database,table_name,sch
 
     table_exists=does_table_exists(spark,f"{catalog}.`{database}`.`{table_name}`")
 
+    sql_schema= schema.toDDL()
+
     if(table_exists==False):
+         spark.sql(f"""
+            CREATE TABLE {catalog}.`{database}`.`{table_name}`
+            (
+            {sql_schema}
+            )
+           USING iceberg
+            {partitionBy}
+            """)
 
-        empty_df=spark.createDataFrame([],schema)
+def create_non_partitioned_table_if_not_exists(spark,catalog,database,table_name,schema):
 
-        empty_df.write. \
-        format("iceberg").\
-        partitionBy(*partitionBy). \
-        mode("append"). \
-        saveAsTable(f"{catalog}.`{database}`.`{table_name}`")
+    table_exists=does_table_exists(spark,f"{catalog}.`{database}`.`{table_name}`")
+
+    sql_schema= schema.toDDL()
+
+    if(table_exists==False):
+         spark.sql(f"""
+            CREATE TABLE {catalog}.`{database}`.`{table_name}`
+            (
+            {sql_schema}
+            )
+           USING iceberg
+            """)
+
 
 def generate_chagelog(new_batch,processed_batch,join_cols):
     # join columns are natural keys and must be present in both dfs . These are used to join and find diff in batches.

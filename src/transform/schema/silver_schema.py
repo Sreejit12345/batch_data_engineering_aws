@@ -116,3 +116,11 @@ SILVER_SCHEMAS = {
     "pull_requests": PULL_REQUESTS_FACT_SCHEMA,
     "user": USER_DIM_SCHEMA,
 }
+
+SILVER_PARTITIONS={
+    "repo_language": None,
+    "language": None,
+    "commits": "PARTITIONED BY (days(committed_at))",
+    "pull_requests": "PARTITIONED BY (days(created_at))",
+    "user": None,
+}

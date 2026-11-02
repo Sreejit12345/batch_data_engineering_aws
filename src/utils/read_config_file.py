@@ -32,8 +32,8 @@ def get_secret(logger,config):
 def read_config(logger):
     environemnt= get_env(logger)
     config=configparser.ConfigParser()
-    config_file = resources.files("src.extract").joinpath(
-        "config", f"constants-{environemnt}.ini"
+    config_file = resources.files("src.config").joinpath(
+        f"constants-{environemnt}.ini"
     )
     with config_file.open(encoding="utf-8") as file:
         config.read_file(file)

@@ -2,7 +2,7 @@ from src.extract.github_api_client import *
 from src.extract.github_extract_data import *
 import logging
 import sys
-from src.extract.utils.read_config_file import initialize_context_dict
+from src.utils.read_config_file import initialize_context_dict
 from pyiceberg.partitioning import PartitionSpec, PartitionField
 from pyiceberg.transforms import DayTransform, IdentityTransform
 from pyiceberg.catalog import load_catalog

@@ -19,8 +19,8 @@ spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExte
 
 '''
 
-from src.extract.utils.common_functions import *
-from src.extract.utils.read_config_file import *
+from src.utils.common_functions import *
+from src.utils.read_config_file import *
 import logging
 from src.extract.schema.bronze_schema import *
 from datetime import datetime, timezone

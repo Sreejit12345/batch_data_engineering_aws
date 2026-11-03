@@ -89,11 +89,11 @@ if(__name__=='__main__'):
         spark_sess.sql(f"""
         INSERT INTO {metadata_table_sql_name}
         VALUES
-        ('bronze-githubanalytics-{config_dict['env']}', 'repo_language', 'bronze', 'bronze_ingestion_timestamp','scd2','bridge', NULL, 'repo_id,language', NULL),
+        ('bronze-githubanalytics-{config_dict['env']}', 'repo_language', 'bronze', 'bronze_ingestion_timestamp','scd1','bridge', NULL, 'repo_id,language', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'language', 'bronze', 'bronze_ingestion_timestamp','scd1','dim', NULL, 'language_name', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'commits', 'bronze', 'bronze_ingestion_timestamp','scd1','fact', NULL, 'commit_sha', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'pull_requests', 'bronze', 'bronze_ingestion_timestamp','scd1','fact', NULL, 'pull_request_id', NULL),
-        ('bronze-githubanalytics-{config_dict['env']}', 'user', 'bronze', 'bronze_ingestion_timestamp','scd2','dim', NULL, 'user_id', NULL)
+        ('bronze-githubanalytics-{config_dict['env']}', 'user', 'bronze', 'bronze_ingestion_timestamp','scd1','dim', NULL, 'user_id', NULL)
         """)
 
     else:
@@ -187,27 +187,55 @@ if(__name__=='__main__'):
         withColumn('is_deleted',
                   F.when(F.col('delta_type')==F.lit('delete'),F.lit(True)).otherwise(F.lit(False)))
 
+        row=source_df.limit(1).collect()[0]
 
+        try:
 
-        if(load_type=='scd1'):
-
-            logger.info(f"Proceeding to do scd1 for silver table {silver_table_sql_name}")
-
-            if(table_type=='dim'):
-                sk_reqd=True
-            else:
-                sk_reqd=False
-
-            scd1_implementation(spark_sess,logger,source_df,"glue_catalog",
-                                f"`{r['table_name']}`",f"`{config_dict['silver']['database_name']}`",pk.split(','),sk_reqd)
     
+            if(load_type=='scd1'):
+
+                logger.info(f"Proceeding to do scd1 for silver table {silver_table_sql_name}")
+
+                if(table_type=='dim'):
+                    sk_reqd=True
+                else:
+                    sk_reqd=False
+                    
+
+                scd1_implementation(spark_sess,logger,source_df,"glue_catalog",
+                                    f"`{r['table_name']}`",f"`{config_dict['silver']['database_name']}`",pk.split(','),sk_reqd)
+        
+                
+            logger.info(f"Table {silver_table_sql_name} processed successfully!")
+
+            spark_sess.sql(f"""
+                    UPDATE {metadata_table_sql_name} 
+                    SET ts_for_last_processed_batch_id_by_silver =
+                        CAST('{row['bronze_ingestion_timestamp']}' AS TIMESTAMP),
+                    last_batch_id_processed_successfully_by_silver = '{row['bronze_batch_id']}'
+                    WHERE table_name = '{r['table_name']}'
+                    and database_name = '{r['database_name']}'
+                                
+                    """)
+        
+            logger.info(f"Table {bronze_table_sql_name} metadata processed successfully")
             
 
+        except:
 
+            logger.info("Something went wrong in processing table")
 
-        
+            spark_sess.sql(f"""
+            UPDATE {metadata_table_sql_name}
+            SET ts_for_last_processed_batch_id_by_silver =
+                {("NULL" if r['ts_for_last_processed_batch_id_by_silver'] is None else "CAST('" + str(r['ts_for_last_processed_batch_id_by_silver']) + "' AS TIMESTAMP)")},
+                last_batch_id_processed_successfully_by_silver =
+                {("NULL" if r['last_batch_id_processed_successfully_by_silver'] is None else "'" + str(r['last_batch_id_processed_successfully_by_silver']) + "'")}
+            WHERE table_name = '{r['table_name']}'
+            AND database_name = '{r['database_name']}'
+            """)
 
-
+            raise
 
 
 

@@ -186,8 +186,8 @@ if(__name__=='__main__'):
         new_batch=spark_sess.sql(source_query)
 
         if(new_batch.count()==0):
-            logger.info("no new batches exist , quiting workflow.....")
-            sys.exit(0)
+            logger.info(f"no new batches exist , skipping table {bronze_table_sql_name}.....")
+            continue
 
         processed_batch= spark_sess.sql(target_query)
 

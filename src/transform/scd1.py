@@ -19,11 +19,11 @@ def scd1_implementation(spark_session,logger,df,catalog_name,target_table,target
         else:
             full_join_cond= full_join_cond + " AND " + d
 
-    # generate columsn to update via merge- bronze and silver tables share the same column names apart from audit columns
+    # generate columsn to update via merge- bronze and silver tables share the same column names apart from audit columns , delta columns and surrgate key
     target_df=spark_session.sql(f"select * from {full_table_name} limit 1")
     raw_audit_cols=['raw_batch_id','raw_ingestion_timestamp']
     reqd_cols=[i for i in target_df.columns 
-               if (i not in primary_keys) and (i not in raw_audit_cols) and (i!='delta_type')]
+               if (i not in primary_keys) and (i not in raw_audit_cols) and (i!='delta_type') and (i!=f"{target_table.replace('`','')}_sk")]
 
     update_exp=None
     for i in reqd_cols:
@@ -36,9 +36,9 @@ def scd1_implementation(spark_session,logger,df,catalog_name,target_table,target
 
     if(isskreqd is True):
         # add surogate key to incoming df - needed for the insert part
-        max_key=derive_max_surrogate_key(spark_session,catalog_name,target_database,target_table,f"{target_table}_sk")
+        max_key=derive_max_surrogate_key(spark_session,catalog_name,target_database,target_table,f"{target_table.replace('`','')}_sk")
         wnd= Window.orderBy(F.col(primary_keys[0]))
-        df=df.withColumn(f'{target_table}_sk',F.row_number().over(wnd)+ F.lit(max_key))
+        df=df.withColumn(f"{target_table.replace('`','')}_sk",F.row_number().over(wnd)+ F.lit(max_key))
 
     #generate columns to insert by merge 
     insert_stmt=None

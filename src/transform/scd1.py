@@ -34,7 +34,8 @@ def scd1_implementation(spark_session,logger,df,catalog_name,target_table,target
         else:
             update_exp= update_exp + ' , ' + x
 
-    if(isskreqd is True):
+    if(isskreqd is True):  #tells us that its a dim table
+
         # add surogate key to incoming df - needed for the insert part
         max_key=derive_max_surrogate_key(spark_session,catalog_name,target_database,target_table,f"{target_table.replace('`','')}_sk")
         wnd= Window.orderBy(F.col(primary_keys[0]))

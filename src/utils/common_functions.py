@@ -2,6 +2,8 @@ from pyspark.sql.window import Window
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 from src.extract.schema.bronze_schema import *
+from decimal import Decimal
+import datetime
 
 def does_table_exists(spark,tbl_name):
 
@@ -14,8 +16,9 @@ def get_spark_session():
     return spark
 
 def derive_max_surrogate_key(spark,catalog,database,table_name,sk_col_name):
+    # since default row is added with -99 befoe this we want to make sure 1st sk starts from 1
 
-    val=spark.sql(f"select coalesce(max({sk_col_name}),0) mx_key from {catalog}.{database}.{table_name} ").collect()[0]
+    val=spark.sql(f"select greatest(coalesce(max({sk_col_name}),0),0) as mx_key from {catalog}.{database}.{table_name} ").collect()[0]
 
     return val['mx_key']
 
@@ -191,8 +194,44 @@ def generate_chagelog(new_batch,processed_batch,join_cols):
     return full_df
 
 
+def generate_default_key_for_dim(spark,catalog,database,table_name,sk_col_name):
+    # this methods adds a -99 default unknow keys to dimension to make sure even if fact does not match dim- it gets mapped to -99
+    
+    data=spark.sql(f"select * from {catalog}.{database}.{table_name} where {sk_col_name}=-99 ")
+
+    array=[]
+
+    if(data.count()==0):
+
+        for col,type in data.dtypes:
+
+            if(col.lower() == sk_col_name.lower()):
+                val = -99
+
+            elif(type=='string'):
+                val='UNKNOWN'
+            elif( 'int' in type ):
+                val=0
+            elif(type=='boolean'):
+                val=False
+            elif(type=='float' or type=='double'):
+                val=0.0
+            elif('decimal' in type):
+                val= Decimal('0.0')
+            elif type == 'date':
+                val = datetime.date(1900, 1, 1)
+            elif type in ('timestamp', 'timestamp_ntz'):
+                val = datetime.datetime(1900, 1, 1, 0, 0, 0)
+            else:
+                val='UNKNOWN'
+
+            array.append(val)
+
+        p=[tuple(array)]
+
+        new_df= spark.createDataFrame(p,data.schema)
+
+        new_df.writeTo(f"{catalog}.{database}.{table_name}").append()
 
 
-
-
-
+        

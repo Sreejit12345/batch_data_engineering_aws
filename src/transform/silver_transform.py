@@ -195,6 +195,11 @@ if(__name__=='__main__'):
                 logger.info(f"Proceeding to do scd1 for silver table {silver_table_sql_name}")
 
                 if(table_type=='dim'):
+
+                    generate_default_key_for_dim(spark_sess,"glue_catalog", f"`{config_dict['silver']['database_name']}`",
+                                                  f"`{r['table_name']}`",
+                                                  f"{r['table_name']}_sk")
+
                     sk_reqd=True
                 else:
                     sk_reqd=False

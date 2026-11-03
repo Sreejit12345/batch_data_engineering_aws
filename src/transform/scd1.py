@@ -45,7 +45,7 @@ def scd1_implementation(spark_session,logger,df,catalog_name,target_table,target
     values_stmt=None
     for i in target_df.columns:
         x = f"INSERT( {i}"
-        y= f"VALUES (s.{i})"
+        y= f"VALUES (s.{i}"
         if(insert_stmt is None):
             insert_stmt=x
         else:

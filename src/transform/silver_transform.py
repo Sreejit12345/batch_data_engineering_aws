@@ -73,6 +73,7 @@ if(__name__=='__main__'):
             layer STRING,
             batch_ordering_columns STRING,
             tgt_load_type STRING,
+            tgt_table_type STRING,
             ts_for_last_processed_batch_id_by_silver TIMESTAMP,
             natural_primary_keys STRING,
             last_batch_id_processed_successfully_by_silver STRING
@@ -88,11 +89,11 @@ if(__name__=='__main__'):
         spark_sess.sql(f"""
         INSERT INTO {metadata_table_sql_name}
         VALUES
-        ('bronze-githubanalytics-{config_dict['env']}', 'repo_language', 'bronze', 'bronze_ingestion_timestamp','scd2', NULL, 'repo_id,language', NULL),
-        ('bronze-githubanalytics-{config_dict['env']}', 'language', 'bronze', 'bronze_ingestion_timestamp','scd1', NULL, 'language_name', NULL),
-        ('bronze-githubanalytics-{config_dict['env']}', 'commits', 'bronze', 'bronze_ingestion_timestamp','scd1', NULL, 'commit_sha', NULL),
-        ('bronze-githubanalytics-{config_dict['env']}', 'pull_requests', 'bronze', 'bronze_ingestion_timestamp','scd1', NULL, 'pull_request_id', NULL),
-        ('bronze-githubanalytics-{config_dict['env']}', 'user', 'bronze', 'bronze_ingestion_timestamp','scd2', NULL, 'user_id', NULL)
+        ('bronze-githubanalytics-{config_dict['env']}', 'repo_language', 'bronze', 'bronze_ingestion_timestamp','scd2','bridge', NULL, 'repo_id,language', NULL),
+        ('bronze-githubanalytics-{config_dict['env']}', 'language', 'bronze', 'bronze_ingestion_timestamp','scd1','dim', NULL, 'language_name', NULL),
+        ('bronze-githubanalytics-{config_dict['env']}', 'commits', 'bronze', 'bronze_ingestion_timestamp','scd1','fact', NULL, 'commit_sha', NULL),
+        ('bronze-githubanalytics-{config_dict['env']}', 'pull_requests', 'bronze', 'bronze_ingestion_timestamp','scd1','fact', NULL, 'pull_request_id', NULL),
+        ('bronze-githubanalytics-{config_dict['env']}', 'user', 'bronze', 'bronze_ingestion_timestamp','scd2','dim', NULL, 'user_id', NULL)
         """)
 
     else:
@@ -119,6 +120,8 @@ if(__name__=='__main__'):
         spark_schema=SILVER_SCHEMAS[r['table_name']]
         partition=SILVER_PARTITIONS[r['table_name']]
         load_type= r['tgt_load_type']
+        table_type=r['tgt_table_type']
+        pk=r['natural_primary_keys']
 
         last_batch_processed_ts= r['ts_for_last_processed_batch_id_by_silver']
         last_batch_processed = r['last_batch_id_processed_successfully_by_silver']
@@ -163,8 +166,8 @@ if(__name__=='__main__'):
             source_query= f"""
                           with first_batch as(
                                  select min({batch_order}) as first_batch_ts from {bronze_table_sql_name}
-                                  where ingestion_timestamp >='{last_batch_processed_ts}'
-                                                 and batch_id != '{last_batch_processed}'
+                                  where bronze_ingestion_timestamp >='{last_batch_processed_ts}'
+                                                 and bronze_batch_id != '{last_batch_processed}'
                                  )
                              select r.* from 
                              {bronze_table_sql_name} r
@@ -174,20 +177,31 @@ if(__name__=='__main__'):
 
         source_df= spark_sess.sql(source_query)
 
-        source_df.drop("")
+        if(source_df.count() ==0):
+            logger.info("no new batches exist , quiting workflow.....")
+            sys.exit(0)
+
+
+        source_df=source_df.withColumn('silver_batch_id',F.lit(my_uuid)).\
+        withColumn('silver_ingestion_timestamp',F.lit(ingestion_ts)).\
+        withColumn('is_deleted',
+                  F.when(F.col('delta_type')==F.lit('delete'),F.lit(True)).otherwise(F.lit(False)))
+
+
 
         if(load_type=='scd1'):
 
             logger.info(f"Proceeding to do scd1 for silver table {silver_table_sql_name}")
 
-            scd1_implementation()
+            if(table_type=='dim'):
+                sk_reqd=True
+            else:
+                sk_reqd=False
+
+            scd1_implementation(spark_sess,logger,source_df,"glue_catalog",
+                                f"`{r['table_name']}`",f"`{config_dict['silver']['database_name']}`",pk.split(','),sk_reqd)
     
             
-
-
-
-
-
 
 
 

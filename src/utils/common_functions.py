@@ -3,7 +3,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 from src.extract.schema.bronze_schema import *
 from decimal import Decimal
-import datetime
+from datetime import datetime, date
 
 def does_table_exists(spark,tbl_name):
 
@@ -219,9 +219,9 @@ def generate_default_key_for_dim(spark,catalog,database,table_name,sk_col_name):
             elif('decimal' in type):
                 val= Decimal('0.0')
             elif type == 'date':
-                val = datetime.date(1900, 1, 1)
+                val = date(1900, 1, 1)
             elif type in ('timestamp', 'timestamp_ntz'):
-                val = datetime.datetime(1900, 1, 1, 0, 0, 0)
+                val = datetime(1900, 1, 1, 0, 0, 0)
             else:
                 val='UNKNOWN'
 

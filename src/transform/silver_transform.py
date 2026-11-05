@@ -116,7 +116,7 @@ if(__name__=='__main__'):
         logger.info(f"bronze to silver Processing for table : {r['table_name']}")
 
         spark_schema=SILVER_SCHEMAS[r['table_name']]
-        partition=SILVER_PARTITIONS[r['table_name']]
+        partition=SILVER_PARTITIONS[r['table_name']] #get the corresponding partition columns
         load_type= r['tgt_load_type']
         table_type=r['tgt_table_type']
         pk=r['natural_primary_keys']
@@ -176,8 +176,8 @@ if(__name__=='__main__'):
         source_df= spark_sess.sql(source_query)
 
         if(source_df.count() ==0):
-            logger.info("no new batches exist , quiting workflow.....")
-            sys.exit(0)
+            logger.info("no new batches exist , proceeding to next table.....")
+            continue
 
 
         source_df=source_df.withColumn('silver_batch_id',F.lit(my_uuid)).\
@@ -187,42 +187,49 @@ if(__name__=='__main__'):
 
         row=source_df.limit(1).collect()[0]
 
+        sk_reqd=False
+
         try:
 
-    
-            if(load_type=='scd1'):
-
-                logger.info(f"Proceeding to do scd1 for silver table {silver_table_sql_name}")
-
-                if(table_type=='dim'):
-
+               if(table_type=='dim'):
+                    #generate -99 key for all dimensions
                     generate_default_key_for_dim(spark_sess,"glue_catalog", f"`{config_dict['silver']['database_name']}`",
-                                                  f"`{r['table_name']}`",
-                                                  f"{r['table_name']}_sk")
-
+                                                              f"`{r['table_name']}`",
+                                                              f"{r['table_name']}_sk")
                     sk_reqd=True
-                else:
-                    sk_reqd=False
-                    
 
-                scd1_implementation(spark_sess,logger,source_df,"glue_catalog",
+               if(table_type=='fact'):
+                    # need to do key replacements
+
+                    keys_repalcing=SILVER_FOREIGN_KEYS_REPLACEMENTS.get(r['table_name'])
+
+                    if(keys_repalcing==None):
+                         logger.info(f"No keys to be replaced for table {r['table_name']}")
+                    else:
+                         pass
+                         # TBD implement key replacement for facts
+            
+               if(load_type=='scd1'):        
+
+                    scd1_implementation(spark_sess,logger,source_df,"glue_catalog",
                                     f"`{r['table_name']}`",f"`{config_dict['silver']['database_name']}`",pk.split(','),sk_reqd)
         
-                
-            logger.info(f"Table {silver_table_sql_name} processed successfully!")
-
-            spark_sess.sql(f"""
-                    UPDATE {metadata_table_sql_name} 
-                    SET ts_for_last_processed_batch_id_by_silver =
-                        CAST('{row['bronze_ingestion_timestamp']}' AS TIMESTAMP),
-                    last_batch_id_processed_successfully_by_silver = '{row['bronze_batch_id']}'
-                    WHERE table_name = '{r['table_name']}'
-                    and database_name = '{r['database_name']}'
-                                
-                    """)
-        
-            logger.info(f"Table {bronze_table_sql_name} metadata processed successfully")
             
+                    logger.info(f"Table {silver_table_sql_name} processed successfully!")
+
+                         
+
+               spark_sess.sql(f"""
+                            UPDATE {metadata_table_sql_name} 
+                            SET ts_for_last_processed_batch_id_by_silver =
+                                CAST('{row['bronze_ingestion_timestamp']}' AS TIMESTAMP),
+                            last_batch_id_processed_successfully_by_silver = '{row['bronze_batch_id']}'
+                            WHERE table_name = '{r['table_name']}'
+                            and database_name = '{r['database_name']}'
+                                        
+                            """)
+
+               logger.info(f"Table {bronze_table_sql_name} metadata processed successfully")
 
         except:
 

@@ -129,3 +129,9 @@ SILVER_PARTITIONS={
     "pull_requests": "PARTITIONED BY (days(created_at))",
     "user": None,
 }
+
+SILVER_FOREIGN_KEYS_REPLACEMENTS={
+    "commits": ["org_id","repo_id","author_user_id_verified","committer_user_id_verified"],
+    "pull_requests":["org_id","repo_id","user_raised_id"],
+
+}

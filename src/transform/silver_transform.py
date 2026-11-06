@@ -27,6 +27,7 @@ from src.utils.read_config_file import *
 from src.utils.common_functions import *
 from src.transform.schema.silver_schema import *
 from src.transform.scd1 import *
+from src.transform.scd2 import *
 
 # Entry point for bronze to silver generic transformation job.
 if(__name__=='__main__'):
@@ -90,8 +91,10 @@ if(__name__=='__main__'):
         INSERT INTO {metadata_table_sql_name}
         VALUES
         ('bronze-githubanalytics-{config_dict['env']}', 'language', 'bronze', 'bronze_ingestion_timestamp','scd1','dim', NULL, 'language_name', NULL),
+        ('bronze-githubanalytics-{config_dict['env']}', 'user', 'bronze', 'bronze_ingestion_timestamp','scd2','dim', NULL, 'user_id', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'commits', 'bronze', 'bronze_ingestion_timestamp','scd1','fact', NULL, 'commit_sha', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'pull_requests', 'bronze', 'bronze_ingestion_timestamp','scd1','fact', NULL, 'pull_request_id', NULL)
+    
         """)
 
     else:
@@ -113,7 +116,7 @@ if(__name__=='__main__'):
         )
         bronze_table_sql_name = f"glue_catalog.`{r['database_name']}`.`{r['table_name']}`"
 
-        logger.info(f"bronze to silver Processing for table : {r['table_name']}")
+        logger.info(f"bronze to silver processing for table : {r['table_name']}")
 
         spark_schema=SILVER_SCHEMAS[r['table_name']]
         partition=SILVER_PARTITIONS[r['table_name']] #get the corresponding partition columns
@@ -132,7 +135,7 @@ if(__name__=='__main__'):
 
         if(partition is None):
 
-            logger.info(f"Creating non partitioned table {silver_table_sql_name} if it does not exist")
+            logger.info(f"Creating non partitioned table {silver_table_sql_name} if it does not exist!")
 
             #create silver tables - with same names as raw tables
             create_non_partitioned_table_if_not_exists(spark_sess,"glue_catalog",config_dict['silver']['database_name'],r['table_name'],
@@ -140,7 +143,7 @@ if(__name__=='__main__'):
 
         else:
 
-              logger.info(f"Creating table {silver_table_sql_name} partitioned on {partition} if it does not exist")
+              logger.info(f"Creating table {silver_table_sql_name} partitioned on {partition} if it does not exist!")
 
               create_partitioned_table_if_not_exists(spark_sess,"glue_catalog",config_dict['silver']['database_name'],r['table_name'],
                                                             spark_schema,partition)
@@ -215,7 +218,14 @@ if(__name__=='__main__'):
                                     f"`{r['table_name']}`",f"`{config_dict['silver']['database_name']}`",pk.split(','),sk_reqd)
         
             
-                    logger.info(f"Table {silver_table_sql_name} processed successfully!")
+                    logger.info(f"Table {silver_table_sql_name} processed successfully by scd1 pattern!")
+
+               elif(load_type=='scd2'):
+                    scd2_implementation(spark_sess,logger,source_df,"glue_catalog",
+                                    f"`{r['table_name']}`",f"`{config_dict['silver']['database_name']}`",
+                                    pk.split(','),'updated_at')
+
+                    logger.info(f"Table {silver_table_sql_name} processed successfully by scd2 pattern!")
 
                          
 

@@ -79,5 +79,7 @@ def scd1_implementation(spark_session,logger,df,catalog_name,target_table,target
 
     """)
 
+    logger.info(f"Completed silver merge scd1 for table {full_table_name}")
+
  
      

@@ -40,8 +40,8 @@ LANGUAGE_DIM_SCHEMA = StructType([
 
 COMMITS_FACT_SCHEMA = StructType([
     StructField("commit_sha", StringType(), nullable=False),
-    StructField("author_user_id_verified", LongType(), nullable=True),
-    StructField("committer_user_id_verified", LongType(), nullable=True),
+    StructField("author_sk", IntegerType(), nullable=True),
+    StructField("committer_sk", IntegerType(), nullable=True),
     StructField("is_commit_verified", BooleanType(), nullable=False),
     StructField("commit_message", StringType(), nullable=False),
     StructField("commit_url", StringType(), nullable=False),
@@ -63,7 +63,7 @@ COMMITS_FACT_SCHEMA = StructType([
 PULL_REQUESTS_FACT_SCHEMA = StructType([
     StructField("org_id", LongType(), nullable=False),
     StructField("repo_id", LongType(), nullable=False),
-    StructField("user_raised_id", LongType(), nullable=False),
+    StructField("user_raised_sk", IntegerType(), nullable=False),
     StructField("pull_request_id", LongType(), nullable=False),
     StructField("pull_request_url", StringType(), nullable=False),
     StructField("source_branch", StringType(), nullable=False),
@@ -131,7 +131,40 @@ SILVER_PARTITIONS={
 }
 
 SILVER_FOREIGN_KEYS_REPLACEMENTS={
-    "commits": ["org_id","repo_id","author_user_id_verified","committer_user_id_verified"],
-    "pull_requests":["org_id","repo_id","user_raised_id"],
+    # if dim_table_type is 'scd2' we also need another key 'time_col' that is used in join cond.
+    # time_col should be populated from fact table
+
+    "commits":[
+        {
+            "dim_table":"user",
+            "dim_table_type":"scd2",
+            "time_col": "committed_at",
+            "join_cols":[{"author_user_id_verified":"user_id"}],  #array of map of fact column to dim column . For more join cond add more elements to array
+            'fk':"author_user_id_verified",
+            "sk":"user_sk",
+            "rename":"author_sk"
+        },
+        {
+            "dim_table":"user",
+            "dim_table_type":"scd2",
+             "time_col": "committed_at",
+            "join_cols":[{"committer_user_id_verified":"user_id"}],  #map of fact column to dim column . For more join cond add more elements to array
+            'fk':"committer_user_id_verified",
+            "sk":"user_sk",
+            "rename":"committer_sk"
+        }],
+
+
+    "pull_requests":[
+        {
+            "dim_table":"user",
+            "dim_table_type":"scd2",
+            "time_col": "created_at",
+            "join_cols":[{"user_raised_id":"user_id"}],  #array of map of fact column to dim column . For more join cond add more elements to array
+            'fk':"user_raised_id",
+            "sk":"user_sk",
+            "rename":"user_raised_sk"
+        },
+        ]
 
 }

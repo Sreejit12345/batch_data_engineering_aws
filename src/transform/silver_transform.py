@@ -201,23 +201,25 @@ if(__name__=='__main__'):
                                                               f"{r['table_name']}_sk")
                     sk_reqd=True
 
-               if(table_type=='fact'):
-                    # need to do key replacements
-
-                    keys_repalcing=SILVER_FOREIGN_KEYS_REPLACEMENTS.get(r['table_name'])
-
-                    if(keys_repalcing==None):
-                         logger.info(f"No keys to be replaced for table {r['table_name']}")
-                    else:
-                         pass
-                         # TBD implement key replacement for facts
+             
             
-               if(load_type=='scd1'):        
+               if(load_type=='scd1'): 
+
+                    if(table_type=='fact' and SILVER_FOREIGN_KEYS_REPLACEMENTS[r['table_name']]!=None): #for facts we might need to replace keys
+                         
+                         source_df=natural_key_replacement_sk(spark_sess,logger,"glue_catalog", f"`{config_dict['silver']['database_name']}`",
+                                                              f"{r['table_name']}",
+                                                              source_df,SILVER_FOREIGN_KEYS_REPLACEMENTS) 
+
+                         logger.info(f"Keys replaced for table `{r['table_name']}`")   
+
+                    
 
                     scd1_implementation(spark_sess,logger,source_df,"glue_catalog",
                                     f"`{r['table_name']}`",f"`{config_dict['silver']['database_name']}`",pk.split(','),sk_reqd)
+
+                    
         
-            
                     logger.info(f"Table {silver_table_sql_name} processed successfully by scd1 pattern!")
 
                elif(load_type=='scd2'):

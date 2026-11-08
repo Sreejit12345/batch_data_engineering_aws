@@ -234,4 +234,54 @@ def generate_default_key_for_dim(spark,catalog,database,table_name,sk_col_name):
         new_df.writeTo(f"{catalog}.{database}.{table_name}").append()
 
 
+def natural_key_replacement_sk(spark,logger,catalog,database,fct_table,fact_df,mapping):
+
+  
+    mapping_filtered=mapping[fct_table]
+
+
+    for k in mapping_filtered:  # for each key that needs to be replaced .
+        logger.info(f"Replacing foreign key {k['fk']}")
+
+        join_cond=None
+        for j in k['join_cols']: #each element here is a single dict containing 1 k,v pair
+
+            con= tuple(j.items())
+            fact_col=con[0][0]
+            dim_col=con[0][1]
+
+            cc=F.col(f"f.{fact_col}")==F.col(f"d.{dim_col}")
+
+            if(join_cond is None):
+                join_cond=cc
+            else:
+                join_cond=join_cond & cc
+
+        if(k['dim_table_type']=='scd2'):  #adding time constraint for scd2- to join in-point row
+            join_cond = (join_cond ) & ( 
+                ( F.col(f"f.{k['time_col']}")>=F.col('d.valid_from_timestamp') ) \
+            & (F.col(f"f.{k['time_col']}")<F.col('d.valid_to_timestamp'))
+            )
+
+
+       
+        dim_df=spark.sql(f"select * from {catalog}.{database}.`{k["dim_table"]}`")
+
+
+        fact_df=fact_df.alias('f').join(dim_df.alias('d'),join_cond,"left").select("f.*",
+                                                                F.coalesce(F.col(f"d.{k["sk"]}"),F.lit(-99)).alias(k['rename']))
         
+
+        fact_df=fact_df.drop(k['fk'])
+
+    return fact_df
+
+    
+
+
+    
+
+
+
+
+    

@@ -90,6 +90,8 @@ if(__name__=='__main__'):
         spark_sess.sql(f"""
         INSERT INTO {metadata_table_sql_name}
         VALUES
+        ('bronze-githubanalytics-{config_dict['env']}', 'org', 'bronze', 'bronze_ingestion_timestamp','scd2','dim', NULL, 'org_id', NULL),
+        ('bronze-githubanalytics-{config_dict['env']}', 'repo', 'bronze', 'bronze_ingestion_timestamp','scd2','dim', NULL, 'repo_id', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'language', 'bronze', 'bronze_ingestion_timestamp','scd1','dim', NULL, 'language_name', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'user', 'bronze', 'bronze_ingestion_timestamp','scd2','dim', NULL, 'user_id', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'commits', 'bronze', 'bronze_ingestion_timestamp','scd1','fact', NULL, 'commit_sha', NULL),

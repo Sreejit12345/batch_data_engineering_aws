@@ -11,6 +11,7 @@ def scd2_implementation(spark_session,logger,df,catalog_name,target_table,silver
     # scd2_time_col is the time column from upsteam which we do scd2 on
 
     max_end_timestamp = datetime(2099, 12, 31, 0, 0, 0)
+    min_str_timestamp = datetime(1900, 12, 31, 0, 0, 0)
     full_table_name_silver=f"{catalog_name}.{silver_database}.{target_table}"
 
     logger.info(f"Proceesing to load table {full_table_name_silver} by scd2 pattern..")
@@ -31,7 +32,7 @@ def scd2_implementation(spark_session,logger,df,catalog_name,target_table,silver
 
     # Preparing insert df
 
-    insert_df= insert_df.withColumn("valid_from_timestamp",F.col(scd2_time_col)).\
+    insert_df= insert_df.withColumn("valid_from_timestamp",F.lit(min_str_timestamp)).\
     withColumn("valid_to_timestamp",F.lit(max_end_timestamp)).\
     withColumn("is_active",F.lit(True))
 
@@ -94,7 +95,7 @@ def scd2_implementation(spark_session,logger,df,catalog_name,target_table,silver
 
     WHEN MATCHED THEN 
         UPDATE 
-         SET t.is_active = False, t.valid_to_timestamp = s.{scd2_time_col}, t.is_deleted=s.is_deleted
+         SET t.is_active = False, t.valid_to_timestamp = s.bronze_ingestion_timestamp, t.is_deleted=s.is_deleted
     """
 
     # Statement execution

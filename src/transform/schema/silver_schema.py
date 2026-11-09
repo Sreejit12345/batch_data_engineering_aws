@@ -11,6 +11,7 @@ from pyspark.sql.types import (
 
 
 REPO_LANGUAGE_BRIDGE_SCHEMA = StructType([
+    StructField("repo_language_sk", IntegerType(), nullable=False),
     StructField("org_id", LongType(), nullable=False),
     StructField("repo_id", LongType(), nullable=False),
     StructField("language", StringType(), nullable=False),

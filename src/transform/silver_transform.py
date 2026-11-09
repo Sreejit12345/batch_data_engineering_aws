@@ -94,6 +94,7 @@ if(__name__=='__main__'):
         ('bronze-githubanalytics-{config_dict['env']}', 'repo', 'bronze', 'bronze_ingestion_timestamp','scd2','dim', NULL, 'repo_id', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'language', 'bronze', 'bronze_ingestion_timestamp','scd1','dim', NULL, 'language_name', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'user', 'bronze', 'bronze_ingestion_timestamp','scd2','dim', NULL, 'user_id', NULL),
+        ('bronze-githubanalytics-{config_dict['env']}', 'repo_language', 'bronze','bronze_ingestion_timestamp', 'scd2', 'bridge', NULL, 'repo_id,language', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'commits', 'bronze', 'bronze_ingestion_timestamp','scd1','fact', NULL, 'commit_sha', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'pull_requests', 'bronze', 'bronze_ingestion_timestamp','scd1','fact', NULL, 'pull_request_id', NULL)
     
@@ -225,9 +226,17 @@ if(__name__=='__main__'):
                     logger.info(f"Table {silver_table_sql_name} processed successfully by scd1 pattern!")
 
                elif(load_type=='scd2'):
-                    scd2_implementation(spark_sess,logger,source_df,"glue_catalog",
-                                    f"`{r['table_name']}`",f"`{config_dict['silver']['database_name']}`",
-                                    pk.split(','),'updated_at')
+
+                    if(r['table_name']=='repo_language'):
+                         # for bridge table we use bronze_ingestion_timestamp as scd2 column
+                        scd2_implementation(spark_sess,logger,source_df,"glue_catalog",
+                                        f"`{r['table_name']}`",f"`{config_dict['silver']['database_name']}`",
+                                        pk.split(','),'bronze_ingestion_timestamp')
+                    else: # for all others we use updated_at
+                          scd2_implementation(spark_sess,logger,source_df,"glue_catalog",
+                                                                 f"`{r['table_name']}`",f"`{config_dict['silver']['database_name']}`",
+                                                                 pk.split(','),'updated_at')
+                         
 
                     logger.info(f"Table {silver_table_sql_name} processed successfully by scd2 pattern!")
 

@@ -4,15 +4,21 @@ import json
 from src.extract.github_api_client import GitHubClient
 from tenacity import retry,wait_exponential,stop_after_attempt
 from requests.exceptions import HTTPError
-from dotenv import load_dotenv
 from datetime import datetime, timezone
-from typing import Optional
+import uuid
 
-def add_bronze_audit_columns(d):
+#CONSTANTS per batch
+ingestion_ts= datetime.now(timezone.utc) # at module level so all records in batch have same ingestion timestamps.
+my_uuid = str(uuid.uuid4()) # at module level, so all records in bacth have same batch_id
+source= "GITHUBDATA"
+
+
+def add_raw_audit_columns(d):
      # add ingestion date
 
-     current_date = datetime.now(timezone.utc)
-     d['ingestion_timestamp'] = current_date
+     d['ingestion_timestamp'] = ingestion_ts
+     d['batch_id']=my_uuid
+     d['source']=source
 
      
 def parse_github_timestamp(value):
@@ -97,7 +103,7 @@ def query_org_dimension(client,logger):
 
      Natural Key: org_id
      Grain: 1 record per org
-     Watermark Column: updated_at
+  
      '''
 
      all_orgs= []
@@ -127,7 +133,7 @@ def query_org_dimension(client,logger):
                  "updated_at":parse_github_timestamp(resp["updated_at"])
                  }
 
-            add_bronze_audit_columns(org_dim_dict)
+            add_raw_audit_columns(org_dim_dict)
 
             all_orgs.append(org_dim_dict)
 
@@ -197,7 +203,7 @@ def query_repository_dimension(pages_reqd,org_dim,client,logger):
                         "updated_at": parse_github_timestamp(repo_details['updated_at'])
                     }
 
-                    add_bronze_audit_columns(repo_dim_dict)
+                    add_raw_audit_columns(repo_dim_dict)
 
                     all_repo.append(repo_dim_dict)
 
@@ -274,7 +280,7 @@ def query_repo_language_bridge(repo_dim,client,logger):
 
                 merged_dict= base_dict| add_dict
 
-                add_bronze_audit_columns(merged_dict)
+                add_raw_audit_columns(merged_dict)
 
                 all_languages.append(merged_dict)
 
@@ -309,7 +315,7 @@ def query_language_dimension(repo_language_bridge,client,logger):
                     'language_description': f"This is language {lang}"
                }
 
-               add_bronze_audit_columns(lang_rec)
+               add_raw_audit_columns(lang_rec)
 
                languages_map[lang] = lang_rec
 
@@ -319,34 +325,26 @@ def query_language_dimension(repo_language_bridge,client,logger):
 def query_commit_facts_default_branch(pages_reqd,repo_dim,client,logger):
      
      """
-     Queries commits on the defualt branch and populates facts incrementally based on watermark.
-     Remember, commits are immutable and cant be updated. Only comments can be added later to a commit, but we dont care about it
-     - so we call comments metric as comments_at_ingestion.
-
-     Also, we dont get a last updated field in commits, since they are immutable. So even if someone adds comments later its hard
-     to ingest the update. So we should do a full pull, but not reqd as this is not an important metric to track.
+     Queries commits on the defualt branch and populates facts.
+     We do a full pull becuase we can get hard deletes from source
     
      PK: commit_sha
      FK: org_id,repo_id,author_user_id_verified
      """
-
-     def get_last_watermark():
-          return '2025-01-01T00:00:00Z'
 
      all_commits=[]
      
      for r in repo_dim:
 
           i=1
-          since=get_last_watermark()
 
-          logger.info(f"Getting the commits for repo {r['name']} from {since} ")
+          logger.info(f"Getting the commits for repo {r['name']}")
 
           org_id=r["org_id"]
           repo_id=r["repo_id"]
 
           
-          full_url= client.repo_base_url + r['full_name'] + '/commits' + f"?since={since}" +"&per_page=100"
+          full_url= client.repo_base_url + r['full_name'] + '/commits' + f"?per_page=100"
 
           try:
             while(i<=pages_reqd):
@@ -374,7 +372,7 @@ def query_commit_facts_default_branch(pages_reqd,repo_dim,client,logger):
                             "authored_at":parse_github_timestamp(commits['commit']['author']['date'])
                     }
 
-                    add_bronze_audit_columns(commits_fct_dict)
+                    add_raw_audit_columns(commits_fct_dict)
 
                     all_commits.append(commits_fct_dict)
 
@@ -396,13 +394,10 @@ def query_commit_facts_default_branch(pages_reqd,repo_dim,client,logger):
 def query_pull_requests_fact(pages_reqd,repo_dim,client,logger):
      
      '''
-     Responsible to pull data for all Pull requests. 
+     Responsible to pull data for all Pull requests. We do a full pull because we can get hard deletes on source.
 
      '''
 
-     def is_first_load():
-               
-               return False
      
      all_pull_requests=[]
         
@@ -410,16 +405,12 @@ def query_pull_requests_fact(pages_reqd,repo_dim,client,logger):
     
             i=1
 
-            since=is_first_load()
             logger.info(f"Getting the pull requests for repo {r['repo_id']}")
     
             org_id=r["org_id"]
             repo_id=r["repo_id"]
     
-            if(since==True):
-                 state="all"
-            else:
-                 state="open"
+            state= "all"
 
             full_url= client.repo_base_url + r['full_name'] + '/pulls' + f"?state={state}" +"&per_page=100"
      
@@ -469,7 +460,7 @@ def query_pull_requests_fact(pages_reqd,repo_dim,client,logger):
 
                         pull_requests_fct_dict.update(get_api_dict)
 
-                        add_bronze_audit_columns(pull_requests_fct_dict)
+                        add_raw_audit_columns(pull_requests_fct_dict)
 
 
                         all_pull_requests.append(pull_requests_fct_dict)
@@ -530,7 +521,7 @@ def query_user_dimension(commits_fact_incr,query_pull_requests_fact_t,client,log
                     'updated_at': parse_github_timestamp(user_resp['updated_at'])
                }
 
-               add_bronze_audit_columns(user_dict)
+               add_raw_audit_columns(user_dict)
 
                all_users_dict.append(user_dict)
 

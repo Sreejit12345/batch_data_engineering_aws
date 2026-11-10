@@ -1,5 +1,14 @@
-CREATE ROLE IF NOT EXISTS  admin_role; 
-CREATE ROLE IF NOT EXISTS viewer_role; 
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'admin_role') THEN
+        CREATE ROLE admin_role;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'viewer_role') THEN
+        CREATE ROLE viewer_role;
+    END IF;
+END
+$$;
 
 create SCHEMA IF NOT EXISTS gold;
 

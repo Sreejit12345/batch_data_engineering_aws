@@ -1,7 +1,7 @@
 CREATE ROLE  admin_role; 
 CREATE ROLE  viewer_role; 
 
-create SCHEMA IF NOT EXISTS gold;
+create SCHEMA IF NOT EXISTS "githubanalytics-dev".gold;
 
 
 -- have all access on gold schema in githubanalytics-dev database

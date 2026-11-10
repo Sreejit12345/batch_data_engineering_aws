@@ -34,7 +34,7 @@ jobs:
 
             - name:  create roles
               run: |
-                    SQL_QUERY=$(cat ./src/redshift/inital_setup_dev.sql)
+                    SQL_QUERY=$(cat ./src/redshift/initial_setup_dev.sql)
                     aws redshift-data execute-statement --secret-arn ${{ inputs.redshift_serverless_arn }} \
                     --database "githubanalytics-dev" \
                     --sql "$SQL_QUERY" \

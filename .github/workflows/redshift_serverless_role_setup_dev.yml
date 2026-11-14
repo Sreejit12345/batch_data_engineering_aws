@@ -1,4 +1,4 @@
-# deploys redshift code- We need to run this once to make sure redshift roles are set up correctly
+# deploys redshift code- We need to run this once per env to make sure redshift roles are set up correctly
 # this is for dev environment
 
 name: redshift_serverless_role_setup_one_time

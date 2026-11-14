@@ -1,11 +1,14 @@
 # deploys redshift code- We need to run this once per env to make sure redshift roles are set up correctly
 # this is for dev environment
 
+# Pre-Req: For each env after redshift is deployed through infra- go to secret manager and copy ARN and place in default in code- or 
+# while running the pipeline manually in GITHUB put its value there.
+
 name: redshift_serverless_role_setup_one_time
 
 on:
   workflow_dispatch:
-     inputs: # after redshift is deployed go to secret(which contains admin username and secret) and place secret arn here
+     inputs: # after redshift is deployed , go to secret(which contains admin username and secret) and place secret arn here, or change in UI while running pipeline
       redshift_serverless_arn:
         type: string
         description: 'The target AWS IAM Role ARN to assume'

@@ -32,11 +32,59 @@ def scd2_implementation(spark_session,logger,df,catalog_name,target_table,silver
 
     # Preparing insert df
 
-    insert_df= insert_df.withColumn("valid_from_timestamp",F.lit(min_str_timestamp)).\
+    # for first time records- that is having no entry we can safely mark start as 1900*
+    # but if a record gets deleted and comes back
+    '''
+    For deletes we:
+
+    expire the current record- mark is_active as False and is_deleted as True, we also set valid_to_timestamp as the bronze_ingestion_ts.
+
+    Now if record again comes back if we insert a new records with 1900 then we get overlapping intervals. So we cant do that!
+    
+    Ideally the start_ts of that re-entered scd2 record should be the bronze_ingestion_ts and not 1900. If any facts happen in that period we assign
+    -99 since its not going to match any row in dim.
+    
+    We use bronze_ingestion_ts because source does not give any any deltion ts.
+    
+    '''
+
+
+    full_join_cond_i = None
+    for col in primary_keys:
+        d = F.col(f"t.{col}") == F.col(f"s.{col}")
+
+        if full_join_cond_i is None:
+            full_join_cond_i = d
+        else:
+            full_join_cond_i = full_join_cond_i & d
+
+    # Determine if natural keys are already present in table with delta_type as delete
+    exis_df= spark_session.sql(f"select * from {full_table_name_silver}")
+
+    ww= Window.partitionBy(*primary_keys).orderBy(F.col(f"{target_table.replace('`','')}_sk").desc())
+    exis_df=exis_df.withColumn('rn',F.row_number().over(ww)).filter('rn==1').drop('rn')
+
+    insert_df1 = (
+        insert_df.alias("s")
+        .join(exis_df.alias("t"), full_join_cond_i, "left")
+        .select(
+            "s.*",
+            (
+                (F.col("t.is_deleted") == F.lit(True))
+                & (F.col("t.is_active") == F.lit(False))
+            ).alias("check_col"),
+        )
+    )
+
+
+
+    insert_df1= insert_df1.withColumn("valid_from_timestamp",F.when(F.col('check_col') == F.lit(True), F.col('bronze_ingestion_timestamp')).\
+                                    otherwise(F.lit(min_str_timestamp)) ,
+                                   ).\
     withColumn("valid_to_timestamp",F.lit(max_end_timestamp)).\
     withColumn("is_active",F.lit(True))
 
-    insert_insert_df=insert_df.select(*silv_cols)
+    insert_insert_df=insert_df1.select(*silv_cols)
 
 
     # Preparing update df 
@@ -109,4 +157,3 @@ def scd2_implementation(spark_session,logger,df,catalog_name,target_table,silver
     all_insert=insert_insert_df.unionByName(update_insert_df)
 
     all_insert.writeTo(full_table_name_silver).append()
-

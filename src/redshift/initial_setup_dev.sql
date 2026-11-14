@@ -5,6 +5,7 @@ CREATE ROLE  viewer_role;
 GRANT ALL PRIVILEGES ON DATABASE "githubanalytics-dev" TO ROLE admin_role;
 GRANT ALL PRIVILEGES ON SCHEMA gold  TO ROLE admin_role;
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA gold TO ROLE admin_role;
+GRANT CREATE USER TO ROLE admin_role;
 
 
 -- only able to view data on gold schema in githubanalytics-dev database
@@ -14,7 +15,13 @@ GRANT SELECT,REFERENCES ON ALL TABLES IN SCHEMA gold TO ROLE viewer_role;
 
 
 -- create external schema that points to glue silver database
-create external schema gold 
+create external schema silver 
 from data catalog 
-database 'silver-githubanalytics-dev'
+database 'silver-githubanalytics-dev'   
 IAM_ROLE default;
+
+
+-- create internal schema that refers external tables . THis is the gold schema
+create  schema gold ;
+
+

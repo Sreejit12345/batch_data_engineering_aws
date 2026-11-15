@@ -97,6 +97,7 @@ LANGUAGE_DIM_SCHEMA = StructType([
 
 COMMITS_FACT_SCHEMA = StructType([
     StructField("commit_sha", StringType(), nullable=False),
+    StructField("repo_id", LongType(), nullable=False),
     StructField("author_sk", IntegerType(), nullable=True),
     StructField("committer_sk", IntegerType(), nullable=True),
     StructField("is_commit_verified", BooleanType(), nullable=False),
@@ -195,6 +196,11 @@ SILVER_FOREIGN_KEYS_REPLACEMENTS={
     # if dim_table_type is 'scd2' we also need another key 'time_col' that is used in join cond.
     # time_col should be populated from fact table
 
+    # For some reason if we want to preserve the natural key we can pass "preserve_fk=True",
+    # THis may be reqd if any column in a composite key serves as the primary key and foreign key.
+    # repo_id,commit_sha is a composite natural key - but repo_id is also a FK -
+    # so in fact we store both repo_id and repo_sk.
+
     "commits":[
         {
             "dim_table":"user",
@@ -230,7 +236,8 @@ SILVER_FOREIGN_KEYS_REPLACEMENTS={
             "join_cols":[{"repo_id":"repo_id"}],  #map of fact column to dim column . For more join cond add more elements to array
             'fk':"repo_id",
             "sk":"repo_sk",
-            "rename":"repo_sk"
+            "rename":"repo_sk",
+            "preserve_fk": True
         },
         ],
 

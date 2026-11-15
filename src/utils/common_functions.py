@@ -272,7 +272,8 @@ def natural_key_replacement_sk(spark,logger,catalog,database,fct_table,fact_df,m
                                                                 F.coalesce(F.col(f"d.{k["sk"]}"),F.lit(-99)).alias(k['rename']))
         
 
-        fact_df=fact_df.drop(k['fk'])
+        if not k.get("preserve_fk", False):
+            fact_df=fact_df.drop(k['fk'])
 
     return fact_df
 

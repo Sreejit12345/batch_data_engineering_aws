@@ -90,7 +90,7 @@ if(__name__=='__main__'):
         ('raw-githubanalytics-{config_dict['env']}', 'repo', 'raw', 'ingestion_timestamp', NULL, 'repo_id', NULL),
         ('raw-githubanalytics-{config_dict['env']}', 'repo_language', 'raw', 'ingestion_timestamp', NULL, 'repo_id,language', NULL),
         ('raw-githubanalytics-{config_dict['env']}', 'language', 'raw', 'ingestion_timestamp', NULL, 'language_name', NULL),
-        ('raw-githubanalytics-{config_dict['env']}', 'commits', 'raw', 'ingestion_timestamp', NULL, 'commit_sha', NULL),
+        ('raw-githubanalytics-{config_dict['env']}', 'commits', 'raw', 'ingestion_timestamp', NULL, 'commit_sha,repo_id', NULL),
         ('raw-githubanalytics-{config_dict['env']}', 'pull_requests', 'raw', 'ingestion_timestamp', NULL, 'pull_request_id', NULL),
         ('raw-githubanalytics-{config_dict['env']}', 'user', 'raw', 'ingestion_timestamp', NULL, 'user_id', NULL)
         """)

@@ -95,7 +95,7 @@ if(__name__=='__main__'):
         ('bronze-githubanalytics-{config_dict['env']}', 'language', 'bronze', 'bronze_ingestion_timestamp','scd1','dim', NULL, 'language_name', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'user', 'bronze', 'bronze_ingestion_timestamp','scd2','dim', NULL, 'user_id', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'repo_language', 'bronze','bronze_ingestion_timestamp', 'scd2', 'bridge', NULL, 'repo_id,language', NULL),
-        ('bronze-githubanalytics-{config_dict['env']}', 'commits', 'bronze', 'bronze_ingestion_timestamp','scd1','fact', NULL, 'commit_sha', NULL),
+        ('bronze-githubanalytics-{config_dict['env']}', 'commits', 'bronze', 'bronze_ingestion_timestamp','scd1','fact', NULL, 'commit_sha,repo_id', NULL),
         ('bronze-githubanalytics-{config_dict['env']}', 'pull_requests', 'bronze', 'bronze_ingestion_timestamp','scd1','fact', NULL, 'pull_request_id', NULL)
     
         """)
@@ -209,6 +209,11 @@ if(__name__=='__main__'):
                if(load_type=='scd1'): 
 
                     if(table_type=='fact' and SILVER_FOREIGN_KEYS_REPLACEMENTS[r['table_name']]!=None): #for facts we might need to replace keys
+
+
+                        # if a PK natural key combination is "commit_sha,repo_id" , and repo_id also needs sk replacement, we need to make 
+                        # sure the natural keys are carried on and not dropped after key replacement, because in merge these are reqd.
+                        # in final silver we preseeve the repo_id and the repo_sk both.
                          
                          source_df=natural_key_replacement_sk(spark_sess,logger,"glue_catalog", f"`{config_dict['silver']['database_name']}`",
                                                               f"{r['table_name']}",

@@ -6,54 +6,73 @@ This repo has two GitHub Actions pipelines and the Python source code for the ET
 
 ## Project overview
 
-The project pulls GitHub metadata for organization-owned repositories, lands it in a medallion architecture on S3, registers the data in the AWS Glue Catalog, and exposes curated Gold-layer views in Redshift Serverless for reporting and dashboarding.
+The project pulls GitHub metadata from the GitHub REST APIs, lands it in a medallion architecture on S3, registers the data in the AWS Glue Catalog, and exposes curated Gold-layer views in Redshift Serverless for reporting and dashboarding.
 
-This repo is intentionally designed for controlled, repeatable batch processing rather than streaming. It is not a real-time event-driven pipeline; it is built around batch orchestration, metadata-driven transformations, and cost-conscious use of AWS services.
+This repo is designed for controlled, repeatable batch processing rather than streaming. It is not a real-time event-driven pipeline; it is built around batch orchestration, metadata-driven transformations, and cost-conscious use of AWS services.
 
-## Repo explanation, high level
+## Repository structure and flow
+
+This repo is built around the medallion architecture and the environment-specific AWS deployment setup. The code is split so the config, ingestion, transformation, and reporting pieces stay clear, reusable, and easy to work with across environments.
 
 ### 1) `src/config`
 
-The `config` folder has `.ini` files based on the environment (`constants-dev.ini`, `constants-prod.ini`, etc.). These provide the environment-specific parameters needed by the Glue jobs, such as `database_name`, secret name, and other operational settings.
+The `config` folder has the environment-specific `.ini` files like `constants-dev.ini` and `constants-prod.ini`. These hold the runtime values the Glue jobs need, like database name, secret name, and other env-specific settings.
 
-This file is parsed differently depending on how the job is triggered:
+The config logic is built to work in both local and AWS runs:
 
-- For local runs, it expects a `.env` file containing the environment name and GitHub PAT.
-- The environment key in the `.env` file is used to read the relevant config.
-- In AWS, Glue jobs deployed through CloudFormation have a parameter `--env` that tells the job which environment it is running in.
-- The config file is parsed based on the `env` parameter, and the GitHub PAT is derived from AWS Secrets Manager.
-- The secret name in Secrets Manager is derived by parsing the ini file.
+- For local runs, it expects a `.env` file with the `env` and `github_pat` keys.
+- In AWS, Glue jobs use the `--env` parameter to know which environment they are running in. This is set by CloudFormation.
+- The config file is parsed based on `env`, and the GitHub PAT is pulled from AWS Secrets Manager.
+- The secret name in Secrets Manager is derived from the environment-specific ini file itself.
+
 
 ### 2) `src/data`
 
-The `data` folder contains sample data from local runs to help understand the structure of the responses returned by the GitHub REST APIs.
+The `data` folder has sample payloads from local runs. These help understand the structure of the GitHub REST API responses and also help validate the downstream transformations.
 
 ### 3) `src/extract`
 
-The `extract` folder contains the code for the raw + bronze medallion layers. It also contains a sub-folder called `schema`, which stores the schemas for the raw and bronze layers.
+The `extract` layer holds the logic for the Raw and Bronze medallion stages. It also has a `schema` subfolder with the schema definitions for the raw and bronze datasets.
+
+Main pieces:
 
 - `ingestion.py` is the entry point for the RAW Glue job
 - `changelog.py` is the entry point for the BRONZE Glue job
-- Other files are helper modules
+- Other modules handle the reusable extraction, validation, and load logic
+
+This layer is responsible for pulling GitHub entities, landing the raw data, and turning it into the Bronze structure with schema checks and audit fields.
 
 ### 4) `src/transform`
 
-The `transform` folder contains the Silver layer code, including the SCD1/SCD2 logic. `silver_transform.py` is the entry point for the SILVER Glue job. It also contains a `schema` folder with the schema for the Silver layer.
+The `transform` folder holds the Silver layer logic, including the metadata-driven SCD1 and SCD2 processing. `silver_transform.py` is the entry point for the SILVER Glue job.
+
+It also has a `schema` folder with the Silver-layer schema definitions. This logic is responsible for:
+
+- reconciling historical changes
+- applying SCD1 / SCD2 behavior
+- replacing surrogate keys for fact tables
+- keeping the data model aligned with the downstream Gold-layer reporting
 
 ### 5) `src/utils`
 
-The `utils` folder contains the shared generic modules used across the codebase.
+The `utils` folder holds the common functionality used across the codebase.
 
-- `read_config_file.py` contains logic for parsing the environment based on the env file or Glue job parameter, and deriving the GitHub PAT from the environment.
-- `common_functions.py` contains reusable generic Spark code.
+- `read_config_file.py` handles the environment detection from `.env` or Glue job parameters and resolves the GitHub PAT based on the active environment.
+- `common_functions.py` contains shared Spark helpers and common transformation utilities used across jobs.
+
+This keeps the ETL logic cleaner and avoids repeating the same logic across ingestion and transformation stages.
 
 ### 6) `src/redshift`
 
-The `redshift` folder contains the SQL code for the Gold layer. It has init scripts such as `initial_setup_dev.sql`, which help set up initial roles and access control for Gold objects. It also contains gold-layer views on which dashboards are built in Amazon QuickSight.
+The `redshift` folder has the SQL assets for the Gold layer. It includes setup scripts like `initial_setup_dev.sql`, which help set up the initial roles and access control for Gold objects.
+
+It also contains Gold-layer views used for dashboarding and business reporting, usually consumed by QuickSight or other downstream analytics tools.
 
 ### 7) `setup.py`
 
-`setup.py` helps build the wheel file, which is pushed to the source code S3 bucket and made available to the Glue jobs as a Python dependency.
+`setup.py` builds the Python wheel for the project. That package is pushed to the source-code S3 bucket and made available to the Glue jobs as a Python dependency.
+
+This packaging step is important for deploying the ETL jobs consistently across environments.
 
 ## GitHub Actions CI/CD pipelines
 
@@ -65,7 +84,7 @@ The `redshift` folder contains the SQL code for the Gold layer. It has init scri
 
    When we create the Redshift Serverless namespace and workspace through CloudFormation, it automatically creates an admin username and password and stores it in AWS Secrets Manager. When the pipeline runs, it expects a default parameter named `redshift_serverless_arn`, which is the ARN of the admin secret created by Redshift during setup. We need to copy this ARN and provide it during the run.
 
-   Branch names have utmost importance here. If we push to the `dev` branch, it deploys the specific source code bucket and sets up roles for that specific Redshift Serverless database. Currently  its enabled for deployment on dev and prod branch.
+   Branch names have utmost importance here. If we push to the `dev` branch, it deploys the specific source code bucket and sets up roles for that specific Redshift Serverless database. Currently  its enabled for deployment on `dev` and `prod` branch.
 
 ## Architecture
 
@@ -75,53 +94,6 @@ See [architecture.md](./architecture.md) for the full deployment and pipeline fl
 
 See [medallion.pdf](./medallion.pdf).
 
-## What this project does
-
-- Pulls GitHub API data into a raw landing layer
-- Converts raw payloads into Bronze tables with schema validation and audit fields
-- Applies metadata-driven SCD1 / SCD2 logic in the Silver layer
-- Publishes curated Gold views for downstream reporting and QuickSight usage
-- Uses a batch-oriented Glue + S3 architecture rather than a streaming platform
-
-This is intentionally designed for controlled, repeatable batch loads rather than near-real-time ingestion.
-
-## Architecture at a glance
-
-- GitHub API -> AWS Glue ingestion jobs
-- Raw data -> Bronze data -> Silver transformation
-- Glue Data Catalog registration
-- Redshift Serverless for Gold reporting layer
-- Step Functions + SNS for orchestration and notifications
-
-## Repository structure
-
-### Source code
-
-- `src/config/`  
-  Environment-specific configuration files (`*.ini`) used by Glue jobs. These are selected by environment, with local runs using a `.env` file and AWS jobs using an `--env` parameter.
-
-- `src/data/`  
-  Sample payloads and local test data used to understand the structure of GitHub API responses.
-
-- `src/extract/`  
-  Raw and Bronze layer logic. Includes the entry points for ingestion and changelog processing, plus schema definitions for Raw/Bronze datasets.
-
-- `src/transform/`  
-  Silver layer logic for dimensional and fact updates, including SCD1 and SCD2 handling.
-
-- `src/utils/`  
-  Shared utility modules for config parsing, secrets handling, and common Spark functions.
-
-- `src/redshift/`  
-  Gold-layer SQL assets, including setup and access scripts for Redshift Serverless views.
-
-### Packaging and deployment
-
-- `setup.py`  
-  Builds the Python wheel used by AWS Glue jobs.
-
-- `.github/workflows/`  
-  CI/CD pipelines for deployment automation.
 
 ## Local setup
 

@@ -1,4 +1,4 @@
-# deploys source code to dev
+# deploys source code to s3, based on branch name it deployes to that specific folder, for dev deploys to dev bucket etc...
 
 name: source_code_deployment
 

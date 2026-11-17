@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS gold.dim_date
         week_of_year   INTEGER,
         month_number   INTEGER,
         month_name     VARCHAR(20),
+        month_short_name     VARCHAR(20),
         year           INTEGER,
         quarter        INTEGER
     )
@@ -50,6 +51,7 @@ CREATE TABLE IF NOT EXISTS gold.dim_date
         DATE_PART(week, full_date)::INT AS week_of_year,
         EXTRACT(MONTH FROM full_date)::INT AS month_number,
         TRIM(TO_CHAR(full_date, 'Month')) AS month_name,
+        SUBSTRING(TRIM(TO_CHAR(full_date, 'Month')),1,3) AS month_short_name,
         EXTRACT(YEAR FROM full_date)::INT AS year,
         EXTRACT(QUARTER FROM full_date)::INT AS quarter
 

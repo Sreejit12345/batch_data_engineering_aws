@@ -42,8 +42,37 @@ jobs:
               run: |
 
                     set -euo pipefail
-                    
+
                     SQL_QUERY=$(cat ./src/redshift/populate_date_dimension.sql)
+                    STATEMENT_ID=$(aws redshift-data execute-statement  \
+                    --database "githubanalytics-${{ github.ref_name }}" \
+                    --sql "$SQL_QUERY" \
+                    --workgroup-name "redshift-serving-workgroup-${{ github.ref_name }}" \
+                     --query 'Id' --output text)
+                     
+  
+                    while true; do
+                    STATUS=$(aws redshift-data describe-statement \
+                        --id "$STATEMENT_ID" \
+                        --query 'Status' --output text)
+
+                    if [ "$STATUS" = "FINISHED" ]; then
+                        echo "SQL executed successfully"
+                        break
+                    elif [ "$STATUS" = "FAILED" ] || [ "$STATUS" = "ABORTED" ]; then
+                        echo "SQL execution failed"
+                        exit 1
+                    fi
+
+                    sleep 5
+                    done
+
+            - name:  deploy gold layer views
+              run: |
+
+                    set -euo pipefail
+                    
+                    SQL_QUERY=$(cat ./src/redshift/populate_gold_views.sql)
                     STATEMENT_ID=$(aws redshift-data execute-statement  \
                     --database "githubanalytics-${{ github.ref_name }}" \
                     --sql "$SQL_QUERY" \

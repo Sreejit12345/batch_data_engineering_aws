@@ -5,7 +5,7 @@
 # while running the pipeline manually in GITHUB put its value there.
 
 # THis connects via the redhsift data API using the master account credentials.
-
+# https://docs.aws.amazon.com/cli/latest/reference/redshift-data/
 
 name: redshift_serverless_role_setup_one_time
 

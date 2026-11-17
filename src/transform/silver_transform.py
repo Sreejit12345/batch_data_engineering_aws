@@ -105,8 +105,15 @@ if(__name__=='__main__'):
         logger.info("Skipping metadata table creation- table already exists")
 
 
+# make sure dim and bridge tables and processed before facts
 
-    bronze_silver_table_metadata = spark_sess.read.table(metadata_table_sql_name).collect()
+    bronze_silver_table_metadata = spark_sess.read.table(metadata_table_sql_name).\
+        orderBy(
+             F.when(F.col('tgt_table_type')==F.lit('dim'),F.lit(1)).\
+             when(F.col('tgt_table_type')==F.lit('bridge'),F.lit(2)).\
+             when(F.col('tgt_table_type')==F.lit('fact'),F.lit(3)).\
+             otherwise(F.lit(4))).\
+        collect()
 
     
     for r in bronze_silver_table_metadata:

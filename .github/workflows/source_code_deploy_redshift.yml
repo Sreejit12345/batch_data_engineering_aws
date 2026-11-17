@@ -40,6 +40,9 @@ jobs:
 
             - name:  deploy date dimension sp and execute it
               run: |
+
+                    set -euo pipefail
+                    
                     SQL_QUERY=$(cat ./src/redshift/populate_date_dimension.sql)
                     STATEMENT_ID=$(aws redshift-data execute-statement  \
                     --database "githubanalytics-${{ github.ref_name }}" \
@@ -47,12 +50,7 @@ jobs:
                     --workgroup-name "redshift-serving-workgroup-${{ github.ref_name }}" \
                      --query 'Id' --output text)
                      
-                    aws redshift-data describe-statement \
-                    --id "$STATEMENT_ID" \
-                    --query 'Status' \
-                    --output text
-
-
+  
                     while true; do
                     STATUS=$(aws redshift-data describe-statement \
                         --id "$STATEMENT_ID" \

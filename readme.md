@@ -64,9 +64,10 @@ This keeps the ETL logic cleaner and avoids repeating the same logic across inge
 
 ### 6) `src/redshift`
 
-The `redshift` folder has the SQL assets for the Gold layer. It includes setup scripts like `initial_setup_dev.sql`, which help set up the initial roles and access control for Gold objects.
+The `redshift` folder has the SQL assets for the Gold layer. It includes setup scripts like `initial_setup_dev.sql`, which help set up the initial roles and access control for Gold objects. `initial_setup_dev.sql` connects to redshift cluster using redshift data api, using the admin credentials stored in aws secret manager.
 
-It also contains Gold-layer views used for dashboarding and business reporting, usually consumed by QuickSight or other downstream analytics tools.
+
+It also contains Gold-layer views used for dashboarding and business reporting.These are created by the cicd account specific role, and since admin_role and viewer_roles in DB have default privileges, users part of those roles will be able to access those objects.
 
 ### 7) `setup.py`
 
@@ -77,14 +78,18 @@ This packaging step is important for deploying the ETL jobs consistently across 
 ## GitHub Actions CI/CD pipelines
 
 1) `source_code_deployment`  
-   This pipeline is responsible for building the Python wheel file and uploading the entry-point files (the `.py` files) to the environment-specific source code S3 bucket. The Glue jobs refer to these files during execution.
+   This pipeline is responsible for building the Python wheel file and uploading the entry-point files (the `.py` files) to the environment-specific source code S3 bucket. The Glue jobs refer to these files during execution. Currently  its enabled for deployment on `dev` and `prod` branch.
 
 2) `redshift_serverless_role_setup_one_time`  
    This pipeline is responsible for setting up the Redshift Serverless roles for access. It is intended to be executed `once per environment`.
 
    When we create the Redshift Serverless namespace and workspace through CloudFormation, it automatically creates an admin username and password and stores it in AWS Secrets Manager. When the pipeline runs, it expects a default parameter named `redshift_serverless_arn`, which is the ARN of the admin secret created by Redshift during setup. We need to copy this ARN and provide it during the run.
 
-   Branch names have utmost importance here. If we push to the `dev` branch, it deploys the specific source code bucket and sets up roles for that specific Redshift Serverless database. Currently  its enabled for deployment on `dev` and `prod` branch.
+3) `source_code_deploy_redshift` 
+   This pipeline is responsible for deploying the gold objects to redshift serverless. This connects to redshift serverless using redshift data api, using the account level IAM cicd role that we set up in the setup stack. Currently  its enabled for deployment on `dev` and `prod` branch.
+
+  Branch names have utmost importance here. If we push to the `dev` branch, it deploys to the specific source code bucket and sets up roles for that specific Redshift Serverless database for that env. Similarly it deploys gold objects to that specific redshift env.
+
 
 ## Architecture
 

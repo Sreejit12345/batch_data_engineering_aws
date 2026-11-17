@@ -4,6 +4,8 @@
 # Pre-Req: For each env after redshift is deployed through infra- go to secret manager and copy ARN and place in default in code- or 
 # while running the pipeline manually in GITHUB put its value there.
 
+# THis connects via the redhsift data API using the master account credentials.
+
 
 name: redshift_serverless_role_setup_one_time
 

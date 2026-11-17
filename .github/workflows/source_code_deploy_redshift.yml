@@ -1,0 +1,72 @@
+# Used to deploy the source code to redshift serverless via the redshift data api.
+# This connects to redshift serverless using redshift data api, using the account level IAM cicd role that we set up in the setup stack.
+
+# https://docs.aws.amazon.com/cli/latest/reference/redshift-data/
+
+
+# also all the objects created as part of this will be owned by the cicd AIM user, and since alter default privileges exist on
+# admin_role and viewer_role, users part of admin/viewer role will have access to it.
+
+# also remember that the data api is async so we run a loop to wait for it to finish .
+
+
+name: source_code_deployment_redshift
+
+on:
+    push:
+        branches :
+            - dev
+            - prod
+permissions:
+    id-token: write
+    contents: read
+
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: authenticate aws creds
+              uses: aws-actions/configure-aws-credentials@v3
+              with:
+                role-to-assume: arn:aws:iam::468094684048:role/cicd-iam
+                aws-region: "ap-south-1"
+                role-session-name: SreejitsSession
+
+            - name:  deploy date dimension sp and execute it
+              run: |
+                    SQL_QUERY=$(cat ./src/redshift/populate_date_dimension.sql)
+                    STATEMENT_ID=$(aws redshift-data execute-statement  \
+                    --database "githubanalytics-${{ github.ref_name }}" \
+                    --sql "$SQL_QUERY" \
+                    --workgroup-name "redshift-serving-workgroup-${{ github.ref_name }}" \
+                     --query 'Id' --output text)
+                     
+                    aws redshift-data describe-statement \
+                    --id "$STATEMENT_ID" \
+                    --query 'Status' \
+                    --output text
+
+
+                    while true; do
+                    STATUS=$(aws redshift-data describe-statement \
+                        --id "$STATEMENT_ID" \
+                        --query 'Status' --output text)
+
+                    if [ "$STATUS" = "FINISHED" ]; then
+                        echo "SQL executed successfully"
+                        break
+                    elif [ "$STATUS" = "FAILED" ] || [ "$STATUS" = "ABORTED" ]; then
+                        echo "SQL execution failed"
+                        exit 1
+                    fi
+
+                    sleep 5
+                    done
+
+            

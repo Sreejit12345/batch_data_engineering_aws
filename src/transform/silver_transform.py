@@ -1,4 +1,5 @@
 # High level - thids job is responsible for doing scd1/2 based on generic loaders
+# Do remember- we must ensure, that bronze ingestion for each table happens sequentially and not concurrently. Bronze_timestamps are unique for each table.
 '''
  This sets up 1 spark catalog (glue_catalog). This spark catalog is internally mapped to the default account specific aws glue catalog 
  We already have 3 databases set up inside the default account specific aws glue catalog , with respective locations stored in the database level.
@@ -32,10 +33,6 @@ from src.transform.scd2 import *
 # Entry point for bronze to silver generic transformation job.
 if(__name__=='__main__'):
 
-
-    #CONSTANTS per batch
-    ingestion_ts= datetime.now(timezone.utc) # at module level so all records in batch have same ingestion timestamps.
-    my_uuid = str(uuid.uuid4()) # at module level, so all records in bacth have same batch_id
 
     root_logger = logging.getLogger()
     root_logger.setLevel(logging.INFO)
@@ -116,171 +113,187 @@ if(__name__=='__main__'):
         collect()
 
     
-    for r in bronze_silver_table_metadata:
+    for r in bronze_silver_table_metadata:  #for table processing order
+
+        batch_count=1
+
+        while(True):  #loop continues for a single table -until it finishes processing all pending batches
+            # bronze and silver share same table names , only database name is different.
+
+            table_specific_metadata = spark_sess.read.table(metadata_table_sql_name).\
+              filter(
+                (F.col("table_name") == r["table_name"])
+            ).collect()[0]
 
 
-        # bronze and silver share same table names , only database name is different.
+            #CONSTANTS per batch
+            ingestion_ts= datetime.now(timezone.utc) # at module level so all records in batch have same ingestion timestamps.
+            my_uuid = str(uuid.uuid4()) # at module level, so all records in bacth have same batch_id
 
-        silver_table_sql_name = (
-            f"glue_catalog.`{config_dict['silver']['database_name']}`.`{r['table_name']}`"
-        )
-        bronze_table_sql_name = f"glue_catalog.`{r['database_name']}`.`{r['table_name']}`"
+            silver_table_sql_name = (
+                f"glue_catalog.`{config_dict['silver']['database_name']}`.`{table_specific_metadata['table_name']}`"
+            )
+            bronze_table_sql_name = f"glue_catalog.`{table_specific_metadata['database_name']}`.`{table_specific_metadata['table_name']}`"
 
-        logger.info(f"bronze to silver processing for table : {r['table_name']}")
+            logger.info(f"Processing batch {batch_count} for table {silver_table_sql_name} ")
 
-        spark_schema=SILVER_SCHEMAS[r['table_name']]
-        partition=SILVER_PARTITIONS[r['table_name']] #get the corresponding partition columns
-        load_type= r['tgt_load_type']
-        table_type=r['tgt_table_type']
-        pk=r['natural_primary_keys']
+            logger.info(f"bronze to silver processing for table : {table_specific_metadata['table_name']}")
 
-        last_batch_processed_ts= r['ts_for_last_processed_batch_id_by_silver']
-        last_batch_processed = r['last_batch_id_processed_successfully_by_silver']
+            spark_schema=SILVER_SCHEMAS[table_specific_metadata['table_name']]
+            partition=SILVER_PARTITIONS[table_specific_metadata['table_name']] #get the corresponding partition columns
+            load_type= table_specific_metadata['tgt_load_type']
+            table_type=table_specific_metadata['tgt_table_type']
+            pk=table_specific_metadata['natural_primary_keys']
 
-
-        natural_keys= r['natural_primary_keys']
-        batch_order= r['batch_ordering_columns']
-        
-        logger.info(f"{bronze_table_sql_name}'s corresponding silver table name is {silver_table_sql_name}")
-
-        if(partition is None):
-
-            logger.info(f"Creating non partitioned table {silver_table_sql_name} if it does not exist!")
-
-            #create silver tables - with same names as raw tables
-            create_non_partitioned_table_if_not_exists(spark_sess,"glue_catalog",config_dict['silver']['database_name'],r['table_name'],
-                                                spark_schema)
-
-        else:
-
-              logger.info(f"Creating table {silver_table_sql_name} partitioned on {partition} if it does not exist!")
-
-              create_partitioned_table_if_not_exists(spark_sess,"glue_catalog",config_dict['silver']['database_name'],r['table_name'],
-                                                            spark_schema,partition)
+            last_batch_processed_ts= table_specific_metadata['ts_for_last_processed_batch_id_by_silver']
+            last_batch_processed = table_specific_metadata['last_batch_id_processed_successfully_by_silver']
 
 
-
-        if(r['last_batch_id_processed_successfully_by_silver'] is None and r['ts_for_last_processed_batch_id_by_silver'] is None ):
-
-            logger.info(f"No processed batch found for table {bronze_table_sql_name}")
-
-            source_query= f"""
-                        with first_batch as(
-                        select min({batch_order}) as first_batch_ts from {bronze_table_sql_name}
-                        )
-                        select r.* from {bronze_table_sql_name} r cross join first_batch f
-                        where r.{batch_order}=f.first_batch_ts
-                    """
-
-        else:
-
-            source_query= f"""
-                          with first_batch as(
-                                 select min({batch_order}) as first_batch_ts from {bronze_table_sql_name}
-                                  where bronze_ingestion_timestamp >='{last_batch_processed_ts}'
-                                                 and bronze_batch_id != '{last_batch_processed}'
-                                 )
-                             select r.* from 
-                             {bronze_table_sql_name} r
-                             cross join first_batch f
-                             where r.{batch_order}=f.first_batch_ts
-                     """
-
-        source_df= spark_sess.sql(source_query)
-
-        if(source_df.count() ==0):
-            logger.info("no new batches exist , proceeding to next table.....")
-            continue
-
-
-        source_df=source_df.withColumn('silver_batch_id',F.lit(my_uuid)).\
-        withColumn('silver_ingestion_timestamp',F.lit(ingestion_ts)).\
-        withColumn('is_deleted',
-                  F.when(F.col('delta_type')==F.lit('delete'),F.lit(True)).otherwise(F.lit(False)))
-
-        row=source_df.limit(1).collect()[0]
-
-        sk_reqd=False
-
-        try:
-
-               if(table_type=='dim'):
-                    #generate -99 key for all dimensions
-                    generate_default_key_for_dim(spark_sess,"glue_catalog", f"`{config_dict['silver']['database_name']}`",
-                                                              f"`{r['table_name']}`",
-                                                              f"{r['table_name']}_sk")
-                    sk_reqd=True
-
-             
+            natural_keys= table_specific_metadata['natural_primary_keys']
+            batch_order= table_specific_metadata['batch_ordering_columns']
             
-               if(load_type=='scd1'): 
+            logger.info(f"{bronze_table_sql_name}'s corresponding silver table name is {silver_table_sql_name}")
 
-                    if(table_type=='fact' and SILVER_FOREIGN_KEYS_REPLACEMENTS[r['table_name']]!=None): #for facts we might need to replace keys
+            if(partition is None):
+
+                logger.info(f"Creating non partitioned table {silver_table_sql_name} if it does not exist!")
+
+                #create silver tables - with same names as raw tables
+                create_non_partitioned_table_if_not_exists(spark_sess,"glue_catalog",config_dict['silver']['database_name'],table_specific_metadata['table_name'],
+                                                    spark_schema)
+
+            else:
+
+                logger.info(f"Creating table {silver_table_sql_name} partitioned on {partition} if it does not exist!")
+
+                create_partitioned_table_if_not_exists(spark_sess,"glue_catalog",config_dict['silver']['database_name'],table_specific_metadata['table_name'],
+                                                                spark_schema,partition)
 
 
-                        # if a PK natural key combination is "commit_sha,repo_id" , and repo_id also needs sk replacement, we need to make 
-                        # sure the natural keys are carried on and not dropped after key replacement, because in merge these are reqd.
-                        # in final silver we preseeve the repo_id and the repo_sk both.
-                         
-                         source_df=natural_key_replacement_sk(spark_sess,logger,"glue_catalog", f"`{config_dict['silver']['database_name']}`",
-                                                              f"{r['table_name']}",
-                                                              source_df,SILVER_FOREIGN_KEYS_REPLACEMENTS) 
 
-                         logger.info(f"Keys replaced for table `{r['table_name']}`")   
+            if(table_specific_metadata['last_batch_id_processed_successfully_by_silver'] is None and table_specific_metadata['ts_for_last_processed_batch_id_by_silver'] is None ):
 
-                    
+                logger.info(f"No processed batch found for table {bronze_table_sql_name}")
 
-                    scd1_implementation(spark_sess,logger,source_df,"glue_catalog",
-                                    f"`{r['table_name']}`",f"`{config_dict['silver']['database_name']}`",pk.split(','),sk_reqd)
+                source_query= f"""
+                            with first_batch as(
+                            select min({batch_order}) as first_batch_ts from {bronze_table_sql_name}
+                            )
+                            select r.* from {bronze_table_sql_name} r cross join first_batch f
+                            where r.{batch_order}=f.first_batch_ts
+                        """
 
-                    
-        
-                    logger.info(f"Table {silver_table_sql_name} processed successfully by scd1 pattern!")
+            else:
 
-               elif(load_type=='scd2'):
+                source_query= f"""
+                            with first_batch as(
+                                    select min({batch_order}) as first_batch_ts from {bronze_table_sql_name}
+                                    where bronze_ingestion_timestamp >='{last_batch_processed_ts}'
+                                                    and bronze_batch_id != '{last_batch_processed}'
+                                    )
+                                select r.* from 
+                                {bronze_table_sql_name} r
+                                cross join first_batch f
+                                where r.{batch_order}=f.first_batch_ts
+                        """
 
-                    if(r['table_name']=='repo_language'):
-                         # for bridge table we use bronze_ingestion_timestamp as scd2 column
-                        scd2_implementation(spark_sess,logger,source_df,"glue_catalog",
-                                        f"`{r['table_name']}`",f"`{config_dict['silver']['database_name']}`",
-                                        pk.split(','),'bronze_ingestion_timestamp')
-                    else: # for all others we use updated_at
-                          scd2_implementation(spark_sess,logger,source_df,"glue_catalog",
-                                                                 f"`{r['table_name']}`",f"`{config_dict['silver']['database_name']}`",
-                                                                 pk.split(','),'updated_at')
-                         
+            source_df= spark_sess.sql(source_query)
 
-                    logger.info(f"Table {silver_table_sql_name} processed successfully by scd2 pattern!")
+            if(source_df.count() ==0):
+                logger.info("no new batches exist , proceeding to next table.....")
+                break
 
-                         
 
-               spark_sess.sql(f"""
-                            UPDATE {metadata_table_sql_name} 
-                            SET ts_for_last_processed_batch_id_by_silver =
-                                CAST('{row['bronze_ingestion_timestamp']}' AS TIMESTAMP),
-                            last_batch_id_processed_successfully_by_silver = '{row['bronze_batch_id']}'
-                            WHERE table_name = '{r['table_name']}'
-                            and database_name = '{r['database_name']}'
-                                        
-                            """)
+            source_df=source_df.withColumn('silver_batch_id',F.lit(my_uuid)).\
+            withColumn('silver_ingestion_timestamp',F.lit(ingestion_ts)).\
+            withColumn('is_deleted',
+                    F.when(F.col('delta_type')==F.lit('delete'),F.lit(True)).otherwise(F.lit(False)))
 
-               logger.info(f"Table {bronze_table_sql_name} metadata processed successfully")
+            row=source_df.limit(1).collect()[0]
 
-        except:
+            sk_reqd=False
 
-            logger.info("Something went wrong in processing table")
+            try:
 
-            spark_sess.sql(f"""
-            UPDATE {metadata_table_sql_name}
-            SET ts_for_last_processed_batch_id_by_silver =
-                {("NULL" if r['ts_for_last_processed_batch_id_by_silver'] is None else "CAST('" + str(r['ts_for_last_processed_batch_id_by_silver']) + "' AS TIMESTAMP)")},
-                last_batch_id_processed_successfully_by_silver =
-                {("NULL" if r['last_batch_id_processed_successfully_by_silver'] is None else "'" + str(r['last_batch_id_processed_successfully_by_silver']) + "'")}
-            WHERE table_name = '{r['table_name']}'
-            AND database_name = '{r['database_name']}'
-            """)
+                if(table_type=='dim'):
+                        #generate -99 key for all dimensions
+                        generate_default_key_for_dim(spark_sess,"glue_catalog", f"`{config_dict['silver']['database_name']}`",
+                                                                f"`{table_specific_metadata['table_name']}`",
+                                                                f"{table_specific_metadata['table_name']}_sk")
+                        sk_reqd=True
 
-            raise
+                
+                
+                if(load_type=='scd1'): 
+
+                        if(table_type=='fact' and SILVER_FOREIGN_KEYS_REPLACEMENTS[table_specific_metadata['table_name']]!=None): #for facts we might need to replace keys
+
+
+                            # if a PK natural key combination is "commit_sha,repo_id" , and repo_id also needs sk replacement, we need to make 
+                            # sure the natural keys are carried on and not dropped after key replacement, because in merge these are reqd.
+                            # in final silver we preseeve the repo_id and the repo_sk both.
+                            
+                            source_df=natural_key_replacement_sk(spark_sess,logger,"glue_catalog", f"`{config_dict['silver']['database_name']}`",
+                                                                f"{table_specific_metadata['table_name']}",
+                                                                source_df,SILVER_FOREIGN_KEYS_REPLACEMENTS) 
+
+                            logger.info(f"Keys replaced for table `{table_specific_metadata['table_name']}`")   
+
+                        
+
+                        scd1_implementation(spark_sess,logger,source_df,"glue_catalog",
+                                        f"`{table_specific_metadata['table_name']}`",f"`{config_dict['silver']['database_name']}`",pk.split(','),sk_reqd)
+
+                        
+            
+                        logger.info(f"Table {silver_table_sql_name} processed successfully by scd1 pattern!")
+
+                elif(load_type=='scd2'):
+
+                        if(table_specific_metadata['table_name']=='repo_language'):
+                            # for bridge table we use bronze_ingestion_timestamp as scd2 column
+                            scd2_implementation(spark_sess,logger,source_df,"glue_catalog",
+                                            f"`{table_specific_metadata['table_name']}`",f"`{config_dict['silver']['database_name']}`",
+                                            pk.split(','),'bronze_ingestion_timestamp')
+                        else: # for all others we use updated_at
+                            scd2_implementation(spark_sess,logger,source_df,"glue_catalog",
+                                                                    f"`{table_specific_metadata['table_name']}`",f"`{config_dict['silver']['database_name']}`",
+                                                                    pk.split(','),'updated_at')
+                            
+
+                        logger.info(f"Table {silver_table_sql_name} processed successfully by scd2 pattern!")
+
+                            
+
+                spark_sess.sql(f"""
+                                UPDATE {metadata_table_sql_name} 
+                                SET ts_for_last_processed_batch_id_by_silver =
+                                    CAST('{row['bronze_ingestion_timestamp']}' AS TIMESTAMP),
+                                last_batch_id_processed_successfully_by_silver = '{row['bronze_batch_id']}'
+                                WHERE table_name = '{table_specific_metadata['table_name']}'
+                                and database_name = '{table_specific_metadata['database_name']}'
+                                            
+                                """)
+
+                logger.info(f"Table {bronze_table_sql_name} metadata processed successfully")
+
+                batch_count=batch_count+1
+
+            except:
+
+                logger.info("Something went wrong in processing table")
+
+                spark_sess.sql(f"""
+                UPDATE {metadata_table_sql_name}
+                SET ts_for_last_processed_batch_id_by_silver =
+                    {("NULL" if table_specific_metadata['ts_for_last_processed_batch_id_by_silver'] is None else "CAST('" + str(table_specific_metadata['ts_for_last_processed_batch_id_by_silver']) + "' AS TIMESTAMP)")},
+                    last_batch_id_processed_successfully_by_silver =
+                    {("NULL" if table_specific_metadata['last_batch_id_processed_successfully_by_silver'] is None else "'" + str(table_specific_metadata['last_batch_id_processed_successfully_by_silver']) + "'")}
+                WHERE table_name = '{table_specific_metadata['table_name']}'
+                AND database_name = '{table_specific_metadata['database_name']}'
+                """)
+
+                raise
 
 
 

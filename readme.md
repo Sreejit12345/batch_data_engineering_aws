@@ -2,7 +2,7 @@
 
 This repository contains the application code for the `batch_data_engineering_aws` project. The infrastructure is provisioned via the `batch_data_engineering_aws_infra` repo.
 
-This repo has two GitHub Actions pipelines and the Python source code for the ETL workloads.
+This repo has three GitHub Actions pipelines and the Python/SQL source code for the ETL workloads.
 
 ## Project overview
 
@@ -67,7 +67,7 @@ This keeps the ETL logic cleaner and avoids repeating the same logic across inge
 The `redshift` folder has the SQL assets for the Gold layer. It includes setup scripts like `initial_setup_dev.sql`, which help set up the initial roles and access control for Gold objects. `initial_setup_dev.sql` connects to redshift cluster using redshift data api, using the admin credentials stored in aws secret manager.
 
 
-It also contains Gold-layer views used for dashboarding and business reporting.These are created by the cicd account specific role, and since admin_role and viewer_roles in DB have default privileges, users part of those roles will be able to access those objects.
+It also contains Gold-layer views used for dashboarding and business reporting.These are created by the cicd account specific role, and since admin_role and viewer_roles in DB have default privileges, users part of those roles will be able to access those objects automtically.
 
 ### 7) `setup.py`
 

@@ -231,7 +231,7 @@ def query_repo_language_bridge(repo_dim,client,logger):
      """
      Build a repo language bridge table with weightage percentage.
 
-     Natural Key: repo_id,org_id
+     Natural Key: repo_id,language
      Grain: 1 row per repo/language combination.
 
      """
@@ -326,9 +326,13 @@ def query_commit_facts_default_branch(pages_reqd,repo_dim,client,logger):
      
      """
      Queries commits on the defualt branch and populates facts.
-     We do a full pull becuase we can get hard deletes from source
+     We do a full pull becuase we can get hard deletes from source,
+
+     Remeber same commit_sha can be present in diff repos in case of forks,clones etc..
+     So we include both in grain- so 1 row= 1 commit per repo.
     
-     PK: commit_sha
+     Grain: one row per commit per repository
+     PK: commit_sha,repo_id
      FK: org_id,repo_id,author_user_id_verified
      """
 

@@ -1,11 +1,17 @@
-# deploys redshift code- We need to run this once to make sure redshift roles are set up correctly
-# this is for dev environment
+# deploys redshift code- We need to run this once per env to make sure redshift roles are set up correctly
+# Run this from dev branch once to setup roles for dev, run from prod to setup roles for prod, etc...
+
+# Pre-Req: For each env after redshift is deployed through infra- go to secret manager and copy ARN and place in default in code- or 
+# while running the pipeline manually in GITHUB put its value there.
+
+# THis connects via the redhsift data API using the master account credentials.
+# https://docs.aws.amazon.com/cli/latest/reference/redshift-data/
 
 name: redshift_serverless_role_setup_one_time
 
 on:
   workflow_dispatch:
-     inputs: # after redshift is deployed go to secret(which contains admin username and secret) and place secret arn here
+     inputs: # after redshift is deployed , go to secret(which contains admin username and secret) and place secret arn here, or change in UI while running pipeline
       redshift_serverless_arn:
         type: string
         description: 'The target AWS IAM Role ARN to assume'
@@ -34,10 +40,10 @@ jobs:
 
             - name:  create roles
               run: |
-                    SQL_QUERY=$(cat sql/inital_setup_dev.sql)
+                    SQL_QUERY=$(cat ./src/redshift/initial_setup_${{ github.ref_name }}.sql)
                     aws redshift-data execute-statement --secret-arn ${{ inputs.redshift_serverless_arn }} \
-                    --database "githubanalytics-dev" \
+                    --database "githubanalytics-${{ github.ref_name }}" \
                     --sql "$SQL_QUERY" \
-                    --workgroup-name "redshift-serving-workgroup-dev"
+                    --workgroup-name "redshift-serving-workgroup-${{ github.ref_name }}"
 
             

@@ -160,7 +160,7 @@ The project follows several practical conventions that are important for correct
 15) Fact tables in Silver have their FKs replaced by surrogate keys. These are mentioned in the key replacement constants.
 16) Right now all 7 datasets are processed in a loop in one raw/bronze and silver job to save costs.
 17) Metadata for batch progress is maintained in the metadata database and metadata S3 bucket.
-
+18) We pull all github data from the default branch of the repo.
 ## Notes
 
 - This project is structured for controlled AWS deployment and environment-specific config management.
@@ -171,3 +171,4 @@ The project follows several practical conventions that are important for correct
 
 - [architecture.md](./architecture.md)
 - [medallion.pdf](./medallion.pdf)
+- [results.md](./results.md)

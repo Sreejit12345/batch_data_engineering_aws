@@ -2,6 +2,8 @@
 CREATE OR REPLACE PROCEDURE populate_date_dimension()
 LANGUAGE plpgsql
 AS $$
+DECLARE
+    row_cnt INT;
 
 BEGIN
 
@@ -23,6 +25,10 @@ CREATE TABLE IF NOT EXISTS gold.dim_date
     DISTSTYLE ALL
     SORTKEY (full_date);
 
+    SELECT COUNT(*) INTO row_cnt
+    FROM (SELECT 1 FROM gold.dim_date LIMIT 1);
+
+IF row_cnt = 0 THEN
   INSERT INTO gold.dim_date
     WITH RECURSIVE base (full_date) AS
     (
@@ -57,8 +63,12 @@ CREATE TABLE IF NOT EXISTS gold.dim_date
 
     FROM base;
 
+    END IF;
+
 END;
 
 $$;
+
+
 
 CALL populate_date_dimension();

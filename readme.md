@@ -88,7 +88,7 @@ This packaging step is important for deploying the ETL jobs consistently across 
 3) `source_code_deploy_redshift` 
    This pipeline is responsible for deploying the gold objects to redshift serverless. This connects to redshift serverless using redshift data api, using the account level IAM cicd role that we set up in the setup stack. Currently  its enabled for deployment on `dev` and `prod` branch.
 
-  Branch names have utmost importance here. If we push to the `dev` branch, it deploys to the specific source code bucket and sets up roles for that specific Redshift Serverless database for that env. Similarly it deploys gold objects to that specific redshift env.
+  Branch names have utmost importance here. If we push to the `dev` branch, it deploys to the specific source code bucket and sets up roles for that specific Redshift Serverless database for that env. Similarly it deploys gold objects to that specific redshift env. Before pushing to a branch/env- pls make sure the corresponding infra is deployed to that branch/env via the `batch_data_engineering_aws_infra` repo. 
 
 
 ## Architecture
